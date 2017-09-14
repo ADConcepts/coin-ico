@@ -16,5 +16,16 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::post('login', 'Auth\LoginController@loginWalletOrEmail');
+Route::get('/confirm/email/{token}', 'Auth\RegisterController@getConfirmEmail')->name('get:user:confirm:email');
+Route::get('/verify/email', 'AccountController@getVerifyEmail')->name('get:user:verify:email');
+Route::get('/verify/email/link', 'AccountController@getVerifyEmailLink')->name('get:user:verify:email:link');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/buy', 'BuyController@getBuy')->name('get:buy')->middleware(['auth','verify-email']);
+
+Route::get('/commands', function () {
+    Artisan::call('exchange:rates');
+    dd(Artisan::output());
+});

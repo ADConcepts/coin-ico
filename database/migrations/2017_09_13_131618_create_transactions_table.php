@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('type', ['Deposit', 'Referral']);
-            $table->decimal('amount', 10, 2)->nullable();
+            $table->decimal('amount', 25, 2)->nullable();
             $table->unsignedInteger('payment_id')->nullable();
             $table->unsignedInteger('referral_id')->nullable();
             $table->decimal('exchange_rate', 10, 2)->nullable();

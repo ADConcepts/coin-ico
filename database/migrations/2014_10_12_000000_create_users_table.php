@@ -18,8 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('wallet_id')->nullable();
+            $table->string('wallet_id')->unique();
             $table->boolean('is_admin')->default(false);
+            $table->string('email_token')->nullable();
+            $table->boolean('email_verified')->default(0);
+            $table->timestamp('verified_email_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

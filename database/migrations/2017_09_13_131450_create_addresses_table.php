@@ -18,7 +18,8 @@ class CreateAddressesTable extends Migration
             $table->unsignedInteger('user_id')->nullable();
             $table->string('coinbase_id')->unique();
             $table->string('address')->unique();
-            $table->enum('currency', ['Bitcoin', 'Litecoin', 'Ethereum']);
+            $table->string('name')->nullable();
+            $table->enum('currency', ['bitcoin', 'litecoin', 'ethereum']);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
