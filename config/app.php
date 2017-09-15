@@ -228,4 +228,16 @@ return [
 
     ],
 
+    'exchangeRate' => [
+        'ethereum' => env('ETHEREUM_EXCHANGE_RATE', NULL),
+        'bitcoin' => env('BITCOIN_EXCHANGE_RATE', NULL),
+        'litecoin' => env('LITECOIN_EXCHANGE_RATE', NULL),
+    ],
+
+    'currencies' => [
+        'BTC' => 'bitcoin',
+        'LTC' => 'litecoin',
+        'ETH' => 'ethereum'
+    ]
+
 ];

@@ -25,6 +25,7 @@ class UsersTableSeeder extends Seeder
                 'password' => $password,
                 'wallet_id' => str_random(34),
                 'is_admin' => $i == 1,
+                'referral_code' => substr(md5(microtime()),rand(0,26),5),
                 'created_at' => $now,
                 'updated_at' => $now,
             ];

@@ -15,11 +15,15 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('coinbase_id')->nullable();
             $table->unsignedInteger('address_id')->nullable();
-            $table->decimal('amount', 25, 2)->nullable();
+            $table->unsignedInteger('exchange_rate_id')->nullable();
+            $table->string('notification_id')->nullable();
+            $table->string('coinbase_id')->nullable();
+            $table->string('address')->nullable();
+            $table->decimal('amount', 25, 10)->nullable();
             $table->enum('currency', ['bitcoin', 'litecoin', 'ethereum']);
-            $table->string('currency_transaction_id')->unique();
+            $table->string('currency_transaction_id')->nullable();
+            $table->decimal('exchange_rate', 25, 10)->nullable();
             $table->timestamps();
 
             $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');

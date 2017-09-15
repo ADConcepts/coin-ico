@@ -16,8 +16,8 @@ class CreateExchangeRatesTable extends Migration
         Schema::create('exchange_rates', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('currency', ['bitcoin', 'litecoin', 'ethereum']);
-            $table->decimal('amount', 25, 2)->nullable();
-            $table->decimal('dollar', 25, 2)->nullable();
+            $table->decimal('amount', 25, 10)->nullable();
+            $table->decimal('dollar', 25, 10)->nullable();
             $table->timestamp('start_date')->nullable();
             $table->timestamp('end_date')->nullable();
             $table->timestamps();

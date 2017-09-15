@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Domain\Referral\Referral;
 use App\Notifications\EmailVerification;
 use App\User;
 use App\Http\Controllers\Controller;
@@ -72,6 +73,24 @@ class RegisterController extends Controller
 
         $this->guard()->login($user);
 
+        if(\Session::has('code') && \Session::has('referral_id')){
+            $code = \Session::get('code');
+            $referralId = \Session::get('referral_id');
+
+            $referral = Referral::query()
+                ->where('referral_code',$code)
+                ->where('id',$referralId)
+                ->first();
+
+            if($referral) {
+                $now = \Carbon\Carbon::now()->toDateTimeString();
+                $referral->referral_id = $user->id;
+                $referral->email = $user->email;
+                $referral->registered_at = $now;
+                $referral->save();
+            }
+        }
+
         $user->notify(new EmailVerification($user));
 
         return $this->registered($request, $user)
@@ -93,6 +112,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'email_token' => str_random(32),
             'wallet_id' => str_random(34),
+            'referral_code' => substr(md5(microtime()), rand(0, 26), 5)
         ]);
 
     }

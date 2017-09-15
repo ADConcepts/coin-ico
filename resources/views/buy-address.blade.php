@@ -6,14 +6,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Address detail</div>
                     <div class="panel-body">
-                        <strong>Selected Currency:</strong>
+                        <strong>Currency:</strong>
                         {{ ucfirst($currency) }} <br/>
                         <strong>Address:</strong>
                         {{ $address->address }} <br/>
-                        <strong>Exchange Rate: </strong>
-                        {{ config('coinbase.exchangeRate')[$currency] }}<br/>
                         <strong>Expected coins: </strong>
-                        {{ $exchangeRate->amount }}
+                        1 {{ ucfirst($currency) }} =>  {{ round($exchangeRate->amount,2) }} $
                          <br/>
                         <strong>QR Code:</strong>
                         <img src="{{ $imageData }}" />

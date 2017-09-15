@@ -41,15 +41,12 @@ class BuyController extends Controller
             ]);
             $client->createAccountAddress($account, $coinBaseAddress);
 
-            $now = \Carbon\Carbon::now()->toDateTimeString();
             $address = new Addresses();
             $address->user_id = $user->id;
             $address->coinbase_id = $coinBaseAddress->getId();
             $address->address = $coinBaseAddress->getAddress();
             $address->name = $coinBaseAddress->getName();
             $address->currency = $currency;
-            $address->created_at = $now;
-            $address->updated_at = $now;
             $address->save();
 
             $qrCode = new QrCode($coinBaseAddress->getAddress());

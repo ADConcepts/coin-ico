@@ -3,7 +3,10 @@
 namespace App\Console\Commands;
 
 use App\Domain\ExchangeRate\ExchangeRate;
+use App\Notifications\ExceptionMail;
+use App\User;
 use Illuminate\Console\Command;
+use Mockery\Exception;
 
 class ExchangeRates extends Command
 {
@@ -38,41 +41,56 @@ class ExchangeRates extends Command
      */
     public function handle()
     {
-        $json = file_get_contents('https://api.coinmarketcap.com/v1/ticker/');
-        $data = json_decode($json);
+        $data = [];
+        try {
+            $client = new \GuzzleHttp\Client();
+            $res = $client->request('GET', 'https://api.coinmarketcap.com/v1/ticker/');
+            $data = \GuzzleHttp\json_decode($res->getBody());
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
         $currencies = [];
         foreach ($data as $key => $value) {
             if (count($currencies) == 3) {
                 break;
             }
-            if (in_array($value->id, ['bitcoin', 'litecoin', 'ethereum'])) {
-                $now = \Carbon\Carbon::now()->toDateTimeString();
-                $currencies[] = $value->id;
 
-                $oldExchangeRate = ExchangeRate::query()
-                    ->where('currency', $value->id)
-                    ->orderBy('id', 'desc')
-                    ->first();
-
-                if ($oldExchangeRate) {
-                    $oldExchangeRate->end_date = $now;
-                    $oldExchangeRate->save();
-                }
-
-                $exchangeRate = new ExchangeRate();
-                $exchangeRate->currency = $value->id;
-                $exchangeRate->start_date = $now;
-                $exchangeRate->dollar = $value->price_usd;
-
-                $rate = config('coinbase.exchangeRate')[$value->id];
-                $amount = $value->price_usd * $rate;
-                $exchangeRate->amount = $amount;
-
-                $exchangeRate->created_at = $now;
-                $exchangeRate->updated_at = $now;
-
-                $exchangeRate->save();
+            if (!in_array($value->id, ['bitcoin', 'litecoin', 'ethereum'])) {
+                continue;
             }
+
+            $now = \Carbon\Carbon::now()->toDateTimeString();
+            $currencies[$value->id] = $value->id;
+
+            $oldExchangeRate = ExchangeRate::query()
+                ->where('currency', $value->id)
+                ->orderBy('id', 'desc')
+                ->first();
+
+            if ($oldExchangeRate) {
+                $oldExchangeRate->end_date = $now;
+                $oldExchangeRate->save();
+            }
+
+            $exchangeRate = new ExchangeRate();
+            $exchangeRate->currency = $value->id;
+            $exchangeRate->start_date = $now;
+            $exchangeRate->dollar = $value->price_usd;
+
+            $rate = config('app.exchangeRate')[$value->id];
+            $amount = $value->price_usd * $rate;
+            $exchangeRate->amount = $amount;
+
+            $exchangeRate->save();
         }
+
+        if (count($currencies) < 3) {
+            $user = User::query()
+                ->where('is_admin', 1)
+                ->first();
+
+            $user->notify(new ExceptionMail($user));
+        }
+
     }
 }
