@@ -36,6 +36,7 @@ class ReferFriend extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('email.refer');
+        $url = route('get:referral:code',['code' => $this->user->referral_code]);
+        return $this->markdown('email.refer',['url' => $url]);
     }
 }
