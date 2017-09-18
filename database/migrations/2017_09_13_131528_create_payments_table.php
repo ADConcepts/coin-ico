@@ -18,8 +18,6 @@ class CreatePaymentsTable extends Migration
             $table->unsignedInteger('address_id')->nullable();
             $table->unsignedInteger('exchange_rate_id')->nullable();
             $table->string('notification_id')->nullable();
-            $table->string('coinbase_id')->nullable();
-            $table->string('address')->nullable();
             $table->decimal('amount', 25, 10)->nullable();
             $table->enum('currency', ['bitcoin', 'litecoin', 'ethereum']);
             $table->string('currency_transaction_id')->nullable();

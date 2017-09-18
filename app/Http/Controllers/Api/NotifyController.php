@@ -101,8 +101,6 @@ class NotifyController extends Controller
             $payment->address_id = $address->id;
             $payment->exchange_rate_id = $exchangeRate->id;
             $payment->notification_id = $raw_body['id'];
-            $payment->coinbase_id = $raw_body['data']['id'];
-            $payment->address = $raw_body['data']['address'];
             $payment->amount = $amount;
             $payment->currency = $currency;
             $payment->currency_transaction_id = $raw_body['additional_data']['transaction']['id'];
