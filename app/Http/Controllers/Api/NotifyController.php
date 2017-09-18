@@ -108,6 +108,7 @@ class NotifyController extends Controller
             $payment->save();
 
             $transaction = new Transaction();
+            $transaction->user_id = $address->user_id;
             $transaction->payment_id = $payment->id;
             $transaction->type = 'deposit';
             $transaction->amount = $amount;
@@ -124,6 +125,7 @@ class NotifyController extends Controller
                 $now = \Carbon\Carbon::now()->toDateTimeString();
 
                 $transaction = new Transaction();
+                $transaction->user_id = $referral->user_id;
                 $transaction->referral_id = $referral->id;
                 $transaction->amount = ($amount*5) / 100;
                 $transaction->type = 'referral';
