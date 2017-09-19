@@ -16,6 +16,9 @@
                                 {{ session('error') }}
                             </div>
                         @endif
+
+                        <div class="well">{{ route('get:referral:code', $user->referral_code) }}</div>
+
                         <form class="form-horizontal" method="POST" action="{{ route('post:refer') }}">
                             {{ csrf_field() }}
 
@@ -41,6 +44,18 @@
                                 </div>
                             </div>
                         </form>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Total referred</th>
+                                <th>Coins the referrals bought</th>
+                                <th>Referral credit</th>
+                            </tr>
+                            <tr>
+                                <td> {{ $referrals->count() }} </td>
+                                <td> {{ $referralUserEarning }} </td>
+                                <td> {{ $referralEarning }} </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

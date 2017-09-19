@@ -37,7 +37,10 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        @auth
+                            <li><a href="{{ route('get:home') }}">Dashboard</a></li>
+                            <li><a href="{{ route('get:refer') }}">Refer</a></li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -71,6 +74,14 @@
                 </div>
             </div>
         </nav>
+
+        @if (session('alert'))
+           <div class="container">
+               <div class="alert alert-success">
+                   {{ session('alert') }}
+               </div>
+           </div>
+        @endif
 
         @yield('content')
     </div>

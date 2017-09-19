@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Domain\Referral\Referral;
+use App\Domain\Transaction\Transaction;
 use App\Mail\ReferFriend;
 use App\User;
 use Illuminate\Http\Request;
@@ -23,7 +24,25 @@ class ReferralController extends Controller
     public function getRefer(Request $request)
     {
         $user = $request->user();
-        return view('referral.index', compact('user'));
+
+        $referrals = Referral::query()
+            ->where('referral_code', $user->referral_code)
+            ->get();
+        //dd($referrals->pluck('referral_id'));
+
+        $referralUserEarning = Transaction::query()
+            ->whereIn('user_id', function($query) use($user) {
+                $query->select('referral_id')->from('referrals')->where('user_id', $user->id)->distinct();
+            })
+            ->where('type', 'deposit')
+            ->sum('amount');
+
+        $referralEarning = Transaction::query()
+            ->where('user_id', $user->id)
+            ->where('type', 'referral')
+            ->sum('amount');
+
+        return view('referral.index', compact('user', 'referrals', 'referralEarning', 'referralUserEarning'));
     }
 
     public function postRefer(Request $request)
@@ -47,7 +66,9 @@ class ReferralController extends Controller
             }
         }
 
-        Mail::to($validEmails)->send(new ReferFriend($user));
+        foreach ($validEmails as $validEmail) {
+            Mail::to($validEmail)->send(new ReferFriend($user));
+        }
 
         if ($validEmails) {
             $emails = implode(', ', $validEmails);
@@ -71,7 +92,7 @@ class ReferralController extends Controller
     public function getReferralCode(Request $request)
     {
         if($request->user()) {
-            return redirect()->route('home');
+            return redirect()->route('get:home');
         }
 
         if(\Session::has('code')){
