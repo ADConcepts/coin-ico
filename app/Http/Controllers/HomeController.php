@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Domain\Transaction\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class HomeController extends Controller
 {
@@ -16,13 +18,28 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function getIndex(Request $request)
     {
-        return view('home');
+        $user = $request->user();
+
+        $total = Transaction::query()
+            ->where('user_id', $user->id)
+            ->sum('amount');
+
+        return view('home', compact('total'));
+    }
+
+    public function getHistory(Request $request)
+    {
+        $user = $request->user();
+        $currencies = array_flip(Config::get('app.currencies'));
+
+        $transactions = Transaction::query()
+            ->where('user_id', $user->id)
+            ->with('payment')
+            ->with('referral')
+            ->paginate();
+
+        return view('history', compact('transactions','currencies'));
     }
 }
