@@ -20,7 +20,18 @@
                                     <td>{{ $transaction->amount }}</td>
                                     <td>{{ $transaction->created_at }}</td>
                                     @if($transaction->type == 'deposit')
-                                        <td>Deposit {{ $transaction->payment->amount }} {{$currencies[$transaction->payment->currency]}}.</td>
+                                        @php
+                                            $currency = strtolower($currencies[$transaction->payment->currency])
+                                        @endphp
+                                        <td>
+                                            @if($currency == 'btc' || $currency == 'ltc')
+                                                <a href="https://live.blockcypher.com/{{ $currency }}/tx/{{ $transaction->payment->currency_transaction_id }}" target="_blank">
+                                                    Deposit {{ $transaction->payment->amount }} {{$currencies[$transaction->payment->currency]}}.
+                                                </a>
+                                            @else
+                                                Deposit {{ $transaction->payment->amount }} {{$currencies[$transaction->payment->currency]}}.
+                                            @endif
+                                        </td>
                                     @elseif($transaction->type == 'referral')
                                         <td>{{ $transaction->amount }} referral credit from "{{$transaction->referral->user->email}}".</td>
                                     @endif
