@@ -18,7 +18,7 @@ class WalletController extends Controller
 
         $user = User::query()
             ->where('wallet_id', $walletId)
-            ->first();
+            ->firstOrFail();
 
         $transactions = Transaction::query()
             ->where('user_id', $user->id)
@@ -29,6 +29,21 @@ class WalletController extends Controller
         $totalBalance = $transactions->sum('amount');
 
         return view('wallet-history', compact('transactions','currencies', 'totalBalance'));
+    }
+
+    public function getTransactionDetail(Request $request)
+    {
+        $transactionHash = $request->route('transaction_hash');
+
+        $currencies = array_flip(Config::get('app.currencies'));
+
+        $transaction = Transaction::query()
+            ->where('transaction_hash', $transactionHash)
+            ->with('payment')
+            ->with('referral')
+            ->firstOrFail();
+
+        return view('transaction-detail', compact('transaction','currencies'));
     }
 
 }

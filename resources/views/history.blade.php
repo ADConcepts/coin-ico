@@ -3,13 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Transaction history</div>
 
                 <div class="panel-body">
                     <table class="table table-bordered">
                         <tr>
+                            <th>Transaction#</th>
                             <th>Amount</th>
                             <th>Date</th>
                             <th>Description</th>
@@ -17,7 +18,8 @@
                         @if($transactions->count() > 0)
                             @foreach($transactions as $transaction)
                                 <tr>
-                                    <td>{{ $transaction->amount }}</td>
+                                    <td><a href="{{ route('get:transaction:transaction_hash', ['transaction_hash' => $transaction->transaction_hash]) }}">{{ $transaction->transaction_hash }}</a></td>
+                                    <td><span class="pull-right">{{ $transaction->amount }}</span></td>
                                     <td>{{ $transaction->created_at }}</td>
                                     @if($transaction->type == 'deposit')
                                         @php

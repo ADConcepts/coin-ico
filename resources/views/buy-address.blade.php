@@ -11,7 +11,7 @@
                         <strong>Address:</strong>
                         {{ $address->address }} <br/>
                         <strong>Expected coins: </strong>
-                        1 {{ ucfirst($currency) }} =>  {{ round($exchangeRate->amount,2) }} $
+                        1 {{ ucfirst($currency) }} =>  {{ round($exchangeRate->amount,2) }} coins
                          <br/>
                         <strong>QR Code:</strong>
                         <img src="{{ $imageData }}" />

@@ -33,6 +33,7 @@ Route::get('/refer', 'ReferralController@getRefer')->name('get:refer');
 Route::post('/refer', 'ReferralController@postRefer')->name('post:refer');
 
 Route::get('/wallet/{wallet_id}', 'WalletController@getWalletHistory')->name('get:wallet:wallet_id');
+Route::get('/transaction/{transaction_hash}', 'WalletController@getTransactionDetail')->name('get:transaction:transaction_hash');
 
 Route::get('/commands', function () {
     Artisan::call('exchange:rates');

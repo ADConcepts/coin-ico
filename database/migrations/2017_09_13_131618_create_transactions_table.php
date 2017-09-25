@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->unsignedInteger('user_id')->nullable();
             $table->unsignedInteger('payment_id')->nullable();
             $table->unsignedInteger('referral_id')->nullable();
+            $table->string('transaction_hash')->unique();
             $table->enum('type', ['deposit', 'referral']);
             $table->decimal('amount', 25, 10)->nullable();
             $table->timestamps();

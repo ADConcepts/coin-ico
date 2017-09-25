@@ -39,6 +39,7 @@
                     <ul class="nav navbar-nav">
                         @auth
                             <li><a href="{{ route('get:home') }}">Dashboard</a></li>
+                            <li><a href="{{ route('get:buy') }}">Buy</a></li>
                             <li><a href="{{ route('get:refer') }}">Refer</a></li>
                         @endauth
                     </ul>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Domain\Referral\Referral;
 use App\Domain\Transaction\Transaction;
 use App\Mail\ReferFriend;
+use App\Notifications\ReferredByFriend;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -66,8 +67,19 @@ class ReferralController extends Controller
             }
         }
 
+        $now = \Carbon\Carbon::now()->toDateTimeString();
         foreach ($validEmails as $validEmail) {
-            Mail::to($validEmail)->send(new ReferFriend($user));
+            $referral = new Referral();
+            $referral->user_id = $user->id;
+            $referral->referral_id = NULL;
+            $referral->email = $validEmail;
+            $referral->referral_code = $user->referral_code;
+            $referral->registered_at = NULL;
+            $referral->first_buy_at = NULL;
+            $referral->created_at = $now;
+            $referral->updated_at = $now;
+            $referral->save();
+            $referral->notify(new ReferredByFriend($user));
         }
 
         if ($validEmails) {
