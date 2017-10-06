@@ -13,43 +13,43 @@
                 </div>
 
                 <div class="panel-body">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Transaction#</th>
-                            <th>Amount</th>
-                            <th>Date</th>
-                            <th>Description</th>
-                        </tr>
-                        @if($transactions->count() > 0)
-                            @foreach($transactions as $transaction)
-                                <tr>
-                                    <td><a href="{{ route('get:transaction:transaction_hash', ['transaction_hash' => $transaction->transaction_hash]) }}">{{ $transaction->transaction_hash }}</a></td>
-                                    <td><span class="pull-right">{{ $transaction->amount }}</span></td>
-                                    <td>{{ $transaction->created_at }}</td>
-                                    @if($transaction->type == 'deposit')
-                                        @php
-                                            $currency = strtolower($currencies[$transaction->payment->currency])
-                                        @endphp
-                                        <td>
-                                            @if($currency == 'btc' || $currency == 'ltc')
-                                                <a href="https://live.blockcypher.com/{{ $currency }}/tx/{{ $transaction->payment->currency_transaction_id }}" target="_blank">
-                                                    Deposit {{ $transaction->payment->amount }} {{$currencies[$transaction->payment->currency]}}.
-                                                </a>
-                                            @else
-                                                Deposit {{ $transaction->payment->amount }} {{$currencies[$transaction->payment->currency]}}.
-                                            @endif
-                                        </td>
-                                    @elseif($transaction->type == 'referral')
-                                        <td>{{ $transaction->amount }} referral credit.</td>
-                                    @endif
-                                </tr>
-                            @endforeach
-                        @endif
+                    <table class="table table-bordered" id="wallet-history">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Transaction#</th>
+                                <th>Amount</th>
+                                {{--<th>Description</th>--}}
+                            </tr>
+                        </thead>
                     </table>
-                    {{ $transactions->links() }}
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('script')
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(function () {
+            $('#wallet-history').DataTable({
+                processing: true,
+                serverSide: true,
+                searching: false,
+                info:false,
+                ajax: '{{ route('get:wallet:data-table', ['wallet_id' => $walletId]) }}',
+                columns: [
+                    {"data":"created_at", "name":"created_at"},
+                    {"data":"transaction_hash", "name":"transaction_hash", "orderable":false, "searchable":false},
+                    {"data":"amount", "name":"amount"}
+                ],
+                "order": [
+                    [0, 'asc']
+                ]
+            });
+        });
+    </script>
 @endsection

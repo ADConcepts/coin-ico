@@ -103,7 +103,7 @@ class AppSeeder extends Seeder
             'user_id' => $referral->user_id,
             'payment_id' => null,
             'referral_id' => $referral->id,
-            'transaction_hash' => str_random(60),
+            'transaction_hash' => $payment->transaction->transaction_hash,
             'type' => 'referral',
             'amount' => ($payment->amount * 5) / 100 * $payment->exchange_rate,
             'created_at' => $payment->created_at,

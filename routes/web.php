@@ -24,6 +24,7 @@ Route::get('/verify/email', 'AccountController@getVerifyEmail')->name('get:user:
 Route::get('/verify/email/link', 'AccountController@getVerifyEmailLink')->name('get:user:verify:email:link');
 
 Route::get('/home', 'HomeController@getIndex')->name('get:home');
+Route::get('/historyData/', 'HomeController@getHistoryDataTable')->name('get:history:data-table');
 Route::get('/history', 'HomeController@getHistory')->name('get:history');
 
 Route::get('/buy', 'BuyController@getBuy')->name('get:buy')->middleware(['auth','verify-email']);
@@ -32,7 +33,9 @@ Route::get('/r/{code}', 'ReferralController@getReferralCode')->name('get:referra
 Route::get('/refer', 'ReferralController@getRefer')->name('get:refer');
 Route::post('/refer', 'ReferralController@postRefer')->name('post:refer');
 
+Route::get('/walletData/{wallet_id}', 'WalletController@getWalletDataTable')->name('get:wallet:data-table');
 Route::get('/wallet/{wallet_id}', 'WalletController@getWalletHistory')->name('get:wallet:wallet_id');
+
 Route::get('/transaction/{transaction_hash}', 'WalletController@getTransactionDetail')->name('get:transaction:transaction_hash');
 
 Route::get('/commands', function () {
