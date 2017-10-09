@@ -6,7 +6,7 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Wallet history
+                    <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $walletId]) }}">{{ $walletId }}</a>
                     <div class="pull-right">
                         Wallet balance: {{ $totalBalance }}
                     </div>
@@ -19,7 +19,6 @@
                                 <th>Date</th>
                                 <th>Transaction#</th>
                                 <th>Amount</th>
-                                {{--<th>Description</th>--}}
                             </tr>
                         </thead>
                     </table>

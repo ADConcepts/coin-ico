@@ -22,11 +22,9 @@ class WalletController extends Controller
 
         $transactions = Transaction::query()
             ->where('user_id', $user->id)
-            ->with('payment')
-            ->with('referral')
-            ->paginate();
+            ->sum('amount');
 
-        $totalBalance = $transactions->sum('amount');
+        $totalBalance = $transactions;
 
         return view('wallet-history', compact( 'totalBalance', 'walletId'));
     }
@@ -65,7 +63,7 @@ class WalletController extends Controller
             throw (new ModelNotFoundException)->setModel(get_class($transactions), []);
         }
 
-        return view('transaction-detail', compact('transactions', 'total'));
+        return view('transaction-detail', compact('transactions', 'total', 'transactionHash'));
     }
 
 }

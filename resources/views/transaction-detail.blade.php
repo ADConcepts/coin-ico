@@ -4,8 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
+            <div><b>Transaction</b> View information about a transaction</div>
             <div class="panel panel-default">
-                <div class="panel-heading">Transaction detail</div>
+                <div class="panel-heading">
+                    <a href="{{ route("get:transaction:transaction_hash", ["transaction_hash" => $transactionHash]) }}">{{ $transactionHash }}</a>
+                </div>
 
                 <div class="panel-body">
                     <div class="col-md-12">
@@ -28,11 +31,11 @@
                                     </div>
                                 </div>
                             @endforeach
-                                <div class="row">
-                                    <div class="col-md-4 col-md-offset-8">
-                                        <h4><span class="label label-primary">{{ number_format($total, 10) }}</span></h4>
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-8">
+                                    <h4><span class="label label-primary">{{ number_format($total, 10, '.', '') }}</span></h4>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
