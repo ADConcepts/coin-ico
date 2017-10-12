@@ -42,3 +42,7 @@ Route::get('/commands', function () {
     Artisan::call('exchange:rates');
     dd(Artisan::output());
 });
+
+Route::get('/frontend/{any}', function (\Illuminate\Http\Request $request) {
+    return view(implode('.', explode('/', $request->path())));
+})->where('any', '.*');

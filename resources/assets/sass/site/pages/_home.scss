@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Home
+   ========================================================================== */
+
+
+.time {
+
+  position: relative;
+  width:100%;
+  z-index: 999;
+
+  .stamp {
+
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    margin-top: 5px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+
+    .ico-top {
+      padding-right: 10px;
+    }
+  }
+  
+  .clock {
+    float: left;
+    font-size: 20px;
+    font-family: $light-font;
+    font-weight: 400;
+  }
+
+  .social {
+    float: right;
+
+    li {
+      font-size: 18px;
+      display: inline-block;
+      padding-left: 15px;
+      a {color: #fff;}
+    }
+
+  }
+
+}
+
+.slide-caption {
+  text-shadow: none;
+  margin: 0 2%;
+  top: 47%;
+  transform: translateY(-30%) !important;
+  }
+
+
+.slide-crypted {
+  text-align: left;
+  float: left;
+  h1 {
+    font-size: 62px;
+    color: #fff;
+    font-family: $normal-font;
+    text-align: left;
+    font-weight: 700;
+  }
+   p{
+     font-size: 26px;
+     line-height: 50px;
+     font-family: $light-font;
+   }
+
+}
+
+.big-ico {
+  text-align: center;
+  float: right;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 25px 40px;
+  border-radius: 10px;
+
+  h1 {
+    font-size: 50px;
+    font-family: $normal-font;
+  }
+
+  .big-time {
+    font-size: 65px;
+    font-family: $light-font;
+  }
+
+  .b-day{
+    padding:0 37px;
+    font-family: $light-font;
+  }
+  .b-hour{}
+  .b-minute{}
+
+}
+
+.btn-slide {
+  margin-top: 5%;
+
+  a{
+  background-color: $primary;
+  border-radius: 5px;
+  color: #fff;
+  width: 242px;
+  height: 58px;
+  font-size: 18px;
+  display: inline-block;
+  padding: 14px;
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.slide-inner > .item {
+  overflow: hidden;
+  height: auto;
+  max-height: 720px;
+}
+
+.slide-inner > .item > img, .slide-inner > .item > a > img {
+  height: auto;
+  width: 100%;
+
+}
+
+.title-1 {
+
+  padding: 70px 0;
+
+  h2 {
+    text-align: center;
+    font-weight: 700;
+  }
+
+}
+
+
+
+
+/* Very Small devices - Size XXS */
+@media (min-width: $screen-xxs) {
+
+}
+
+/* Small devices - Size XS */
+@media (min-width: $screen-xs) {
+
+}
+
+/* Small devices - Size SM */
+@media (min-width: $screen-sm) {
+
+}
+
+/*medium screen landscape*/
+
+@media (min-width: $screen-md) and (orientation: landscape) {
+
+}
+
+/* bigger devices - Size md */
+@media (min-width: $screen-md) {
+
+}
+
+/* large screen - Size lg */
+@media (min-width: $screen-lg) {
+
+}
+
+/*large screen - size xl*/
+@media (min-width: $screen-xl) {
+
+}

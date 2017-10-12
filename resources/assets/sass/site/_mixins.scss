@@ -1,0 +1,81 @@
+// animate mixin
+@mixin animate($property, $duration) {
+  transition: $property $duration ease;
+}
+
+// opacity mixin
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+
+// padding mixins
+@mixin hpad($gutter) {
+  padding-left: $gutter + px;
+  padding-right: $gutter + px;
+}
+
+@mixin vpad($pad) {
+  padding-top: $pad + px;
+  padding-bottom: $pad + px;
+}
+
+
+// margin mixins
+@mixin hmar($mar) {
+  margin-left: $mar + px;
+  margin-right: $mar + px;
+}
+
+@mixin vmar($mar) {
+  margin-top: $mar + px;
+  margin-bottom: $mar + px;
+}
+
+
+// heading mixins
+@mixin heading($color: null) {
+  font-family: $bs-font;
+  font-weight: $nor;
+
+  @if $color != null {
+    color: $color;
+  } @else {
+    color: $red;
+  }
+
+  @include vmar(10);
+}
+
+@mixin orangebtn {
+  color: $white;
+  background-image: -webkit-linear-gradient(0deg, #981c00, #bc2300);
+  background-image: -o-linear-gradient(0deg, #981c00, #bc2300);
+  background-image: linear-gradient(0deg, #981c00, #bc2300);
+  background-color: #a11e00;
+  border-radius: 10px;
+  border: 2px solid $orange-btn;
+}
+
+@mixin black-gradient {
+  background-image: -webkit-linear-gradient(0deg, $black, #1f1f1f);
+  background-image: -o-linear-gradient(0deg, $black, #1f1f1f);
+  background-image: linear-gradient(0deg, $black, #1f1f1f);
+  background-color: $black;
+}
+
+
+// change mixins Bootstrap - to prevent property duplication
+@mixin change-column($col) {
+  width: percentage(($col / $grid-columns));
+}
+
+@mixin change-column-pull($col) {
+  right: percentage(($col / $grid-columns));
+}
+
+@mixin change-column-push($col) {
+  left: percentage(($col / $grid-columns));
+}

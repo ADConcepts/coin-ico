@@ -1,0 +1,34 @@
+
+html {
+  -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font: #{$base-size}/#{$line-height} $normal-font;
+  color: $black;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+form, input, textarea, select {
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, article, footer, address, section { display: block; }
+p { margin: 10px 0; }
+img { border: 0; }
+a {
+  color: $link-color;
+  text-decoration: none;
+  outline: none;
+  @include animate(color,0.5s);
+
+  &:hover {
+    color: darken($link-color, 10%);
+    text-decoration: none;
+  }
+}
+
+.clear { clear: both; }
