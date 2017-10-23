@@ -71,6 +71,7 @@ class AppSeeder extends Seeder
     public function fakeTransaction($payment, $createdAt = null)
     {
         return [
+            'sender_id' => 1,
             'user_id' => $payment->address->user_id,
             'payment_id' => $payment->id,
             'referral_id' => null,
@@ -84,7 +85,7 @@ class AppSeeder extends Seeder
 
     public function fakeReferral($id, $users, $userId = null)
     {
-        $userId = ($userId) ? $userId : $this->faker->numberBetween(1, 200);
+        $userId = ($userId) ? $userId : $this->faker->numberBetween(2, 200);
         return [
             'user_id' => $userId,
             'referral_id' => $id,

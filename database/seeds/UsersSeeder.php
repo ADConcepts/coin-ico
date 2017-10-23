@@ -33,15 +33,15 @@ class UsersSeeder extends AppSeeder
         $users = User::all();
         $addresses = [];
 
-        $addresses[] = $this->fakeAddress(1, 'bitcoin');
-        $addresses[] = $this->fakeAddress(1, 'litecoin');
-        $addresses[] = $this->fakeAddress(1, 'ethereum');
+        $addresses[] = $this->fakeAddress(2, 'bitcoin');
         $addresses[] = $this->fakeAddress(2, 'litecoin');
-        $addresses[] = $this->fakeAddress(3, 'ethereum');
-        $addresses[] = $this->fakeAddress(4, 'bitcoin');
+        $addresses[] = $this->fakeAddress(2, 'ethereum');
+        $addresses[] = $this->fakeAddress(3, 'litecoin');
         $addresses[] = $this->fakeAddress(4, 'ethereum');
+        $addresses[] = $this->fakeAddress(5, 'bitcoin');
+        $addresses[] = $this->fakeAddress(5, 'ethereum');
 
-        $addressUsers = $users->slice(4, 180);
+        $addressUsers = $users->slice(5, 180);
 
         foreach ($addressUsers as $user) {
             $addresses[] = $this->fakeAddress(

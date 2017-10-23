@@ -50,9 +50,9 @@ class UsersReferralSeeder extends AppSeeder
         // 3)
         $referrals = [];
 
-        $referrals[] = $this->fakeReferral(201, $users, 1);
-        $referrals[] = $this->fakeReferral(202, $users, 1);
-        $referrals[] = $this->fakeReferral(203, $users, 1);
+        $referrals[] = $this->fakeReferral(201, $users, 2);
+        $referrals[] = $this->fakeReferral(202, $users, 2);
+        $referrals[] = $this->fakeReferral(203, $users, 2);
         for ($i = 204; $i <= 230; $i += 1) {
             $referrals[] = $this->fakeReferral($i, $users);
         }
