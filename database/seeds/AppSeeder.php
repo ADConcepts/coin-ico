@@ -28,7 +28,7 @@ class AppSeeder extends Seeder
             'name' => "user$id",
             'email' => "user$id@mail.com",
             'password' => static::$password,
-            'wallet_id' => str_random(34),
+            'wallet_id' => ($id == 1) ? '1Admin@ProofOfValueTransfer' : str_random(34),
             'is_admin' => $id == 1,
             'referral_code' => substr(md5(microtime()),rand(0,26),5),
             'created_at' => $createdAt ?: $this->now,
