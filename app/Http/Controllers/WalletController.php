@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Config;
 use App\User;
 use App\Domain\Transaction\Transaction;
 use Yajra\DataTables\DataTables;
@@ -26,7 +25,7 @@ class WalletController extends Controller
 
         $totalBalance = $transactions;
 
-        return view('wallet-history', compact( 'totalBalance', 'walletId'));
+        return view('wallet-history', compact( 'totalBalance', 'walletId', 'user'));
     }
 
     public function getWalletDataTable(Request $request)
@@ -37,8 +36,13 @@ class WalletController extends Controller
             ->where('wallet_id', $walletId)
             ->firstOrFail();
 
-        $transactions = Transaction::query()
-            ->where('user_id', $user->id);
+        if ($user->id == 1 && $user->is_admin) {
+            $transactions = Transaction::query()
+                ->where('sender_id', $user->id);
+        } else {
+            $transactions = Transaction::query()
+                ->where('user_id', $user->id);
+        }
 
         return Datatables::of($transactions)
             ->addColumn('transaction_hash', function ($transaction) {
@@ -63,7 +67,12 @@ class WalletController extends Controller
             throw (new ModelNotFoundException)->setModel(get_class($transactions), []);
         }
 
-        return view('transaction-detail', compact('transactions', 'total', 'transactionHash'));
+        $adminUser = User::query()
+            ->where('is_admin', 1)
+            ->where('id', 1)
+            ->firstOrFail();
+
+        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser'));
     }
 
 }

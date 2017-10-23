@@ -8,7 +8,9 @@
                 <div class="panel-heading">
                     <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $walletId]) }}">{{ $walletId }}</a>
                     <div class="pull-right">
-                        Wallet balance: {{ $totalBalance }}
+                        @if ($user && $user->id != 1 && !$user->is_admin)
+                            Wallet balance: {{ $totalBalance }}
+                        @endif
                     </div>
                 </div>
 

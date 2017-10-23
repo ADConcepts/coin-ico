@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             <div><b>Transaction</b> View information about a transaction</div>
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -12,17 +12,19 @@
 
                 <div class="panel-body">
                     <div class="col-md-12">
-                        <div class="col-md-3">
-                            Admin Wallet id
+                        <div class="col-md-4">
+                            <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $adminUser->wallet_id]) }}" target="_blank" title="{{ $adminUser->wallet_id }}">
+                                {{ $adminUser->wallet_id }}
+                            </a>
                         </div>
                         <div class="col-md-1">
                             =>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-7">
                             @foreach ($transactions as $transaction)
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $transaction->user->wallet_id]) }}" target="_blank">
+                                        <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $transaction->user->wallet_id]) }}" target="_blank" title="{{ $transaction->user->wallet_id }}">
                                             {{ $transaction->user->wallet_id }}
                                         </a>
                                     </div>
