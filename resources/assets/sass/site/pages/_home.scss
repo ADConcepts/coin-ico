@@ -5,7 +5,7 @@
 .time {
 
   position: relative;
-  width:100%;
+  width: 100%;
   z-index: 999;
 
   .stamp {
@@ -21,7 +21,7 @@
       padding-right: 10px;
     }
   }
-  
+
   .clock {
     float: none;
     font-size: 14px;
@@ -37,8 +37,10 @@
     li {
       font-size: 14px;
       display: inline-block;
-      padding:0 5px;
-      a {color: #fff;}
+      padding: 0 5px;
+      a {
+        color: #fff;
+      }
     }
 
   }
@@ -53,7 +55,7 @@
   left: 0;
   right: 0;
 
-  }
+}
 
 .slide-crypted {
   text-align: left;
@@ -65,11 +67,11 @@
     text-align: left;
     font-weight: 700;
   }
-   p{
-     font-size: 14px;
-     line-height: normal;
-     font-family: $light-font;
-   }
+  p {
+    font-size: 14px;
+    line-height: normal;
+    font-family: $light-font;
+  }
 
 }
 
@@ -91,32 +93,34 @@
     font-weight: 300;
   }
 
-  .b-day{
-    padding:0 2px;
+  .b-day {
+    padding: 0 2px;
     font-family: $light-font;
     font-size: 12px;
   }
-  .b-hour{}
-  .b-minute{}
+  .b-hour {
+  }
+  .b-minute {
+  }
 
 }
 
 .btn-slide {
   margin-top: 9%;
 
-  a{
-  background-color: $primary;
-  border-radius: 5px;
-  color: #fff;
-  width: 190px;
-  height: auto;
-  font-size: 13px;
-  display: inline-block;
-  padding: 11px;
-  font-family: $normal-font;
-  font-weight: bold;
-  line-height: normal;
-    
+  a {
+    background-color: $primary;
+    border-radius: 5px;
+    color: #fff;
+    width: 190px;
+    height: auto;
+    font-size: 13px;
+    display: inline-block;
+    padding: 11px;
+    font-family: $normal-font;
+    font-weight: bold;
+    line-height: normal;
+
     &:hover {
       color: #fff;
     }
@@ -130,9 +134,9 @@
 }
 
 .slide-inner > .item > img, .slide-inner > .item > a > img {
-    height: 310px;
-    width: auto;
-    max-width: none;
+  height: 310px;
+  width: auto;
+  max-width: none;
 }
 
 .title-1 {
@@ -156,8 +160,8 @@
 
     h2 {
       font-family: $normal-font;
-      font-weight:bold;
-      color:$primary;
+      font-weight: bold;
+      color: $primary;
       font-size: 20px;
     }
 
@@ -202,12 +206,15 @@
 
   }
 
-  .bg { position: relative; min-height: 387px;}
+  .bg {
+    position: relative;
+    min-height: 387px;
+  }
 
   .ford {
     position: absolute;
     bottom: 0;
-    right:0;
+    right: 0;
     img {
       width: 175px;
     }
@@ -275,7 +282,7 @@
     position: relative;
 
     &:before {
-      content:"";
+      content: "";
       position: absolute;
       background: url("/images/transparent-logo.png") no-repeat;
       bottom: 0;
@@ -287,7 +294,6 @@
       background-size: 60px 70px;
     }
   }
-
 
 }
 
@@ -327,11 +333,10 @@
       color: $grey-black;
       font-size: 16px;
       font-family: $light-font;
-      line-height:normal;
+      line-height: normal;
     }
 
   }
-
 
   .right-img {
     display: inline-block;
@@ -356,7 +361,7 @@
       color: $grey-black;
       font-size: 24px;
       font-family: $light-font;
-      line-height:normal;
+      line-height: normal;
     }
 
   }
@@ -400,13 +405,12 @@
       color: $grey-black;
       font-size: 16px;
       font-family: $light-font;
-      line-height:normal;
+      line-height: normal;
     }
 
   }
 
 }
-
 
 .timeline {
 
@@ -416,25 +420,25 @@
 .time-title {
 
   h1 {
-  font-size: 24px;
-  text-align: center;
-  font-weight: 700;
-  color: #393939;
-  padding-bottom: 30px;
-  position: relative;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    color: #393939;
+    padding-bottom: 30px;
+    position: relative;
 
-  &:before {
-    content: "";
-    position: absolute;
-    background: url(/images/transparent-logo.png) no-repeat;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: 70px;
-    margin: 0 auto;
-    background-size: 60px 70px;
-  }
+    &:before {
+      content: "";
+      position: absolute;
+      background: url(/images/transparent-logo.png) no-repeat;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      width: 70px;
+      margin: 0 auto;
+      background-size: 60px 70px;
+    }
   }
 
 }
@@ -452,6 +456,10 @@
 
     button {
       border-radius: 50px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
   }
@@ -461,6 +469,9 @@
 
     button {
       border-radius: 50px;
+      &:focus {
+        outline: none;
+      }
     }
 
   }
@@ -552,7 +563,7 @@
 .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
   margin-left: 0;
   margin-right: 24px;
-  border-right:1px solid $primary;
+  border-right: 1px solid $primary;
   border-left: none;
   padding-right: 5px;
   text-align: right;
@@ -607,23 +618,14 @@
 }
 
 .time-active {
-  color: $primary;}
+  color: $primary;
+}
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
   display: block;
   font-size: 18px;
   font-family: $normal-font;
 }
-
-/*.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:first-child {
-  font-size: 15px;
-  font-weight: bold;
-
-}*/
-
-/*.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:last-child {
-  font-size: 12px;
-}*/
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
   background: #e5e0dc;
@@ -654,10 +656,14 @@
   clear: both;
   list-style: none;
 
-  &.active
-  {
-    .timeline-icon { background-color: $primary; box-shadow: none;}
-    .timeline-time { color: $primary;}
+  &.active {
+    .timeline-icon {
+      background-color: $primary;
+      box-shadow: none;
+    }
+    .timeline-time {
+      color: $primary;
+    }
   }
 }
 
@@ -671,24 +677,10 @@
   border-left: 1px solid $primary;
 }
 
-/*.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 9px 9px 9px 0;
-  border-color: transparent #f5f5f6 transparent transparent;
-  left: 0;
-  top: 10px;
-  margin-left: -9px;
-}*/
-
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2,
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
   color: #737881;
-  font-family:$light-font;
+  font-family: $light-font;
   font-size: 13px;
   margin: 0;
   line-height: 1.428571429;
@@ -714,6 +706,8 @@
   -ms-filter: alpha(opacity=60);
   filter: alpha(opacity=60);
 }
+
+/*-- #timeline --*/
 
 .team-title {
   padding: 50px 0 0 0;
@@ -741,24 +735,36 @@
   }
 
 }
-.team-inner-title { padding-top: 30px;}
+
+.team-inner-title {
+  padding-top: 30px;
+}
+
 .member {
   padding-bottom: 30px;
-  img { margin: 0 auto; width: 150px;}
-  h3 { font-size: 22px;
+  img {
+    margin: 0 auto;
+    width: 150px;
+  }
+  h3 {
+    font-size: 22px;
     font-weight: bold;
     font-family: $normal-font;
     text-align: center;
     padding-top: 15px;
-    padding-bottom: 15px;}
+    padding-bottom: 15px;
+  }
 
-  small { display: inline-block;
+  small {
+    display: inline-block;
     width: 100%;
     font-size: 14px;
     font-family: $light-font;
-    text-align: center;}
+    text-align: center;
+  }
 
-  p { font-size: 16px;
+  p {
+    font-size: 16px;
     font-family: $light-font;
     text-align: justify;
     padding-top: 5px;
@@ -804,8 +810,8 @@
     display: inline-block;
 
     &:last-child {
-    padding-right: 0;
-  }
+      padding-right: 0;
+    }
 
     a {
       img {
@@ -840,18 +846,23 @@
   }
 }
 
-footer { padding-bottom: 20px;}
+footer {
+  padding-bottom: 20px;
+}
 
-.footer { }
+.footer {
+}
 
 .flogo {
   padding-left: 0;
   padding-bottom: 20px;
 
-  img{ padding-top: 20px;}
+  img {
+    padding-top: 20px;
+  }
 
   p {
-     font-family: $base-font;
+    font-family: $base-font;
     font-size: 16px;
     color: #4d4d4d;
     font-weight: 300;
@@ -867,25 +878,25 @@ footer { padding-bottom: 20px;}
     text-transform: uppercase;
   }
 
-ul {
+  ul {
 
-  padding-top: 10px;
-  padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
 
-  li {
+    li {
 
-    list-style: none;
+      list-style: none;
 
-    a {
-      text-decoration: none;
-      color: #4d4d4d;
-      font-size: 16px;
-      font-family: $base-font;
-      font-weight: 300;
+      a {
+        text-decoration: none;
+        color: #4d4d4d;
+        font-size: 16px;
+        font-family: $base-font;
+        font-weight: 300;
+      }
+
     }
-
   }
-}
 
 }
 
@@ -936,7 +947,9 @@ ul {
 
       list-style: none;
 
-      i { width: 25px;}
+      i {
+        width: 25px;
+      }
 
       a {
         text-decoration: none;
@@ -951,10 +964,127 @@ ul {
 
 }
 
-.line { border-top:1px solid rgba(54, 54, 54, 0.20);}
+.line {
+  border-top: 1px solid rgba(54, 54, 54, 0.20);
+}
 
 /* Very Small devices - Size XXS */
 @media (min-width: $screen-xxs) {
+
+  .time {
+
+    position: relative;
+    width: 100%;
+    z-index: 999;
+
+    .stamp {
+
+      position: absolute;
+      width: 100%;
+      margin-top: 5px;
+      padding-bottom: 5px;
+
+      .ico-top {
+        padding-right: 10px;
+      }
+    }
+
+    .clock {
+      float: left;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .social {
+      float: right;
+
+      li {
+        font-size: 14px;
+        display: inline-block;
+        padding-left: 15px;
+        a {
+          color: #fff;
+        }
+      }
+
+    }
+
+  }
+
+  .slide-caption {
+    margin: 0 2%;
+    top: 40%;
+    transform: translateY(-30%) !important;
+    left: 4%;
+    right: 4%;
+  }
+
+  .slide-crypted {
+    text-align: left;
+    float: left;
+
+    h1 {
+      font-size: 24px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: normal;
+    }
+
+  }
+
+  .big-ico {
+    text-align: center;
+    float: right;
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    .big-time {
+      font-size: 35px;
+      font-weight: 300;
+    }
+
+    .b-day {
+      padding: 0 5px;
+      font-size: 14px;
+    }
+
+  }
+
+  .btn-slide {
+    margin-top: 9%;
+
+    a {
+      width: auto;
+      height: auto;
+      font-size: 14px;
+      display: inline-block;
+      padding: 12px;
+      font-weight: bold;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .slide-inner > .item {
+    overflow: hidden;
+    height: auto;
+    max-height: 720px;
+  }
+
+  .slide-inner > .item > img, .slide-inner > .item > a > img {
+    height: 350px;
+    width: auto;
+  }
 
 }
 
@@ -964,7 +1094,7 @@ ul {
   .time {
 
     position: relative;
-    width:100%;
+    width: 100%;
     z-index: 999;
 
     .stamp {
@@ -993,7 +1123,9 @@ ul {
         font-size: 18px;
         display: inline-block;
         padding-left: 15px;
-        a {color: #fff;}
+        a {
+          color: #fff;
+        }
       }
 
     }
@@ -1005,7 +1137,7 @@ ul {
     top: 40%;
     transform: translateY(-30%) !important;
     left: 10%;
-    right:10%;
+    right: 10%;
   }
 
   .slide-crypted {
@@ -1018,7 +1150,7 @@ ul {
       font-weight: 700;
     }
 
-    p{
+    p {
       font-size: 16px;
       line-height: normal;
     }
@@ -1040,8 +1172,8 @@ ul {
       font-weight: 300;
     }
 
-    .b-day{
-      padding:0 5px;
+    .b-day {
+      padding: 0 5px;
       font-size: 14px;
     }
 
@@ -1050,7 +1182,7 @@ ul {
   .btn-slide {
     margin-top: 9%;
 
-    a{
+    a {
       width: auto;
       height: auto;
       font-size: 14px;
@@ -1129,7 +1261,7 @@ ul {
       position: relative;
 
       &:before {
-        content:"";
+        content: "";
         position: absolute;
         background: url("/images/transparent-logo.png") no-repeat;
         bottom: 0;
@@ -1140,7 +1272,6 @@ ul {
         margin: 0 auto;
       }
     }
-
 
   }
 
@@ -1180,7 +1311,7 @@ ul {
         color: $grey-black;
         font-size: 18px;
         font-family: $light-font;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -1214,7 +1345,7 @@ ul {
         color: $grey-black;
         font-size: 24px;
         font-family: $light-font;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -1250,7 +1381,7 @@ ul {
 
       p {
         font-size: 18px;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -1295,7 +1426,6 @@ ul {
     }
   }
 
-
 }
 
 @media (min-width: $screen-xxs) and (max-width: $screen-sm) {
@@ -1304,9 +1434,11 @@ ul {
     width: 33.33%;
     float: left;
 
-    &:first-child { width: 100%; margin: 0px auto;}
+    &:first-child {
+      width: 100%;
+      margin: 0px auto;
+    }
   }
-
 
 }
 
@@ -1316,7 +1448,7 @@ ul {
   .time {
 
     position: relative;
-    width:100%;
+    width: 100%;
     z-index: 999;
 
     .stamp {
@@ -1345,7 +1477,9 @@ ul {
         font-size: 18px;
         display: inline-block;
         padding-left: 15px;
-        a {color: #fff;}
+        a {
+          color: #fff;
+        }
       }
 
     }
@@ -1357,7 +1491,7 @@ ul {
     top: 35%;
     transform: translateY(-30%) !important;
     left: 15%;
-    right:15%;
+    right: 15%;
   }
 
   .slide-crypted {
@@ -1370,7 +1504,7 @@ ul {
       font-weight: 700;
     }
 
-    p{
+    p {
       font-size: 16px;
       line-height: normal;
     }
@@ -1392,8 +1526,8 @@ ul {
       font-weight: 300;
     }
 
-    .b-day{
-      padding:0 5px;
+    .b-day {
+      padding: 0 5px;
       font-size: 14px;
     }
 
@@ -1402,7 +1536,7 @@ ul {
   .btn-slide {
     margin-top: 5%;
 
-    a{
+    a {
       width: auto;
       height: auto;
       font-size: 14px;
@@ -1442,7 +1576,7 @@ ul {
       margin: 10% 0 0 25%;
     }
 
-   .thomas img {
+    .thomas img {
       width: 215px;
     }
 
@@ -1481,7 +1615,7 @@ ul {
       position: relative;
 
       &:before {
-        content:"";
+        content: "";
         position: absolute;
         background: url("/images/transparent-logo.png") no-repeat;
         bottom: 0;
@@ -1492,7 +1626,6 @@ ul {
         margin: 0 auto;
       }
     }
-
 
   }
 
@@ -1532,7 +1665,7 @@ ul {
         color: $grey-black;
         font-size: 18px;
         font-family: $light-font;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -1566,7 +1699,7 @@ ul {
         color: $grey-black;
         font-size: 24px;
         font-family: $light-font;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -1602,7 +1735,7 @@ ul {
 
       p {
         font-size: 18px;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -1794,10 +1927,10 @@ ul {
       text-align: right;
     }
 
-  .bill-words {
-    width: 75%;
-    margin: 13% 0 0 20%;
-  }
+    .bill-words {
+      width: 75%;
+      margin: 13% 0 0 20%;
+    }
   }
 
   .timeline-centered .timeline-entry .timeline-entry-inner {
@@ -1833,7 +1966,6 @@ ul {
     }
   }
 
-
 }
 
 /* large screen - Size lg */
@@ -1847,7 +1979,7 @@ ul {
   .time {
 
     position: relative;
-    width:100%;
+    width: 100%;
     z-index: 999;
 
     .stamp {
@@ -1876,7 +2008,9 @@ ul {
         font-size: 22px;
         display: inline-block;
         padding-left: 15px;
-        a {color: #fff;}
+        a {
+          color: #fff;
+        }
       }
 
     }
@@ -1885,23 +2019,23 @@ ul {
 
   .slide-caption {
     text-shadow: none;
-    margin: 0 2%;
-    top: 47%;
+    margin: 0 0;
+    top: 40%;
     transform: translateY(-30%) !important;
-    left: 20%;
-    right:20%;
+    left: 15%;
+    right: 15%;
   }
 
   .slide-crypted {
     text-align: left;
     float: left;
     h1 {
-      font-size: 55px;
+      font-size: 50px;
       text-align: left;
       font-weight: 700;
     }
-    p{
-      font-size: 26px;
+    p {
+      font-size: 20px;
       line-height: 50px;
     }
 
@@ -1914,26 +2048,28 @@ ul {
     border-radius: 10px;
 
     h1 {
-      font-size: 50px;
+      font-size: 45px;
     }
 
     .big-time {
-      font-size: 85px;
+      font-size: 75px;
       font-weight: 300;
     }
 
-    .b-day{
-      padding:0 37px;
+    .b-day {
+      padding: 0 37px;
     }
-    .b-hour{}
-    .b-minute{}
+    .b-hour {
+    }
+    .b-minute {
+    }
 
   }
 
   .btn-slide {
-    margin-top: 5%;
+    margin-top: 9%;
 
-    a{
+    a {
       border-radius: 5px;
       width: 242px;
       height: 58px;
@@ -1979,7 +2115,7 @@ ul {
       padding: 50px 0 0 0;
 
       h2 {
-        font-weight:bold;
+        font-weight: bold;
         font-size: 30px;
       }
 
@@ -2021,12 +2157,15 @@ ul {
 
     }
 
-    .bg { position: relative; min-height: 387px;}
+    .bg {
+      position: relative;
+      min-height: 387px;
+    }
 
     .ford {
       position: absolute;
       bottom: 0;
-      right:0;
+      right: 0;
       img {
         width: 325px;
       }
@@ -2094,7 +2233,7 @@ ul {
       position: relative;
 
       &:before {
-        content:"";
+        content: "";
         position: absolute;
         background: url("/images/transparent-logo.png") no-repeat;
         bottom: 0;
@@ -2105,7 +2244,6 @@ ul {
         margin: 0 auto;
       }
     }
-
 
   }
 
@@ -2142,7 +2280,7 @@ ul {
 
       p {
         font-size: 24px;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -2173,7 +2311,7 @@ ul {
 
       p {
         font-size: 24px;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -2212,7 +2350,7 @@ ul {
         color: $grey-black;
         font-size: 24px;
         font-family: $light-font;
-        line-height:normal;
+        line-height: normal;
       }
 
     }
@@ -2265,7 +2403,7 @@ ul {
   .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
     margin-left: 0;
     margin-right: 40px;
-    border-right:1px solid $primary;
+    border-right: 1px solid $primary;
     border-left: none;
     padding-right: 15px;
     text-align: right;
@@ -2300,7 +2438,8 @@ ul {
   }
 
   .time-active {
-    color: $primary;}
+    color: $primary;
+  }
 
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
     display: block;
@@ -2323,7 +2462,7 @@ ul {
     font-size: 18px;
   }
 
-/*-- #timeline*/
+  /*-- #timeline*/
 
   .team-title {
     padding: 70px 0;
@@ -2351,14 +2490,38 @@ ul {
 
   }
 
-  .team-inner-title { padding-top: 30px;}
+  .team-inner-title {
+    padding-top: 30px;
+  }
 
   .member {
     padding-bottom: 0;
-    img { margin: 0 auto; width: auto;}
-    h3 { font-size: 24px; font-weight: bold; font-family: $normal-font; text-align: center; padding-top: 35px; padding-bottom: 15px;}
-    small { display: inline-block; width: 100%; font-size: 22px; font-family: $light-font; text-align: center;}
-    p { font-size: 20px; font-family: $light-font; text-align: justify; padding-top: 35px; line-height: 40px;}
+    img {
+      margin: 0 auto;
+      width: 70%;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: $normal-font;
+      text-align: center;
+      padding-top: 35px;
+      padding-bottom: 15px;
+    }
+    small {
+      display: inline-block;
+      width: 100%;
+      font-size: 22px;
+      font-family: $light-font;
+      text-align: center;
+    }
+    p {
+      font-size: 20px;
+      font-family: $light-font;
+      text-align: justify;
+      padding-top: 35px;
+      line-height: 40px;
+    }
 
   }
 
@@ -2427,7 +2590,7 @@ ul {
       a {
 
         img {
-            width: auto;
+          width: auto;
         }
       }
 
@@ -2438,7 +2601,9 @@ ul {
     padding-left: 50px;
     padding-bottom: 0;
 
-    img{ padding-top: 20px;}
+    img {
+      padding-top: 20px;
+    }
 
     p {
       font-family: $base-font;
@@ -2526,7 +2691,9 @@ ul {
 
         list-style: none;
 
-        i { width: 25px;}
+        i {
+          width: 25px;
+        }
 
         a {
           text-decoration: none;
@@ -2541,5 +2708,209 @@ ul {
 
   }
 
+}
+
+/*large screen - size xxl*/
+@media (min-width: $screen-xxl) {
+
+  .time {
+
+    position: relative;
+    width: 100%;
+    z-index: 999;
+
+    .stamp {
+
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      margin-top: 5px;
+      padding-bottom: 5px;
+
+      .ico-top {
+        padding-right: 10px;
+      }
+    }
+
+    .clock {
+      float: left;
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .social {
+      float: right;
+
+      li {
+        font-size: 22px;
+        display: inline-block;
+        padding-left: 15px;
+        a {
+          color: #fff;
+        }
+      }
+
+    }
+
+  }
+
+  .slide-caption {
+    text-shadow: none;
+    margin: 0 2%;
+    top: 47%;
+    transform: translateY(-30%) !important;
+    left: 20%;
+    right: 20%;
+  }
+
+  .slide-crypted {
+    text-align: left;
+    float: left;
+    h1 {
+      font-size: 55px;
+      text-align: left;
+      font-weight: 700;
+    }
+    p {
+      font-size: 26px;
+      line-height: 50px;
+    }
+
+  }
+
+  .big-ico {
+    text-align: center;
+    float: right;
+    padding: 25px 40px;
+    border-radius: 10px;
+
+    h1 {
+      font-size: 50px;
+    }
+
+    .big-time {
+      font-size: 85px;
+      font-weight: 300;
+    }
+
+    .b-day {
+      padding: 0 37px;
+    }
+    .b-hour {
+    }
+    .b-minute {
+    }
+
+  }
+
+  .btn-slide {
+    margin-top: 5%;
+
+    a {
+      border-radius: 5px;
+      width: 242px;
+      height: 58px;
+      font-size: 18px;
+      display: inline-block;
+      padding: 14px;
+      font-weight: bold;
+      line-height: 30px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .title-1 {
+
+    font-size: 36px;
+    padding: 70px 0;
+    max-width: 767px;
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      padding-bottom: 10px;
+      font-size: 36px;
+    }
+
+    .part {
+
+      padding: 50px 0 0 0;
+
+      h2 {
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+
+    }
+
+  }
+
+  .planned {
+
+    width: 767px;
+    margin: 0 auto;
+    padding: 70px 0;
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      font-weight: 700;
+      color: $grey-black;
+      padding-bottom: 30px;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url("/images/transparent-logo.png") no-repeat;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 107px;
+        width: 100px;
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  .member {
+    padding-bottom: 0;
+    img {
+      margin: 0 auto;
+      width: auto;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: $normal-font;
+      text-align: center;
+      padding-top: 35px;
+      padding-bottom: 15px;
+    }
+    small {
+      display: inline-block;
+      width: 100%;
+      font-size: 22px;
+      font-family: $light-font;
+      text-align: center;
+    }
+    p {
+      font-size: 20px;
+      font-family: $light-font;
+      text-align: justify;
+      padding-top: 35px;
+      line-height: 40px;
+    }
+
+  }
 
 }
