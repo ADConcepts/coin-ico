@@ -1,0 +1,793 @@
+/* ==========================================================================
+   Login
+   ========================================================================== */
+
+.login-main  {
+
+  background-color: #fff;
+  min-height: 100vh;
+
+}
+
+.login-left  {
+  background-image: url("/images/loginbg.png");
+  background-size: cover;
+
+  .left-vpad {
+    padding: 50px 0;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 185px;
+  }
+
+  h1 {
+    font-family: $normal-font;
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: url("/images/logo.png") no-repeat;
+      bottom: 0;
+      top:6%;
+      left: -110%;
+      right: 0;
+      height: 50px;
+      width: 42px;
+      margin: 0 auto;
+      background-size: 25px;
+    }
+
+  }
+
+  P {
+      font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    position: relative;
+    left: 0;
+    font-family: $light-font;
+  }
+
+}
+
+.login-right {
+  padding: 20px 15px;
+
+  .form-login {
+
+    width: 100%;
+    margin: 0 auto;
+
+  .login-form {
+
+      margin-bottom: 30px;
+    }
+
+  h1 {
+
+    font-size: 32px;
+    font-family: $normal-font;
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+
+  .forgot {
+    display: inline-block;
+    width: 100%;
+
+      a {
+        text-decoration: none;
+        float: left;
+        color: $primary;
+        font-size: 20px;
+        font-family: $normal-font;
+        font-weight: 400;
+        padding-top: 10px;
+      }
+
+      button {
+        float: right;
+        font-family: $normal-font;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: $primary;
+        border-radius: 3px;
+        width: auto;
+        height: auto;
+        color: #fff;
+        letter-spacing: 1px;
+      }
+
+    }
+
+  .fg {
+      margin-bottom: 30px;
+
+      label {
+
+        font-size: 23px;
+        font-family: $normal-font;
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+
+    }
+
+  .fc {
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(231, 231, 231);
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        height: 60px;
+        width: 100%;
+        font-family: $normal-font;
+        font-weight: 400;
+        font-size: 18px;
+        color: #5d5d5d;
+        padding-left: 15px;
+
+
+      &:focus {
+        border: none;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.07);
+
+      }
+    }
+
+}
+
+  .line-form {
+
+    clear: both;
+    display: inline-block;
+    width: 100%;
+
+    hr {
+        border-top:1px solid #d7d7d7;
+
+    }
+
+  }
+
+  .create-account {
+    display: inline-block;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      float: left;
+      color: #000000;
+      font-size: 18px;
+      font-family: $normal-font;
+      font-weight: 400;
+      padding-top: 10px;
+    }
+
+    .reg {
+      float: right;
+      font-family: $normal-font;
+      font-weight: bold;
+      font-size: 20px;
+      background-color: #fff;
+      border: 1px solid rgb(195, 195, 195);
+      border-radius: 3px;
+      width: auto;
+      height: auto;
+      color: #000000;
+      letter-spacing: 1px;
+      padding: 10px;
+
+    }
+
+  }
+
+}
+
+
+
+/* Very Small devices - Size XXS */
+@media (min-width: $screen-xxs) {
+
+}
+
+/* Small devices - Size XS */
+@media (min-width: $screen-xs) {
+
+}
+
+@media (min-width: $screen-xxs) and (max-width: $screen-sm) {
+
+  .login-right {
+    padding: 0 15px;
+    min-height: 100vh;
+
+    .form-login {
+
+      width: 100%;
+      max-width: 70%;
+      margin: 0 auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+
+      .login-form {
+
+        margin-bottom: 30px;
+      }
+
+      h1 {
+
+        font-size: 32px;
+        font-family: $normal-font;
+        padding-bottom: 30px;
+        padding-top: 20px;
+      }
+
+      .forgot {
+        display: inline-block;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          float: left;
+          color: $primary;
+          font-size: 20px;
+          font-family: $normal-font;
+          font-weight: 400;
+          padding-top: 10px;
+        }
+
+        button {
+          float: right;
+          font-family: $normal-font;
+          font-weight: bold;
+          font-size: 20px;
+          background-color: $primary;
+          border-radius: 3px;
+          width: auto;
+          height: auto;
+          color: #fff;
+          letter-spacing: 1px;
+        }
+
+      }
+
+      .fg {
+        margin-bottom: 30px;
+
+        label {
+
+          font-size: 23px;
+          font-family: $normal-font;
+          font-weight: 400;
+          margin-bottom: 15px;
+        }
+
+      }
+
+      .fc {
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(231, 231, 231);
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        height: 60px;
+        font-family: $normal-font;
+        font-weight: 400;
+        font-size: 23px;
+        color: #5d5d5d;
+        padding-left: 15px;
+
+
+        &:focus {
+          border: none;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.07);
+
+        }
+      }
+
+    }
+
+    .line-form {
+
+      clear: both;
+      display: inline-block;
+      width: 100%;
+
+      hr {
+        border-top:1px solid #d7d7d7;
+
+      }
+
+    }
+
+    .create-account {
+      display: inline-block;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        float: left;
+        color: #000000;
+        font-size: 20px;
+        font-family: $normal-font;
+        font-weight: 400;
+        padding-top: 10px;
+      }
+
+      .reg {
+        float: right;
+        font-family: $normal-font;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #fff;
+        border: 1px solid rgb(195, 195, 195);
+        border-radius: 3px;
+        width: auto;
+        height: auto;
+        color: #000000;
+        letter-spacing: 1px;
+        padding: 10px;
+
+      }
+
+    }
+
+  }
+
+}
+
+/* Small devices - Size SM */
+@media (min-width: $screen-sm) {
+
+
+
+  .login-left  {
+    background-image: url("/images/loginbg.png");
+    background-size: cover;
+
+    .left-vpad {
+      padding: 100px 0;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-family: $normal-font;
+      font-weight: bold;
+      font-size: 35px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url("/images/logo.png") no-repeat;
+        bottom: 0;
+        top:6%;
+        left: -68%;
+        right: 0;
+        height: 50px;
+        width: 42px;
+        margin: 0 auto;
+        background-size: 25px;
+      }
+
+    }
+
+    P {
+      font-size: 22px;
+      line-height: 30px;
+      color: #fff;
+      position: relative;
+      left: 20%;
+      font-family: $light-font;
+    }
+
+  }
+
+  .login-right {
+    padding: 0 15px;
+    min-height: 100vh;
+
+    .form-login {
+
+      width: 100%;
+      max-width: 70%;
+      margin: 0 auto;
+      padding-top: 50px;
+
+      .login-form {
+
+        margin-bottom: 30px;
+      }
+
+      h1 {
+
+        font-size: 32px;
+        font-family: $normal-font;
+        padding-bottom: 30px;
+        padding-top: 20px;
+      }
+
+      .forgot {
+        display: inline-block;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          float: left;
+          color: $primary;
+          font-size: 20px;
+          font-family: $normal-font;
+          font-weight: 400;
+          padding-top: 10px;
+        }
+
+        button {
+          float: right;
+          font-family: $normal-font;
+          font-weight: bold;
+          font-size: 20px;
+          background-color: $primary;
+          border-radius: 3px;
+          width: auto;
+          height: auto;
+          color: #fff;
+          letter-spacing: 1px;
+        }
+
+      }
+
+      .fg {
+        margin-bottom: 30px;
+
+        label {
+
+          font-size: 23px;
+          font-family: $normal-font;
+          font-weight: 400;
+          margin-bottom: 15px;
+        }
+
+      }
+
+      .fc {
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(231, 231, 231);
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        height: 60px;
+        font-family: $normal-font;
+        font-weight: 400;
+        font-size: 23px;
+        color: #5d5d5d;
+        padding-left: 15px;
+
+
+        &:focus {
+          border: none;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.07);
+
+        }
+      }
+
+    }
+
+    .line-form {
+
+      clear: both;
+      display: inline-block;
+      width: 100%;
+
+      hr {
+        border-top:1px solid #d7d7d7;
+
+      }
+
+    }
+
+    .create-account {
+      display: inline-block;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        float: left;
+        color: #000000;
+        font-size: 20px;
+        font-family: $normal-font;
+        font-weight: 400;
+        padding-top: 10px;
+      }
+
+      .reg {
+        float: right;
+        font-family: $normal-font;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #fff;
+        border: 1px solid rgb(195, 195, 195);
+        border-radius: 3px;
+        width: auto;
+        height: auto;
+        color: #000000;
+        letter-spacing: 1px;
+        padding: 10px;
+
+      }
+
+    }
+
+  }
+
+
+
+}
+
+/*medium screen landscape*/
+
+@media (min-width: $screen-md) and (orientation: landscape) {
+
+}
+
+/* bigger devices - Size md */
+@media (min-width: $screen-md) {
+  .login-main  {
+
+    min-height: 100vh;
+    display: table;
+    width: 100%;
+
+  }
+
+  .login-left  {
+    width: 50%;
+    min-height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
+
+    .left-vpad {
+      padding:0;
+    }
+
+    h1 {
+
+      font-size: 36px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url("/images/logo.png") no-repeat;
+        bottom: 0;
+        top:6%;
+        left: -77%;
+        right: 0;
+        height: 50px;
+        width: 42px;
+        margin: 0 auto;
+      }
+
+    }
+
+    P {
+      font-size: 22px;
+      line-height: 36px;
+      color: #fff;
+      position: relative;
+      left: 20%;
+      font-family: $light-font;
+    }
+
+  }
+
+  .login-right {
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+
+    .form-login {
+
+      width: 100%;
+      max-width: 70%;
+      margin: 0 auto;
+
+      .login-form {
+
+        margin-bottom: 30px;
+      }
+
+      h1 {
+
+        font-size: 42px;
+        font-family: $normal-font;
+        padding-bottom: 50px;
+        padding-top: 0;
+      }
+
+      .forgot {
+        display: inline-block;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          float: left;
+          color: $primary;
+          font-size: 20px;
+          font-family: $normal-font;
+          font-weight: 400;
+          padding-top: 10px;
+        }
+
+        button {
+          float: right;
+          font-family: $normal-font;
+          font-weight: bold;
+          font-size: 20px;
+          background-color: $primary;
+          border-radius: 3px;
+          width: auto;
+          height: auto;
+          color: #fff;
+          letter-spacing: 1px;
+        }
+
+      }
+
+      .fg {
+        margin-bottom: 30px;
+
+        label {
+
+          font-size: 23px;
+          font-family: $normal-font;
+          font-weight: 400;
+          margin-bottom: 15px;
+        }
+
+      }
+
+      .fc {
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(231, 231, 231);
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        height: 60px;
+        font-family: $normal-font;
+        font-weight: 400;
+        font-size: 23px;
+        color: #5d5d5d;
+        padding-left: 15px;
+
+
+        &:focus {
+          border: none;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.07);
+
+        }
+      }
+
+    }
+
+    .line-form {
+
+      clear: both;
+      display: inline-block;
+      width: 100%;
+
+      hr {
+        border-top:1px solid #d7d7d7;
+
+      }
+
+    }
+
+    .create-account {
+      display: inline-block;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        float: left;
+        color: #000000;
+        font-size: 20px;
+        font-family: $normal-font;
+        font-weight: 400;
+        padding-top: 10px;
+      }
+
+      .reg {
+        float: right;
+        font-family: $normal-font;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #fff;
+        border: 1px solid rgb(195, 195, 195);
+        border-radius: 3px;
+        width: auto;
+        height: auto;
+        color: #000000;
+        letter-spacing: 1px;
+        padding: 10px;
+
+      }
+
+    }
+
+  }
+
+}
+
+/* large screen - Size lg */
+@media (min-width: $screen-lg) {
+
+}
+
+/*large screen - size xl*/
+@media (min-width: $screen-xl) {
+
+  .login-left  {
+    width: 50%;
+    min-height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
+
+    .left-vpad {
+      padding:0;
+    }
+
+    h1 {
+
+      font-size: 55px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url("/images/logo.png") no-repeat;
+        bottom: 0;
+        top:6%;
+        left: -115%;
+        right: 0;
+        height: 50px;
+        width: 42px;
+        margin: 0 auto;
+      }
+
+    }
+
+    P {
+      font-size: 26px;
+      line-height: 50px;
+      color: #fff;
+      position: relative;
+      left: 0;
+      font-family: $light-font;
+    }
+
+  }
+
+
+}
+
+/*large screen - size xxl*/
+@media (min-width: $screen-xxl) {
+
+}

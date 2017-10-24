@@ -1,0 +1,73 @@
+/* ==========================================================================
+   buy
+   ========================================================================== */
+
+body {
+  background-color: #fff;
+}
+
+
+.nav-df {
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.dp {
+
+  a {
+    i {
+      color: #a7a7a7;
+      background-color: #e8e8e8;
+      padding: 8px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin: 0 8px;
+    }
+  }
+
+}
+
+.select-currency {
+
+  h1 {
+      font-size: 42px;
+      font-family: $normal-font;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      text-align: center;
+      }
+
+  hr {
+    border-top: 1px solid #acacac;
+    padding: 20px 0;
+  }
+
+}
+
+.ph {
+   background-color: #da944b;
+  border: none;
+  color: #fff;
+  height: 200px;
+  padding: 65px 80px;
+  border-radius: 5px;
+}
+
+.buy-now {
+
+  button {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 6px 40px 0 rgba(0, 0, 0, 0.11);
+    width: 176px;
+    height: 53px;
+    border: none;
+    margin-top: -20px;
+    font-size: 24px;
+    font-family: $normal-font;
+    color: rgb(0, 0, 0);
+
+  }
+
+}

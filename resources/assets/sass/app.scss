@@ -1,9 +1,17 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "site/blocks/fonts";
 
-// Variables
+// Variables & mixins
 @import "site/variables";
+@import "site/mixins";
 
 // Bootstrap
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+//pages
+@import "site/pages/login";
+@import "site/pages/register";
+@import "site/pages/buy";

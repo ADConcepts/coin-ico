@@ -2,10 +2,15 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Your Address detail</div>
-                    <div class="panel-body">
+            <div class="col-sm-12">
+                <div class="select-currency">
+                    <h1>Your Address detail</h1>
+
+                    <hr>
+
+                    <div class="row pb">
+
+                        <div class="col-sm-9">
                         <strong>Currency:</strong>
                         {{ ucfirst($currency) }} <br/>
                         <strong>Address:</strong>
@@ -13,8 +18,11 @@
                         <strong>Expected coins: </strong>
                         1 {{ ucfirst($currency) }} =>  {{ round($exchangeRate->amount,2) }} coins
                          <br/>
-                        <strong>QR Code:</strong>
-                        <img src="{{ $imageData }}" />
+                        </div>
+
+                        <div class="col-sm-3">
+                        <img src="{{ $imageData }}" class="img-responsive"/>
+                        </div>
                     </div>
                 </div>
             </div>

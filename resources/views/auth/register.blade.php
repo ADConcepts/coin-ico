@@ -1,77 +1,162 @@
-@extends('layouts.app')
+@extends('layouts.site')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
+    <div class="login-main">
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+        <div class="login-left">
+            <div class="left-vpad">
+                <h1>Crypted United</h1>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <p>Shape the future, <br>
+                    Own the company, <br>
+                    Be the change</p>
             </div>
         </div>
+
+        <div class="login-right">
+
+            <div class="form-login">
+
+                <h1>Register</h1>
+
+
+                    <div class="stepwizard">
+                        <div class="stepwizard-row setup-panel">
+                            <div class="stepwizard-step col-sm-6">
+                                <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                                <p><small>Step1</small></p>
+                            </div>
+                            {{--<div class="stepwizard-step col-xs-3">
+                                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                <p><small>Step2</small></p>
+                            </div>
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                <p><small>Schedule</small></p>
+                            </div>--}}
+                            <div class="stepwizard-step col-sm-6">
+                                <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                <p><small>Step2</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form role="form">
+                        <div class="setup-content" id="step-1">
+                            {{--<div class="panel-heading">
+                                <h3 class="panel-title">Shipper</h3>
+                            </div>--}}
+                            <div class="panel-body">
+
+                                <div class="form-group fg">
+                                    <label class="control-label">Username:</label>
+                                    <input type="text" required="required" class="form-control fc" placeholder="Enter Username" />
+                                </div>
+
+                                <div class="form-group fg">
+                                    <label class="control-label">Email-address:</label>
+                                    <input type="text" required="required" class="form-control fc" placeholder="Enter Email" />
+                                </div>
+
+                                <div class="form-group fg">
+                                    <label class="control-label">Password:</label>
+                                    <input type="password" required="required" class="form-control fc" placeholder="Enter Passowrd" />
+                                </div>
+
+                                <div class="forgot">
+                                    <button class="btn btn-default nextBtn pull-right" type="button">Next</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {{--<div class="setup-content" id="step-2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Destination</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label class="control-label">Company Name</label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Company Address</label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
+                                </div>
+                                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="setup-content" id="step-3">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Schedule</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label class="control-label">Company Name</label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Company Address</label>
+                                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address" />
+                                </div>
+                                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                            </div>
+                        </div>--}}
+
+                        <div class="setup-content" id="step-4">
+                            {{--<div class="panel-heading">
+                                <h3 class="panel-title">Cargo</h3>
+                            </div>--}}
+                            <div class="panel-body">
+                                <div class="form-group fg">
+                                    <label class="control-label">Country of Residence:</label>
+                                    {{--<input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />--}}
+
+                                    <select class="fc">
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group fg">
+                                    <label class="control-label">Country of Birth (Nationality):</label>
+                                    {{--<input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address" />--}}
+
+                                    <select class="fc">
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                        <option>India</option>
+                                    </select>
+                                </div>
+
+                                <div class="fg">
+
+                                    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                                    <label for="styled-checkbox-1">accept Terms of Service</label>
+
+                                </div>
+
+                                   <div class="forgot">
+
+                                       <button class="btn btn-default pull-right" type="submit">Finish!</button>
+
+                                   </div>
+
+                                   </div>
+                        </div>
+                    </form>
+
+
+
+
+            </div>
+        </div>
+
     </div>
-</div>
+
 @endsection
