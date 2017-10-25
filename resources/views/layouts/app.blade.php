@@ -30,33 +30,34 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                       {{-- {{ config('app.name', 'Laravel') }}--}}
+                        <img src="/images/admin-panel-logo.png" class="img-responsive" />
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav left-menu">
                         @auth
-                            <li><a href="{{ route('get:home') }}">Dashboard</a></li>
+                            <li class="left-active"><a href="{{ route('get:home') }}">Dashboard</a></li>
                             <li><a href="{{ route('get:buy') }}">Buy</a></li>
                             <li><a href="{{ route('get:refer') }}">Refer</a></li>
                         @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right nav-main">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li class="orange-bar"><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown dp">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <i class="glyphicon glyphicon-user"></i><span class="caret"></span>
+                                    <span class="username">{{ Auth::user()->name }}</span> <i class="glyphicon glyphicon-user"></i><span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu dd-menu" role="menu">
                                     <li><a href="{{ route('get:wallet:wallet_id', ['wallet_id' => Auth::user()->wallet_id]) }}">My wallet </a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"

@@ -130,7 +130,7 @@ class RegisterController extends Controller
                 return view('auth.emailconfirm', ['user' => $user]);
             }
         }
-        $route = route('home');
+        $route = route('get:home');
         return redirect($route);
     }
 }

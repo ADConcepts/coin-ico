@@ -3,14 +3,16 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Transaction history</div>
+        <div class="col-sm-12">
+            <div class="select-currency">
+                <h1>Transaction history</h1>
 
-                <div class="panel-body">
-                    <table class="table table-bordered" id="history">
+                <hr>
+
+                <div class="panel-body pb">
+                    <table class="table data-history table-responsive" id="history">
                         <thead>
-                        <tr>
+                        <tr class="tabel-heading">
                             <th>Date</th>
                             <th>Transaction#</th>
                             <th>Amount</th>

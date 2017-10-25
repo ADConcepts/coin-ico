@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         <h1>Congratulations!</h1>
                         <p>Your Email is successfully verified.</p>
-                        <a href="{{route('home')}}">Home</a>
+                        <a href="{{route('get:home')}}">Home</a>
                     </div>
                 </div>
             </div>

@@ -60,12 +60,30 @@
 .slide-crypted {
   text-align: left;
   float: left;
+  padding-left: 27px;
   h1 {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     font-family: $normal-font;
     text-align: left;
     font-weight: 700;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: url(/images/logo.png) no-repeat;
+      background-size: 15px;
+      top: 0;
+      bottom: 0;
+      left: -25px;
+      right: 0;
+      height: 26px;
+      width: 24px;
+    }
+
+
+
   }
   p {
     font-size: 14px;
@@ -83,20 +101,20 @@
   border-radius: 10px;
 
   h1 {
-    font-size: 20px;
+    font-size: 16px;
     font-family: $normal-font;
   }
 
   .big-time {
-    font-size: 35px;
+    font-size: 25px;
     font-family: $extra-font;
     font-weight: 300;
   }
 
   .b-day {
-    padding: 0 2px;
+    padding: 0 1px;
     font-family: $light-font;
-    font-size: 12px;
+    font-size: 10px;
   }
   .b-hour {
   }
@@ -1022,11 +1040,25 @@ footer {
   .slide-crypted {
     text-align: left;
     float: left;
+    padding-left: 30;
 
     h1 {
       font-size: 24px;
       text-align: left;
       font-weight: 700;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url(/images/logo.png) no-repeat;
+        background-size: 18px;
+        top: 0;
+        bottom: 0;
+        left: -25px;
+        right: 0;
+        height: 26px;
+        width: 24px;
+      }
     }
 
     p {
@@ -1843,6 +1875,19 @@ footer {
       font-size: 35px;
       text-align: left;
       font-weight: 700;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url(/images/logo.png) no-repeat;
+        background-size: 25px;
+        top: 3px;
+        bottom: 0;
+        left: -40px;
+        right: 0;
+        height: auto;
+        width: 34px;
+      }
     }
     p {
       font-size: 20px;
@@ -2033,6 +2078,19 @@ footer {
       font-size: 50px;
       text-align: left;
       font-weight: 700;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url(/images/logo.png) no-repeat;
+        background-size: 35px;
+        top: 7px;
+        bottom: 0;
+        left: -50px;
+        right: 0;
+        height: auto;
+        width: 42px;
+      }
     }
     p {
       font-size: 20px;

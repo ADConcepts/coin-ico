@@ -2,7 +2,7 @@
 <style>
     .fa-ltc:before {
         content: "Ł";
-        font-weight:bold;
+        font-weight: bold;
     }
 </style>
 @section('content')
@@ -16,14 +16,14 @@
 
                     <div class="pb">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-half">
+                                <div class="buy1">
                                     <div class="panel-heading ph">
-                                        <div class="row">
-                                            <div class="col-xs-3">
+                                        <div class="inner-ph">
+                                            <div class="coin-icon">
                                                 <i class="fa fa-btc fa-5x"></i>
                                             </div>
-                                            <div class="col-xs-9 text-right">
+                                            <div class="coin-name">
                                                 <h3>Bitcoin</h3>
                                             </div>
                                         </div>
@@ -37,14 +37,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-half">
+                                <div class="buy1">
                                     <div class="panel-heading ph">
-                                        <div class="row">
-                                            <div class="col-xs-3">
+                                        <div class="inner-ph">
+                                            <div class="coin-icon">
                                                 <i class="fa fa-ltc fa-5x"></i>
                                             </div>
-                                            <div class="col-xs-9 text-right">
+                                            <div class="coin-name">
                                                 <h3>Litecoin</h3>
                                             </div>
                                         </div>
@@ -64,14 +64,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-half">
+                                <div class="buy1">
                                     <div class="panel-heading ph">
-                                        <div class="row">
-                                            <div class="col-xs-3">
+                                        <div class="inner-ph">
+                                            <div class="coin-icon">
                                                 <i class="fa fa-btc fa-5x"></i>
                                             </div>
-                                            <div class="col-xs-9 text-right">
+                                            <div class="coin-name">
                                                 <h3>Ethereum</h3>
                                             </div>
                                         </div>

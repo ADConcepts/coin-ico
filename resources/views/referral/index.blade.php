@@ -2,10 +2,11 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Refer a friend</div>
-                    <div class="panel-body">
+            <div class="col-sm-12">
+                <div class="select-currency">
+                    <h1>Refer a friend</h1>
+                    <hr>
+                    <div class="panel-body col-sm-8 col-sm-offset-2">
                         @if (session('success'))
                             <div class="alert alert-success">
                                 {{ session('success') }}
@@ -23,10 +24,10 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('emails') ? ' has-error' : '' }}">
-                                <label for="emails" class="col-md-4 control-label">E Mails.</label>
+                                <label for="emails" class="col-sm-12">E Mails.</label>
 
-                                <div class="col-md-6">
-                                    <textarea type="text" class="form-control" name="emails" required autofocus>{{ old('emails') }}</textarea>
+                                <div class="col-sm-12">
+                                    <textarea type="text" class="form-control fc1" name="emails" required autofocus>{{ old('emails') }}</textarea>
                                     <span class="help-block">Please use (,) to seperate multiple emails.</span>
                                     @if ($errors->has('emails'))
                                         <span class="help-block">
@@ -37,15 +38,15 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="col-md-8 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">
+                                <div class="col-sm-12 forgot-btn">
+                                    <button type="submit" class="btn btn-default">
                                         Submit
                                     </button>
                                 </div>
                             </div>
                         </form>
                         <table class="table table-bordered">
-                            <tr>
+                            <tr class="tabel-heading">
                                 <th>Total referred</th>
                                 <th>Coins the referrals bought</th>
                                 <th>Referral credit</th>

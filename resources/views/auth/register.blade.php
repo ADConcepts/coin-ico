@@ -116,9 +116,9 @@
 
                                     <select class="fc">
                                         <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
+                                        <option>USA</option>
+                                        <option>UK</option>
+                                        <option>CANADA</option>
 
                                     </select>
                                 </div>
@@ -128,9 +128,9 @@
 
                                     <select class="fc">
                                         <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
-                                        <option>India</option>
+                                        <option>USA</option>
+                                        <option>UK</option>
+                                        <option>CANADA</option>
                                     </select>
                                 </div>
 
