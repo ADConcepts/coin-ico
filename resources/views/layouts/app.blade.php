@@ -39,9 +39,15 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav left-menu">
                         @auth
-                            <li class="left-active"><a href="{{ route('get:home') }}">Dashboard</a></li>
-                            <li><a href="{{ route('get:buy') }}">Buy</a></li>
-                            <li><a href="{{ route('get:refer') }}">Refer</a></li>
+                            <li class="{{ (\Request::route()->getName() == 'get:home') ? 'left-active' : '' }}">
+                                <a href="{{ route('get:home') }}">Dashboard</a>
+                            </li>
+                            <li class="{{ (\Request::route()->getName() == 'get:buy') ? 'left-active' : '' }}">
+                                <a href="{{ route('get:buy') }}">Buy</a>
+                            </li>
+                            <li class="{{ (\Request::route()->getName() == 'get:refer') ? 'left-active' : '' }}">
+                                <a href="{{ route('get:refer') }}">Refer</a>
+                            </li>
                         @endauth
                     </ul>
 
