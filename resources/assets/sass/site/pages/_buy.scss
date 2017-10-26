@@ -75,7 +75,6 @@ body {
 
 }
 
-
 .dp {
 
   a {
@@ -336,6 +335,80 @@ table.data-history ,.no-footer {
   font-family: $normal-font;
 }
 
+.forgot-btn {
+  display: inline-block;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    float: left;
+    color: $primary;
+    font-size: 20px;
+    font-family: $normal-font;
+    font-weight: 400;
+    padding-top: 10px;
+  }
+
+  button {
+    float: right;
+    font-family: $normal-font;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: $primary;
+    border-radius: 3px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    letter-spacing: 1px;
+
+    &:hover {
+
+      background-color: $primary;
+      color: #fff;
+      border-color: transparent;
+
+    }
+
+  }
+
+}
+
+.fg1 {
+  margin-bottom: 30px;
+
+  label {
+
+    font-size: 23px;
+    font-family: $normal-font;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+}
+
+.fc1 {
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(231, 231, 231);
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 100%;
+  font-family: $normal-font;
+  font-weight: 400;
+  font-size: 18px;
+  color: #5d5d5d;
+  padding-left: 15px;
+
+
+  &:focus {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.07);
+
+  }
+}
 
 
 @media (min-width: $screen-xxs) {
@@ -524,6 +597,73 @@ table.data-history ,.no-footer {
     }
 
   }
+
+      .forgot-btn {
+        display: inline-block;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          float: left;
+          color: $primary;
+          font-size: 20px;
+          font-family: $normal-font;
+          font-weight: 400;
+          padding-top: 10px;
+        }
+
+        button {
+          float: right;
+          font-family: $normal-font;
+          font-weight: bold;
+          font-size: 20px;
+          background-color: $primary;
+          border-radius: 3px;
+          width: auto;
+          height: auto;
+          color: #fff;
+          letter-spacing: 1px;
+        }
+
+      }
+
+      .fg {
+        margin-bottom: 30px;
+
+        label {
+
+          font-size: 23px;
+          font-family: $normal-font;
+          font-weight: 400;
+          margin-bottom: 15px;
+        }
+
+      }
+
+      .fc1 {
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(231, 231, 231);
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+        height: 60px;
+        font-family: $normal-font;
+        font-weight: 400;
+        font-size: 23px;
+        color: #5d5d5d;
+        padding-left: 15px;
+
+
+        &:focus {
+          border: none;
+          background-color: rgb(255, 255, 255);
+          box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.07);
+
+        }
+      }
+
+
 
 
 }

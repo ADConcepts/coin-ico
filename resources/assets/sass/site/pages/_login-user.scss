@@ -77,7 +77,7 @@
 
 }
 
-.forgot-btn {
+/*.forgot-btn {
   display: inline-block;
   width: 100%;
 
@@ -150,19 +150,9 @@
     box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.07);
 
   }
-}
+}*/
 
 
-
-/* Very Small devices - Size XXS */
-@media (min-width: $screen-xxs) {
-
-}
-
-/* Small devices - Size XS */
-@media (min-width: $screen-xs) {
-
-}
 
 @media (min-width: $screen-xxs) and (max-width: $screen-sm) {
 
@@ -464,10 +454,10 @@
 /* bigger devices - Size md */
 @media (min-width: $screen-md) {
 
-  .login-user-right {
+ /* .login-user-right {
     width: 100%;
-    /*display: table-cell;
-    vertical-align: middle;*/
+    !*display: table-cell;
+    vertical-align: middle;*!
 
     .form-user-login {
 
@@ -600,7 +590,7 @@
 
     }
 
-  }
+  }*/
 
 }
 
