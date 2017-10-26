@@ -24,7 +24,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('emails') ? ' has-error' : '' }}">
-                                <label for="emails" class="col-sm-12">E Mails.</label>
+                                <label for="emails" class="col-sm-12">Emails:   </label>
 
                                 <div class="col-sm-12">
                                     <textarea type="text" class="form-control fc1" name="emails" required autofocus>{{ old('emails') }}</textarea>
