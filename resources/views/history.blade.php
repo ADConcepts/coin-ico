@@ -9,8 +9,8 @@
 
                 <hr>
 
-                <div class="panel-body pb">
-                    <table class="table data-history table-responsive" id="history">
+                <div class="pb table-responsive">
+                    <table class="table data-history table-responsive" id="history" width="100%">
                         <thead>
                         <tr class="tabel-heading">
                             <th>Date</th>
@@ -28,10 +28,12 @@
 @endsection
 @section('script')
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
-    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css">
     <script>
         $(function () {
             $('#history').DataTable({
+                responsive: true,
                 processing: true,
                 serverSide: true,
                 searching: false,

@@ -6,7 +6,7 @@
                 <div class="select-currency">
                     <h1>Refer a friend</h1>
                     <hr>
-                    <div class="panel-body col-sm-8 col-sm-offset-2">
+                    <div class="pb col-sm-8 col-sm-offset-2">
                         @if (session('success'))
                             <div class="alert alert-success">
                                 {{ session('success') }}
@@ -45,6 +45,8 @@
                                 </div>
                             </div>
                         </form>
+
+                        <div class="table-responsive">
                         <table class="table table-bordered">
                             <tr class="tabel-heading">
                                 <th>Total referred</th>
@@ -57,6 +59,8 @@
                                 <td> {{ $referralEarning }} </td>
                             </tr>
                         </table>
+                        </div>
+
                     </div>
                 </div>
             </div>

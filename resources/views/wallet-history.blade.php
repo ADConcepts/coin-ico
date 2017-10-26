@@ -3,21 +3,26 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">
+        <div class="col-sm-12">
+            <div class="select-currency">
+                <h4>
                     <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $walletId]) }}">{{ $walletId }}</a>
+
                     <div class="pull-right">
                         @if ($user && $user->id != 1 && !$user->is_admin)
                             Wallet balance: {{ $totalBalance }}
                         @endif
                     </div>
-                </div>
+                </h4>
 
-                <div class="panel-body">
-                    <table class="table table-bordered" id="wallet-history">
+                <hr>
+
+            </div>
+
+                <div class="pb table-responsive">
+                    <table class="table data-history table-responsive" id="wallet-history">
                         <thead>
-                            <tr>
+                            <tr class="tabel-heading">
                                 <th>Date</th>
                                 <th>Transaction#</th>
                                 <th>Amount</th>
@@ -25,7 +30,7 @@
                         </thead>
                     </table>
                 </div>
-            </div>
+
         </div>
     </div>
 </div>
