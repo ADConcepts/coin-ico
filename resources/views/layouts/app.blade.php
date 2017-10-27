@@ -55,8 +55,12 @@
                     <ul class="nav navbar-nav navbar-right nav-main">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="orange-bar"><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li class="{{ (\Request::route()->getName() == 'login') ? 'orange-bar' : '' }}">
+                                <a href="{{ route('login') }}">Login</a>
+                            </li>
+                            <li class="{{ (\Request::route()->getName() == 'register') ? 'orange-bar' : '' }}">
+                                <a href="{{ route('register') }}">Register</a>
+                            </li>
                         @else
                             <li class="dropdown dp">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
