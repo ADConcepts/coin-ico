@@ -80,4 +80,14 @@ class LoginController extends Controller
         $pageTitle = 'Login';
         return view ('auth.login', compact('pageTitle'));
     }
+
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            $this->username() => 'required',
+            'password' => 'required',
+        ], [
+            $this->username().'required' => 'Email or wallet id field is required.',
+        ]);
+    }
 }

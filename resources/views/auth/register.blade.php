@@ -75,7 +75,7 @@
 
                             <div class="form-group fg">
                                 <label for="password-confirm" class="control-label">Confirm Password</label>
-                                <input id="password-confirm" type="password" class="form-control fc" placeholder="Confirm Passowrd" name="password_confirmation" />
+                                <input id="password-confirm" type="password" class="form-control fc" placeholder="Confirm Password" name="password_confirmation" />
                             </div>
 
                             <div class="forgot">

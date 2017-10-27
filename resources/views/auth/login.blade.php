@@ -20,25 +20,29 @@
 
                 <h1>Welcome</h1>
 
-
                 <form class="login-form" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
-                    <div class="form-group fg {{ $errors->has('login') ? ' has-error' : '' }}">
-                        <label for="email">E-Mail or Wallet Id:</label>
-                        <input type="text" class="form-control fc" id="login" placeholder="email or wallet Id." name="login" value="{{ old('login') }}">
+                    <div class="form-group fg {{ ($errors->has('login') || $errors->has('wallet_id')) ? ' has-error' : '' }}">
+                        <label for="email" class="control-label">E-Mail or Wallet Id:</label>
+                        <input type="text" class="form-control fc" id="login" placeholder="Email or Wallet Id." name="login" value="{{ old('login') }}">
                         @if ($errors->has('login'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('login') }}</strong>
                             </span>
                         @endif
+                        @if ($errors->has('wallet_id'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('wallet_id') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="form-group fg {{ $errors->has('password') ? ' has-error' : '' }}">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control fc" id="pwd" placeholder="enter password" name="password">
+                        <label for="pwd" class="control-label">Password:</label>
+                        <input type="password" class="form-control fc" id="pwd" placeholder="Enter Password" name="password">
                         @if ($errors->has('password'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
                         @endif
                     </div>
                     <div class="forgot">

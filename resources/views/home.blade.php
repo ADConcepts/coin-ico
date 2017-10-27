@@ -569,7 +569,7 @@
                     <div class="col-sm-3 col-md-4 col-mid">
 
                         <div class="flogo">
-                            <a href="{{ route('get:home') }}">
+                            <a href="{{ route('home') }}">
                                 <img src="/images/red-logo.png" alt="#" class="img-responsive">
                             </a>
 
