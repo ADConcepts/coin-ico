@@ -29,7 +29,6 @@ class ReferralController extends Controller
         $referrals = Referral::query()
             ->where('referral_code', $user->referral_code)
             ->get();
-        //dd($referrals->pluck('referral_id'));
 
         $referralUserEarning = Transaction::query()
             ->whereIn('user_id', function($query) use($user) {
@@ -43,7 +42,8 @@ class ReferralController extends Controller
             ->where('type', 'referral')
             ->sum('amount');
 
-        return view('referral.index', compact('user', 'referrals', 'referralEarning', 'referralUserEarning'));
+        $pageTitle = 'Referral';
+        return view('referral.index', compact('user', 'referrals', 'referralEarning', 'referralUserEarning', 'pageTitle'));
     }
 
     public function postRefer(Request $request)

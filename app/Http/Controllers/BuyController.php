@@ -25,6 +25,7 @@ class BuyController extends Controller
 
     public function getBuy(Request $request)
     {
+        $pageTitle = 'Buy';
         $user = $request->user();
         if ($request->input('currency')) {
 
@@ -60,9 +61,9 @@ class BuyController extends Controller
                 ->orderBy('id', 'desc')
                 ->first();
 
-            return view('buy-address', compact('user', 'address', 'currency', 'imageData', 'exchangeRate'));
+            return view('buy-address', compact('user', 'address', 'currency', 'imageData', 'exchangeRate', 'pageTitle'));
         } else {
-            return view('buy', compact('user'));
+            return view('buy', compact('user', 'pageTitle'));
         }
     }
 }

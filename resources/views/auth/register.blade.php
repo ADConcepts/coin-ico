@@ -6,7 +6,7 @@
 
         <div class="login-left">
             <div class="left-vpad">
-                <h1>Crypted United</h1>
+                <a href="{{ route('home') }}"><h1>Crypted United</h1></a>
 
                 <p>Shape the future, <br>
                     Own the company, <br>
@@ -118,6 +118,13 @@
                         </div>
                     </div>
                 </form>
+                <div class="line-form">
+                    <hr>
+                </div>
+                <div class="create-account clearfix">
+                    <a href="javascript:void(0)">Already have an account?</a>
+                    <a href="{{ route('login') }}" class="btn btn-default reg">Login</a>
+                </div>
             </div>
         </div>
     </div>

@@ -25,7 +25,9 @@ class WalletController extends Controller
 
         $totalBalance = $transactions;
 
-        return view('wallet-history', compact( 'totalBalance', 'walletId', 'user'));
+        $pageTitle = 'Wallet history';
+
+        return view('wallet-history', compact( 'totalBalance', 'walletId', 'user', 'pageTitle'));
     }
 
     public function getWalletDataTable(Request $request)
@@ -72,7 +74,9 @@ class WalletController extends Controller
             ->where('id', 1)
             ->firstOrFail();
 
-        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser'));
+        $pageTitle = 'Transaction detail';
+
+        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser', 'pageTitle'));
     }
 
 }

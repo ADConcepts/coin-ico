@@ -76,4 +76,8 @@ class LoginController extends Controller
             ->withErrors($errors);
     }
 
+    public function showLoginForm() {
+        $pageTitle = 'Login';
+        return view ('auth.login', compact('pageTitle'));
+    }
 }

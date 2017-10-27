@@ -32,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -144,6 +144,7 @@ class RegisterController extends Controller
 
     public function showRegistrationForm() {
         $countries = Country::all();
-        return view ('auth.register', compact('countries'));
+        $pageTitle = 'Register';
+        return view ('auth.register', compact('countries', 'pageTitle'));
     }
 }

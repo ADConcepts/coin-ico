@@ -21,7 +21,8 @@ class HomeController extends Controller
 
     public function getIndex(Request $request)
     {
-        return view('home');
+        $pageTitle = 'Home';
+        return view('home', compact('pageTitle'));
     }
 
     public function getDashboard(Request $request)
@@ -32,12 +33,14 @@ class HomeController extends Controller
             ->where('user_id', $user->id)
             ->sum('amount');
 
-        return view('dashboard', compact('total'));
+        $pageTitle = 'Dashboard';
+        return view('dashboard', compact('total', 'pageTitle'));
     }
 
     public function getHistory(Request $request)
     {
-        return view('history', compact('transactions'));
+        $pageTitle = 'Transaction history';
+        return view('history', compact('transactions', 'pageTitle'));
     }
 
     public function getHistoryDataTable(Request $request)

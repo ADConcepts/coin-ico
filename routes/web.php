@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Auth::routes();
 Route::post('login', 'Auth\LoginController@loginWalletOrEmail');

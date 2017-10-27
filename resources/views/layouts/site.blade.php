@@ -8,7 +8,7 @@
 
     <!-- CSRF Token -->
 
-    <title>coin-ico</title>
+    <title>{{ isset($pageTitle) ? $pageTitle.' - ' : '' }}{{ config('app.name', 'CryptedUnited') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('/css/site.css') }}" rel="stylesheet">

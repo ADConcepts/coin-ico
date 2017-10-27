@@ -52,7 +52,7 @@
 
                         <div class="slide-part clearfix">
                             <div class="slide-crypted wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <h1>Crypted United</h1>
+                                <a href="{{ route('home') }}"><h1>Crypted United</h1></a>
                                 <p>Shape of future,<br> Own the company, <br> Be the chnage</p>
                             </div>
 

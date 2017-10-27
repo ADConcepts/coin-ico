@@ -556,7 +556,7 @@
                         <div class="flogo">
                             <img src="/images/red-logo.png" alt="#" class="img-responsive">
 
-                            <p>© 2017 CyptedUnited.<br>
+                            <p>© 2017 CryptedUnited.<br>
                                 ALL RIGHTS RESERVED</p>
 
                         </div>
