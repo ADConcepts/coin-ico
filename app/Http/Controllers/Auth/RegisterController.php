@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Domain\Country\Country;
 use App\Domain\Referral\Referral;
 use App\Notifications\EmailVerification;
 use App\User;
@@ -55,6 +56,11 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'residence_country_id' => 'required|integer',
+            'birth_country_id' => 'required|integer',
+        ],[
+            'residence_country_id.required' => "Residence country is required.",
+            'birth_country_id.required' => "Nationality is required."
         ]);
     }
 
@@ -110,6 +116,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'residence_country_id' => $data['residence_country_id'],
+            'birth_country_id' => $data['birth_country_id'],
             'email_token' => str_random(32),
             'wallet_id' => str_random(34),
             'referral_code' => substr(md5(microtime()), rand(0, 26), 5)
@@ -132,5 +140,10 @@ class RegisterController extends Controller
         }
         $route = route('get:home');
         return redirect($route);
+    }
+
+    public function showRegistrationForm() {
+        $countries = Country::all();
+        return view ('auth.register', compact('countries'));
     }
 }
