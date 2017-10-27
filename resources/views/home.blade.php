@@ -12,24 +12,35 @@
 
                    <span class="stamp">
 
-                       <div class="clock">
-                           <span class="ico-top">ICO Starts in</span> <span class="getting-started"></span>
-                       </div>
+                        <div class="clock">
+                            <span class="ico-top">ICO Starts in</span> <span class="getting-started"></span>
+                        </div>
 
-                      <div>
-                       <ul class="social">
-                        <li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a> </li>
+                        <div>
+                            <ul class="social">
+                                {{--<li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a> </li>--}}
+                                @guest
+                                    <li><a href="{{ route('login') }}">Login</a> </li>
+                                @else
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
 
-                    </ul>
-                     </div>
-
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                @endguest
+                            </ul>
+                        </div>
                    </span>
-
                 </div>
-
             </div>
 
             <!-- Wrapper for slides -->

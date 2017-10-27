@@ -3,14 +3,16 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Registration Confirmed!</div>
+            <div class="col-sm-12">
+                <div class="select-currency">
+                    <h1>Registration Confirmed!</h1>
 
-                    <div class="panel-body">
-                        <h1>Congratulations!</h1>
-                        <p>Your Email is successfully verified.</p>
-                        <a href="{{route('get:home')}}">Home</a>
+                    <hr>
+
+                    <div class="pb">
+                        <h2 class="text-center admin-welcome">Congratulations!</h2>
+                        <h4 class="text-center"><strong>Your Email is successfully verified.</strong></h4>
+                        <a href="{{route('get:home')}}" class="back-home pull-right">Home <i class="fa fa-long-arrow-right"></i> </a>
                     </div>
                 </div>
             </div>
