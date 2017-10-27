@@ -18,16 +18,16 @@
 
                         <div>
                             <ul class="social">
-                                {{--<li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-                                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
-                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a> </li>--}}
+                                {{--<li><a href="javascript:void(0)"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-envelope" aria-hidden="true"></i></a> </li>--}}
                                 @guest
                                     <li><a href="{{ route('login') }}">Login</a> </li>
-                                @else
-                                    <li>
+                                    @else
+                                        <li>
                                         <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
+                                           onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
@@ -36,7 +36,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                @endguest
+                                        @endguest
                             </ul>
                         </div>
                    </span>
@@ -74,9 +74,9 @@
                         <div class="btn-slide">
                             @guest
                                 <a href="{{ route('register') }}" class="btn primary">CREATE ACCOUNT</a>
-                            @else
-                                <a href="{{ route('get:dashboard') }}" class="btn primary">DASHBOARD</a>
-                            @endguest
+                                @else
+                                    <a href="{{ route('get:dashboard') }}" class="btn primary">DASHBOARD</a>
+                                    @endguest
                         </div>
 
 
@@ -325,11 +325,11 @@
                                         </time>
 
                                         <div class="timeline-icon">
-                                            <a href="#" class="entypo-feather"></a>
+                                            <a href="javascript:void(0)" class="entypo-feather"></a>
                                         </div>
 
                                         <div class="timeline-label">
-                                            {{--<h2><a href="#">Mohtashim M.</a> <span>Founder & Managing Director</span></h2>--}}
+                                            {{--<h2><a href="javascript:void(0)">Mohtashim M.</a> <span>Founder & Managing Director</span></h2>--}}
                                             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
                                                 dolor sit amet, consectetur adipiscing elit.</p>
                                         </div>
@@ -349,7 +349,7 @@
                                         </div>
 
                                         <div class="timeline-label">
-                                            {{--<h2><a href="#">Job Meeting</a></h2>--}}
+                                            {{--<h2><a href="javascript:void(0)">Job Meeting</a></h2>--}}
                                             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
                                                 dolor sit amet, consectetur adipiscing elit.</p>
                                         </div>
@@ -369,7 +369,7 @@
                                         </div>
 
                                         <div class="timeline-label">
-                                            <!--<h2><a href="#">Gopal K Verma </a> <span>checked in at</span> <a href="#">Tutorials Point</a></h2>-->
+                                            <!--<h2><a href="javascript:void(0)">Gopal K Verma </a> <span>checked in at</span> <a href="javascript:void(0)">Tutorials Point</a></h2>-->
 
                                             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
                                                 dolor sit amet, consectetur adipiscing elit.</p>
@@ -392,7 +392,7 @@
                                         </div>
 
                                         <div class="timeline-label">
-                                            {{--<h2><a href="#">Gopal K Verma </a> <span>changed his</span> <a href="#">Profile Picture</a></h2>--}}
+                                            {{--<h2><a href="javascript:void(0)">Gopal K Verma </a> <span>changed his</span> <a href="javascript:void(0)">Profile Picture</a></h2>--}}
 
                                             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
                                                 dolor sit amet, consectetur adipiscing elit.</p>
@@ -525,15 +525,15 @@
             <h1>Development Stack</h1>
 
             <ul class="lang">
-                <li class="wow zoomIn" data-wow-delay="0.5" data-wow-duration="1s"><a href="#"><img
+                <li class="wow zoomIn" data-wow-delay="0.5" data-wow-duration="1s"><a href="javascript:void(0)"><img
                                 src="/images/php.png" alt="img" class="img-responsive"></a></li>
-                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="#"><img src="/images/v.png"
-                                                                                                    alt="img"
-                                                                                                    class="img-responsive"></a>
+                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="javascript:void(0)"><img src="/images/v.png"
+                                                                                                                     alt="img"
+                                                                                                                     class="img-responsive"></a>
                 </li>
-                <li class="wow zoomIn" data-wow-delay="2" data-wow-duration="2s"><a href="#"><img
+                <li class="wow zoomIn" data-wow-delay="2" data-wow-duration="2s"><a href="javascript:void(0)"><img
                                 src="/images/laravel.png" alt="img" class="img-responsive"></a></li>
-                <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="#"><img
+                <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="javascript:void(0)"><img
                                 src="/images/mysql.png" alt="img" class="img-responsive"></a></li>
             </ul>
 
@@ -541,13 +541,13 @@
 
             <ul class="coin-logo">
 
-                <li class="wow zoomIn" data-wow-delay="0.5" data-wow-duration="1s"><a href="#"><img
+                <li class="wow zoomIn" data-wow-delay="0.5" data-wow-duration="1s"><a href="javascript:void(0)"><img
                                 src="/images/bitcoin.png" alt="img" class="img-responsive"></a></li>
-                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="#"><img
+                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="javascript:void(0)"><img
                                 src="/images/cryptcoin.png" alt="img" class="img-responsive"></a></li>
-                <li class="wow zoomIn" data-wow-delay="2" data-wow-duration="2s"><a href="#"><img
+                <li class="wow zoomIn" data-wow-delay="2" data-wow-duration="2s"><a href="javascript:void(0)"><img
                                 src="/images/coinnoon.png" alt="img" class="img-responsive"></a></li>
-                <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="#"><img
+                <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="javascript:void(0)"><img
                                 src="/images/smatico.png" alt="img" class="img-responsive"></a></li>
 
             </ul>
@@ -610,20 +610,20 @@
                                 @guest
                                     <li class="orange-bar"><a href="{{ route('login') }}">Login</a></li>
                                     <li><a href="{{ route('register') }}">Register</a></li>
-                                @else
-                                    <li><a href="{{ route('get:wallet:wallet_id', ['wallet_id' => Auth::user()->wallet_id]) }}">My wallet </a></li>
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
+                                    @else
+                                        <li><a href="{{ route('get:wallet:wallet_id', ['wallet_id' => Auth::user()->wallet_id]) }}">My wallet </a></li>
+                                        <li>
+                                            <a href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                                                Logout
+                                            </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                @endguest
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </li>
+                                        @endguest
                             </ul>
                         </div>
                     </div>
@@ -634,11 +634,11 @@
                             <h4>Connect</h4>
 
                             <ul>
-                                <li><i class="fa fa-facebook"></i><a href="#">Facebook</a></li>
-                                <li><i class="fa fa-google"></i><a href="#">Google</a></li>
-                                <li><i class="fa fa-twitter"></i><a href="#">Twitter</a></li>
-                                <li><i class="fa fa-youtube-play"></i><a href="#">Youtube</a></li>
-                                <li><i class="fa fa-instagram"></i><a href="#">Instagram</a></li>
+                                <li><i class="fa fa-facebook"></i><a href="javascript:void(0)">Facebook</a></li>
+                                <li><i class="fa fa-google"></i><a href="javascript:void(0)">Google</a></li>
+                                <li><i class="fa fa-twitter"></i><a href="javascript:void(0)">Twitter</a></li>
+                                <li><i class="fa fa-youtube-play"></i><a href="javascript:void(0)">Youtube</a></li>
+                                <li><i class="fa fa-instagram"></i><a href="javascript:void(0)">Instagram</a></li>
                             </ul>
 
 
