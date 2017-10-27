@@ -5,7 +5,7 @@
 
         <div class="login-left">
             <div class="left-vpad">
-                <h1>Crypted United</h1>
+                <a href="{{ route('home') }}"><h1>Crypted United</h1></a>
 
                 <p>Shape the future, <br>
                     Own the company, <br>
