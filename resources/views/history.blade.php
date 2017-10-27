@@ -16,7 +16,6 @@
                             <th>Date</th>
                             <th>Transaction#</th>
                             <th>Amount</th>
-                            {{--<th>Description</th>--}}
                         </tr>
                         </thead>
                     </table>
@@ -47,6 +46,16 @@
                 "order": [
                     [0, 'asc']
                 ]
+            });
+            var table = $('#history').DataTable();
+
+            table.on( 'draw', function () {
+                $(table.table().container())
+                    .find('.dataTables_paginate')
+                    .css( 'display', table.page.info().pages <= 2 ?
+                        'none' :
+                        'block'
+                    )
             });
         });
     </script>

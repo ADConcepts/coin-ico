@@ -56,6 +56,16 @@
                     [0, 'asc']
                 ]
             });
+            var table = $('#wallet-history').DataTable();
+
+            table.on( 'draw', function () {
+                $(table.table().container())
+                    .find('.dataTables_paginate')
+                    .css( 'display', table.page.info().pages <= 2 ?
+                        'none' :
+                        'block'
+                    )
+            });
         });
     </script>
 @endsection
