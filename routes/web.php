@@ -24,6 +24,7 @@ Route::get('/verify/email', 'AccountController@getVerifyEmail')->name('get:user:
 Route::get('/verify/email/link', 'AccountController@getVerifyEmailLink')->name('get:user:verify:email:link');
 
 Route::get('/home', 'HomeController@getIndex')->name('get:home');
+Route::get('/dashboard', 'HomeController@getDashboard')->name('get:dashboard');
 Route::get('/historyData/', 'HomeController@getHistoryDataTable')->name('get:history:data-table');
 Route::get('/history', 'HomeController@getHistory')->name('get:history');
 

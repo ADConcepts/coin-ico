@@ -21,13 +21,18 @@ class HomeController extends Controller
 
     public function getIndex(Request $request)
     {
+        return view('home');
+    }
+
+    public function getDashboard(Request $request)
+    {
         $user = $request->user();
 
         $total = Transaction::query()
             ->where('user_id', $user->id)
             ->sum('amount');
 
-        return view('home', compact('total'));
+        return view('dashboard', compact('total'));
     }
 
     public function getHistory(Request $request)

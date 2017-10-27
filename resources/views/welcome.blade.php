@@ -14,8 +14,12 @@
     </head>
     <body>
 
-fghfghfgfgfghfg
 
+    <div class="container">
+
+            <h1 class="text-center text-capitalize">welcome.......</h1>
+
+    </div>
 
     </body>
 </html>

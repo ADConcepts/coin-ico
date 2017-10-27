@@ -39,8 +39,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav left-menu">
                         @auth
-                            <li class="{{ (\Request::route()->getName() == 'get:home') ? 'left-active' : '' }}">
-                                <a href="{{ route('get:home') }}">Dashboard</a>
+                            <li class="{{ (\Request::route()->getName() == 'get:dashboard') ? 'left-active' : '' }}">
+                                <a href="{{ route('get:dashboard') }}">Dashboard</a>
                             </li>
                             <li class="{{ (\Request::route()->getName() == 'get:buy') ? 'left-active' : '' }}">
                                 <a href="{{ route('get:buy') }}">Buy</a>

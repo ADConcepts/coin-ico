@@ -13,7 +13,7 @@
                    <span class="stamp">
 
                        <div class="clock">
-                           <span class="ico-top">ICO Start in</span> <span class="getting-started"></span>
+                           <span class="ico-top">ICO Starts in</span> <span class="getting-started"></span>
                        </div>
 
                       <div>
@@ -42,7 +42,6 @@
                         <div class="slide-part clearfix">
                             <div class="slide-crypted wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
                                 <h1>Crypted United</h1>
-                                {{--<img src="images/main-logo.png"  />--}}
                                 <p>Shape of future,<br> Own the company, <br> Be the chnage</p>
                             </div>
 
@@ -62,7 +61,11 @@
                         </div>
 
                         <div class="btn-slide">
-                            <a href="#" class="btn primary">CREATE ACCOUNT</a>
+                            @guest
+                                <a href="{{ route('register') }}" class="btn primary">CREATE ACCOUNT</a>
+                            @else
+                                <a href="{{ route('get:dashboard') }}" class="btn primary">DASHBOARD</a>
+                            @endguest
                         </div>
 
 
@@ -555,7 +558,9 @@
                     <div class="col-sm-3 col-md-4 col-mid">
 
                         <div class="flogo">
-                            <img src="/images/red-logo.png" alt="#" class="img-responsive">
+                            <a href="{{ route('get:home') }}">
+                                <img src="/images/red-logo.png" alt="#" class="img-responsive">
+                            </a>
 
                             <p>© 2017 CyptedUnited.<br>
                                 ALL RIGHTS RESERVED</p>
@@ -567,12 +572,18 @@
                     <div class="col-sm-3 col-md-3 col-mid">
 
                         <div class="customer">
-                            <h4>Customer Serices</h4>
+                            <h4>Services</h4>
 
                             <ul>
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Track Order</a></li>
-                                <li><a href="#">Token Info</a></li>
+                                <li>
+                                    <a href="{{ route('get:dashboard') }}">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('get:buy') }}">Buy</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('get:refer') }}">Refer</a>
+                                </li>
                             </ul>
 
                         </div>
@@ -582,20 +593,28 @@
                     <div class="col-sm-3 col-md-3 col-mid">
 
                         <div class="about">
-                            <h4>About us</h4>
+                            <h4>Account</h4>
 
                             <ul>
-                                <li><a href="#"> Company Info</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Investors</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Policies</a></li>
-                                <li><a href="#">Terms and services</a></li>
+                                @guest
+                                    <li class="orange-bar"><a href="{{ route('login') }}">Login</a></li>
+                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                @else
+                                    <li><a href="{{ route('get:wallet:wallet_id', ['wallet_id' => Auth::user()->wallet_id]) }}">My wallet </a></li>
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                @endguest
                             </ul>
-
-
                         </div>
-
                     </div>
 
                     <div class="col-sm-3 col-md-2 col-mid">
