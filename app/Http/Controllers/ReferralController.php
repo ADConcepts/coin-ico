@@ -86,7 +86,7 @@ class ReferralController extends Controller
             $emails = implode(', ', $validEmails);
             $request->session()->flash(
                 'success',
-                $emails
+                'Referred '.$emails
             );
         }
 

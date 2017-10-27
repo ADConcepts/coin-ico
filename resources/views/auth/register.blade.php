@@ -44,8 +44,8 @@
                     <div class="setup-content" id="step-1">
                         <div class="panel-body">
                             <div class="form-group fg{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label class="control-label">Username:</label>
-                                <input type="text" class="form-control fc" placeholder="Enter Username" name="name" value="{{ old('name') }}"/>
+                                <label class="control-label">Name:</label>
+                                <input type="text" class="form-control fc" placeholder="Enter Name" name="name" value="{{ old('name') }}"/>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -86,7 +86,7 @@
 
                     <div class="setup-content" id="step-2">
                         <div class="panel-body">
-                            <div class="form-group fg">
+                            <div class="form-group fg{{ $errors->has('residence_country_id') ? ' has-error' : '' }}">
                                 <label class="control-label">Country of Residence:</label>
                                 <select class="fc" name="residence_country_id" id="residence_country_id">
                                     <optgroup>
@@ -96,8 +96,13 @@
                                         @endforeach
                                     </optgroup>
                                 </select>
+                                @if ($errors->has('residence_country_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('residence_country_id') }}</strong>
+                                    </span>
+                                @endif
                             </div>
-                            <div class="form-group fg">
+                            <div class="form-group fg{{ $errors->has('birth_country_id') ? ' has-error' : '' }}">
                                 <label class="control-label">Country of Birth (Nationality):</label>
                                 <select class="fc" name="birth_country_id" id="birth_country_id">
                                     <option value="" disabled selected>Select Nationality*</option>
@@ -105,11 +110,16 @@
                                         <option value="{{$country->id}}">{{$country->name}}</option>
                                     @endforeach
                                 </select>
+                                @if ($errors->has('birth_country_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('birth_country_id') }}</strong>
+                                    </span>
+                                @endif
                             </div>
 
                             <div class="fg">
                                 <input class="styled-checkbox" id="terms" type="checkbox" value="value1">
-                                <label for="terms">accept Terms of Service</label>
+                                <label for="terms">Accept Terms of Service</label>
                             </div>
 
                             <div class="forgot">

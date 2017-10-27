@@ -19,27 +19,23 @@
 
                 <h1>Reset Password</h1>
 
-
-                <form class="login-form" method="POST" action="{{ route('password.request') }}">
+                <form class="login-form" method="POST" action="{{ route('password.email') }}">
                     {{ csrf_field() }}
-                    <div class="form-group fg {{ $errors->has('login') ? ' has-error' : '' }}">
-                        <label for="email">Email Address :</label>
-                        <input type="text" class="form-control fc" id="login" placeholder="enter email" name="login" value="{{ old('login') }}">
-                        @if ($errors->has('login'))
+                    <div class="form-group fg {{ $errors->has('email') ? ' has-error' : '' }}">
+                        <label for="email" class="control-label">Email Address :</label>
+                        <input type="text" class="form-control fc" id="email" placeholder="enter email" name="email" value="{{ old('email') }}">
+                        @if ($errors->has('email'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('login') }}</strong>
+                                <strong>{{ $errors->first('email') }}</strong>
                             </span>
                         @endif
                     </div>
 
-
                     <div class="forgot">
-                       {{-- <a href="{{ route('password.request') }}">Forgot Password?</a>--}}
-                        <button type="submit" class="btn btn-default">send password reset link</button>
+                        <button type="submit" class="btn btn-default">Send password reset link</button>
                     </div>
 
                 </form>
-
 
             </div>
         </div>
