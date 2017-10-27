@@ -18,7 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->unsignedInteger('country_id');
+            $table->unsignedInteger('residence_country_id');
+            $table->unsignedInteger('birth_country_id');
             $table->string('wallet_id')->unique();
             $table->string('referral_code')->unique();
             $table->boolean('is_admin')->default(false);
@@ -40,7 +41,8 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('users_country_id_foreign');
+            $table->dropForeign('users_residence_country_id_foreign');
+            $table->dropForeign('users_birth_country_id_foreign');
         });
         Schema::dropIfExists('users');
     }

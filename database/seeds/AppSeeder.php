@@ -24,11 +24,13 @@ class AppSeeder extends Seeder
 
     public function fakeUser($id, $createdAt = null)
     {
+        $country = $this->faker->numberBetween(1, 247);
         return [
             'name' => "user$id",
             'email' => "user$id@mail.com",
             'password' => static::$password,
-            'country_id' => $this->faker->numberBetween(1, 247),
+            'residence_country_id' => $country,
+            'birth_country_id' => $country,
             'wallet_id' => ($id == 1) ? '1Admin@ProofOfValueTransfer' : str_random(34),
             'is_admin' => $id == 1,
             'referral_code' => substr(md5(microtime()),rand(0,26),5),
