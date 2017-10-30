@@ -20,12 +20,7 @@
                                 <div class="buy1">
                                     <div class="panel-heading ph">
                                         <div class="inner-ph">
-                                            <div class="coin-icon">
-                                                <i class="fa fa-btc fa-5x"></i>
-                                            </div>
-                                            <div class="coin-name">
-                                                <h3>Bitcoin</h3>
-                                            </div>
+                                            <img src="/images/bit_coin.png" class="img-responsive">
                                         </div>
                                     </div>
                                     <a href="{{ route('get:buy',['currency' => 'bitcoin']) }}">
@@ -41,21 +36,10 @@
                                 <div class="buy1">
                                     <div class="panel-heading ph">
                                         <div class="inner-ph">
-                                            <div class="coin-icon">
-                                                <i class="fa fa-ltc fa-5x"></i>
-                                            </div>
-                                            <div class="coin-name">
-                                                <h3>Litecoin</h3>
-                                            </div>
+                                            <img src="/images/litecoin.png" class="img-responsive">
                                         </div>
                                     </div>
                                     <a href="{{ route('get:buy',['currency' => 'litecoin']) }}">
-                                        {{--<div class="panel-footer">
-                                            <span class="pull-left">Buy Now</span>
-                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                            <div class="clearfix"></div>
-                                        </div>--}}
-
                                         <div class="buy-now text-center">
                                             <button type="button">Buy Now</button>
 
@@ -68,21 +52,10 @@
                                 <div class="buy1">
                                     <div class="panel-heading ph">
                                         <div class="inner-ph">
-                                            <div class="coin-icon">
-                                                <i class="fa fa-btc fa-5x"></i>
-                                            </div>
-                                            <div class="coin-name">
-                                                <h3>Ethereum</h3>
-                                            </div>
+                                            <img src="/images/ethereum.png" class="img-responsive">
                                         </div>
                                     </div>
                                     <a href="{{ route('get:buy',['currency' => 'ethereum']) }}">
-                                        {{--<div class="panel-footer">
-                                            <span class="pull-left">Buy Now</span>
-                                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                            <div class="clearfix"></div>
-                                        </div>--}}
-
                                         <div class="buy-now text-center">
                                             <button type="button">Buy Now</button>
 
