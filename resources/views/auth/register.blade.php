@@ -121,9 +121,12 @@
 
                             <div class="fg">
                                 <input class="styled-checkbox" id="terms" type="checkbox" value="value1">
-                                <label for="terms">Accept Terms of Service</label>
+                                <label>
+                                    <a href="{{ route('get:terms') }}" target="_blank">
+                                        Accept Terms of Service
+                                    </a>
+                                </label>
                             </div>
-
 
                         </div>
 

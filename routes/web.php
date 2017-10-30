@@ -39,6 +39,8 @@ Route::get('/wallet/{wallet_id}', 'WalletController@getWalletHistory')->name('ge
 
 Route::get('/transaction/{transaction_hash}', 'WalletController@getTransactionDetail')->name('get:transaction:transaction_hash');
 
+Route::get('/terms', 'WalletController@getTermsOfConditions')->name('get:terms');
+
 Route::get('/commands', function () {
     Artisan::call('exchange:rates');
     dd(Artisan::output());
