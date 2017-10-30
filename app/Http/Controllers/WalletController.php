@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Domain\Transaction\Transaction;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\Config;
 
 class WalletController extends Controller
 {
@@ -61,7 +62,12 @@ class WalletController extends Controller
         $transactions = Transaction::query()
             ->where('transaction_hash', $transactionHash)
             ->with('user')
+            ->with('payment')
             ->get();
+
+        $currency = array_first($transactions);
+        $currencies = Config::get('app.currencies');
+        $transactionCurrency = array_search($currency->payment->currency, $currencies);
 
         $total = $transactions->sum('amount');
 
@@ -76,7 +82,7 @@ class WalletController extends Controller
 
         $pageTitle = 'Transaction detail';
 
-        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser', 'pageTitle'));
+        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser', 'pageTitle', 'transactionCurrency'));
     }
 
 }

@@ -78,9 +78,11 @@
                                 <input id="password-confirm" type="password" class="form-control fc" placeholder="Confirm Password" name="password_confirmation" />
                             </div>
 
-                            <div class="forgot">
-                                <button class="btn btn-default nextBtn pull-right" type="button">Next</button>
-                            </div>
+
+                        </div>
+
+                        <div class="forgot">
+                            <button class="btn btn-default nextBtn pull-right" type="button">Next</button>
                         </div>
                     </div>
 
@@ -122,9 +124,11 @@
                                 <label for="terms">Accept Terms of Service</label>
                             </div>
 
-                            <div class="forgot">
-                               <button class="btn btn-default pull-right" type="submit" id="submit" disabled>Finish!</button>
-                            </div>
+
+                        </div>
+
+                        <div class="forgot">
+                            <button class="btn btn-default pull-right" type="submit" id="submit" disabled>Finish!</button>
                         </div>
                     </div>
                 </form>
