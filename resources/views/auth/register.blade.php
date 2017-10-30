@@ -121,6 +121,7 @@
 
                             <div class="fg">
                                 <input class="styled-checkbox" id="terms" type="checkbox" value="value1">
+                                <label for="terms"></label>
                                 <label>
                                     <a href="{{ route('get:terms') }}" target="_blank">
                                         Accept Terms of Service
