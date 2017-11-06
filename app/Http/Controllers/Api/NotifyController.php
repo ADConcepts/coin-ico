@@ -29,10 +29,14 @@ class NotifyController extends Controller
     {
         $raw_body = file_get_contents('php://input');
 
-        //$signature = $_SERVER['HTTP_CB_SIGNATURE'];
-        //$configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
-        //$client = Client::create($configuration);
-        //$authenticity = $client->verifyCallback($raw_body, $signature); // boolean
+        $signature = $_SERVER['HTTP_CB_SIGNATURE'];
+        $configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
+        $client = Client::create($configuration);
+        $authenticity = $client->verifyCallback($raw_body, $signature); // boolean
+
+        if (!$authenticity) {
+            return "false";
+        }
 
         /*$raw_body = [
             "id" => "f30b5c10-cc5b-51dc-8962-2c3d904f9d87",
@@ -85,11 +89,12 @@ class NotifyController extends Controller
             ]
         ];*/
 
-        $coinbaseNotification = new CoinbaseNotification();
-        $coinbaseNotification->notification = json_encode($raw_body);
-        $coinbaseNotification->save();
-
         if (isset($raw_body['data']) && !empty($raw_body['data'])) {
+
+            $coinbaseNotification = new CoinbaseNotification();
+            $coinbaseNotification->notification = json_encode($raw_body);
+            $coinbaseNotification->save();
+
             $currencies = config('app.currencies');
             $address = Address::query()
                 ->where('address', $raw_body['data']['address'])
