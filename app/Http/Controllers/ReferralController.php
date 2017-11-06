@@ -19,7 +19,7 @@ class ReferralController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('getReferralCode');
+        $this->middleware('auth')->except('getReferralCode', 'getSetReferralCode');
     }
 
     public function getRefer(Request $request)
@@ -31,7 +31,7 @@ class ReferralController extends Controller
             ->get();
 
         $referralUserEarning = Transaction::query()
-            ->whereIn('user_id', function($query) use($user) {
+            ->whereIn('user_id', function ($query) use ($user) {
                 $query->select('referral_id')->from('referrals')->where('user_id', $user->id)->distinct();
             })
             ->where('type', 'deposit')
@@ -86,7 +86,7 @@ class ReferralController extends Controller
             $emails = implode(', ', $validEmails);
             $request->session()->flash(
                 'success',
-                'Referred '.$emails
+                'Referred ' . $emails
             );
         }
 
@@ -103,11 +103,11 @@ class ReferralController extends Controller
 
     public function getReferralCode(Request $request)
     {
-        if($request->user()) {
+        if ($request->user()) {
             return redirect()->route('get:home');
         }
 
-        if(\Session::has('code')){
+        if (\Session::has('code')) {
             return redirect('register');
         }
 
@@ -128,5 +128,35 @@ class ReferralController extends Controller
         }
 
         return redirect('register');
+    }
+
+    public function getSetReferralCode(Request $request)
+    {
+        $code = $request->route('code');
+
+        $user = User::query()
+            ->where('referral_code', $code)
+            ->first();
+
+        if (!$user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Invalid referral code!',
+            ]);
+        }
+
+        \Session::put('code', $code);
+
+        $referral = new Referral();
+        $referral->user_id = $user->id;
+        $referral->referral_code = $user->referral_code;
+        $referral->save();
+
+        \Session::put('referral_id', $referral->id);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Referral code applied successfully!'
+        ]);
     }
 }

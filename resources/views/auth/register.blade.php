@@ -129,6 +129,15 @@
                                 </label>
                             </div>
 
+                            @if(!\Session::has('code'))
+                                <div class="form-group fg">
+                                    <label class="control-label">Enter Reference Code:</label>
+                                    <input id="refcode" type="text" class="form-control fc" placeholder="Enter Reference Code" />
+                                    <span class="help-block">
+                                    </span>
+                                </div>
+                            @endif
+
                         </div>
 
                         <div class="forgot">
@@ -146,4 +155,31 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script>
+        $(document).on('keyup', '#refcode', function(e) {
+            if (e.keyCode == 13) {
+                setRefer(true);
+            }
+        });
+
+        function setRefer(force) {
+            var refCode = $("#refcode");
+            var existingString = refCode.val();
+            if (!force){
+                return false;
+            }
+            $.get('/refer/'+ existingString, function(data) {
+                if (!data.success) {
+                    refCode.closest('.form-group').removeClass('has-success').addClass('has-error').find('.help-block').text(data.message);
+                    return false;
+                } else {
+                    refCode.closest('.form-group').removeClass('has-error').addClass('has-success').find('.help-block').text(data.message);
+                }
+            });
+        }
+
+    </script>
 @endsection

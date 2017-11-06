@@ -33,6 +33,7 @@ Route::get('/buy', 'BuyController@getBuy')->name('get:buy')->middleware(['auth',
 Route::get('/r/{code}', 'ReferralController@getReferralCode')->name('get:referral:code');
 Route::get('/refer', 'ReferralController@getRefer')->name('get:refer');
 Route::post('/refer', 'ReferralController@postRefer')->name('post:refer');
+Route::get('/refer/{code}', 'ReferralController@getSetReferralCode')->name('get:set-referral:code');
 
 Route::get('/walletData/{wallet_id}', 'WalletController@getWalletDataTable')->name('get:wallet:data-table');
 Route::get('/wallet/{wallet_id}', 'WalletController@getWalletHistory')->name('get:wallet:wallet_id');
