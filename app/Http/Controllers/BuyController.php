@@ -61,7 +61,9 @@ class BuyController extends Controller
                 ->orderBy('id', 'desc')
                 ->first();
 
-            return view('buy-address', compact('user', 'address', 'currency', 'imageData', 'exchangeRate', 'pageTitle'));
+            $bonus = env('BONUS', 0);
+
+            return view('buy-address', compact('user', 'address', 'currency', 'imageData', 'exchangeRate', 'pageTitle', 'bonus'));
         } else {
             return view('buy', compact('user', 'pageTitle'));
         }
