@@ -52,3 +52,8 @@ Add LITECOIN_EXCHANGE_RATE in your .env file
 ### For Bonus(%)
 
 Add BONUS  in your .env file
+
+
+### Webhook URL
+
+http://www.example.com/api/notify
