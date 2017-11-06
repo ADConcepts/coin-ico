@@ -571,8 +571,9 @@
 
 .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
   left: auto;
-  right: -70px;
+  right: -130px;
   text-align: left;
+  width: 120px;
 }
 
 .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-icon {
@@ -627,13 +628,14 @@
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
   position: absolute;
-  left: -70px;
+  left: -130px;
   text-align: right;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   top: -9px;
+  width: 120px;
 }
 
 .time-active {
@@ -2470,8 +2472,9 @@ footer {
 
   .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
     left: auto;
-    right: -100px;
+    right: -250px;
     text-align: left;
+    width: 220px;
   }
 
   .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
@@ -2502,13 +2505,14 @@ footer {
 
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
     position: absolute;
-    left: -100px;
+    left: -255px;
     text-align: right;
     padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     top: -15px;
+    width: 230px;
   }
 
   .time-active {
