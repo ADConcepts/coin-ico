@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Address\Address;
+use App\Domain\CoinbaseNotification;
 use App\Domain\ExchangeRate\ExchangeRate;
 use App\Domain\Payment\Payment;
 use App\Domain\Referral\Referral;
 use App\Domain\Transaction\Transaction;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Coinbase\Wallet\Client;
+use Coinbase\Wallet\Configuration;
 
 class NotifyController extends Controller
 {
@@ -24,11 +27,18 @@ class NotifyController extends Controller
 
     public function getNotify(Request $request)
     {
-        //$raw_body = file_get_contents('php://input');
+        $raw_body = file_get_contents('php://input');
+
         //$signature = $_SERVER['HTTP_CB_SIGNATURE'];
+        //$configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
+        //$client = Client::create($configuration);
         //$authenticity = $client->verifyCallback($raw_body, $signature); // boolean
 
-        $raw_body = [
+        $coinbaseNotification = new CoinbaseNotification();
+        $coinbaseNotification->notification = $raw_body;
+        $coinbaseNotification->save();
+
+       /* $raw_body = [
             "id" => "f30b5c10-cc5b-51dc-8962-2c3d904f9d87",
             "type" => "wallet:addresses:new-payment",
             "data" => [
@@ -77,7 +87,7 @@ class NotifyController extends Controller
                 "type" => "api_key",
                 "api_key" => "sLpL1JycDrKNv0PT",
             ]
-        ];
+        ];*/
 
 
         if (isset($raw_body['data']) && !empty($raw_body['data'])) {
