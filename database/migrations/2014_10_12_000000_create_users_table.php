@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->unsignedInteger('residence_country_id');
-            $table->unsignedInteger('birth_country_id');
+            $table->unsignedInteger('residence_country_id')->nullable();
+            $table->unsignedInteger('birth_country_id')->nullable();
             $table->string('wallet_id')->unique();
             $table->string('referral_code')->unique();
             $table->boolean('is_admin')->default(false);
@@ -29,7 +29,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            //$table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
+            $table->foreign('residence_country_id')->references('id')->on('countries')->onDelete('cascade');
+            $table->foreign('birth_country_id')->references('id')->on('countries')->onDelete('cascade');
         });
     }
 
@@ -40,10 +41,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('users_residence_country_id_foreign');
-            $table->dropForeign('users_birth_country_id_foreign');
-        });
         Schema::dropIfExists('users');
     }
 }

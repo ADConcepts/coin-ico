@@ -24,7 +24,7 @@ class AppSeeder extends Seeder
 
     public function fakeUser($id, $createdAt = null)
     {
-        $country = $this->faker->numberBetween(1, 247);
+        $country = $this->faker->numberBetween(1, 242);
         return [
             'name' => "user$id",
             'email' => "user$id@mail.com",
