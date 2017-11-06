@@ -65,9 +65,10 @@ class WalletController extends Controller
             ->with('payment')
             ->get();
 
-        $currency = array_first($transactions);
+        $paymentTransaction = array_first($transactions);
         $currencies = Config::get('app.currencies');
-        $transactionCurrency = array_search($currency->payment->currency, $currencies);
+        $transactionCurrency = array_search($paymentTransaction->payment->currency, $currencies);
+        $transactionExchangeRate = $paymentTransaction->payment->exchange_rate;
 
         $total = $transactions->sum('amount');
 
@@ -82,7 +83,7 @@ class WalletController extends Controller
 
         $pageTitle = 'Transaction detail';
 
-        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser', 'pageTitle', 'transactionCurrency'));
+        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser', 'pageTitle', 'transactionCurrency', 'transactionExchangeRate', 'paymentTransaction'));
     }
 
     public function getTermsOfConditions()

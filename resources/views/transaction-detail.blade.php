@@ -55,6 +55,51 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <h3>Proof of value transfer</h3>
+                    <hr />
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>Currency Used: </strong>
+                            </div>
+                            <div class="col-md-3">
+                                {{ $transactionCurrency }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>Exchangerate at Time of Purchase: </strong>
+                            </div>
+                            <div class="col-md-3">
+                                {{ $transactionExchangeRate }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>Amount Sent: </strong>
+                            </div>
+                            <div class="col-md-3">
+                                {{ $paymentTransaction->payment->amount }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>Reference TX: </strong>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="https://blockchain.info/tx/{{ $transactionHash }}" target="_blank">{{ $transactionHash }}</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>Effective Bonus: </strong>
+                            </div>
+                            <div class="col-md-3">
+                                50% (pre-ICO 1st Round)
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
