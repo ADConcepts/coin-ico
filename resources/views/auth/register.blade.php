@@ -182,4 +182,14 @@
         }
 
     </script>
+
+    @if($errors->any() && !$errors->has('name') && !$errors->has('email') && !$errors->has('password'))
+        <script>
+            $(document).ready(function() {
+                setTimeout(function() {
+                    $('div.setup-panel div a[href="#step-2"]').removeAttr('disabled').removeClass('disabled').trigger('click');
+                },10);
+            });
+        </script>
+    @endif
 @endsection

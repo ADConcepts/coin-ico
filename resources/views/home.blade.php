@@ -96,21 +96,18 @@
                 beyond <br class="hidden-xs"> borders and nationalities.</h1>
 
             <div class="part wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h2>Shape the future</h2>
-                <p>Every owner of shares/cpoins will be able to vote on decisions regarding the future path and
-                    development of the organization.</p>
+                <h2>Shape the future | 1 Share = 1 Vote</h2>
+                <p>Every owner of shares will be able to vote on decisions regarding the future path and development of the company.</p>
             </div>
 
             <div class="part wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h2>Own the company</h2>
-                <p>As shareholder of coins, you’ll receive dividends for your investment simply by holding on to your
-                    shares/coins.</p>
+                <h2>Own the company | 1 Coin = 1 Share</h2>
+                <p>As shareholder of coins, you'll receive dividends for your investment simply by holding on to your shares.</p>
             </div>
 
             <div class="part wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                 <h2>Be the change</h2>
-                <p>Start proposals for new projects to develop and suggest changes or new features for existing
-                    services.</p>
+                <p>Start proposals for new projects to develop and suggest changes or new features for existing services. As a developer/designer become part of the team and get paid for contributions.</p>
             </div>
 
 
@@ -319,101 +316,217 @@
                             <ul class="timeline-centered">
 
                                 <li class="timeline-entry active">
-
                                     <div class="timeline-entry-inner">
-                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>16 jan</span>
-                                        </time>
-
+                                        <time class="timeline-time" datetime="2016"><span>2016</span></time>
                                         <div class="timeline-icon">
                                             <a href="javascript:void(0)" class="entypo-feather"></a>
                                         </div>
-
                                         <div class="timeline-label">
-                                            {{--<h2><a href="javascript:void(0)">Mohtashim M.</a> <span>Founder & Managing Director</span></h2>--}}
-                                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
-                                                dolor sit amet, consectetur adipiscing elit.</p>
+                                            <p>The Idea, planning and structuring the concept</p>
                                         </div>
                                     </div>
-
                                 </li>
 
-
                                 <li class="timeline-entry left-aligned">
-
                                     <div class="timeline-entry-inner">
-                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>1 feb</span>
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>Sept. 2017</span>
                                         </time>
-
                                         <div class="timeline-icon bg-secondary">
                                             <i class="entypo-suitcase"></i>
                                         </div>
-
                                         <div class="timeline-label">
-                                            {{--<h2><a href="javascript:void(0)">Job Meeting</a></h2>--}}
-                                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
-                                                dolor sit amet, consectetur adipiscing elit.</p>
+                                            <p>Basic profile login/registration set up</p>
                                         </div>
                                     </div>
-
                                 </li>
 
-
                                 <li class="timeline-entry">
-
                                     <div class="timeline-entry-inner">
-                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>28 feb</span>
-                                        </time>
-
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>Sept. 2017</span></time>
                                         <div class="timeline-icon bg-info">
                                             <i class="entypo-location"></i>
                                         </div>
-
                                         <div class="timeline-label">
-                                            <!--<h2><a href="javascript:void(0)">Gopal K Verma </a> <span>checked in at</span> <a href="javascript:void(0)">Tutorials Point</a></h2>-->
-
-                                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
-                                                dolor sit amet, consectetur adipiscing elit.</p>
-
-
+                                            <p>BTC, LTC, ETH and other API integrations</p>
                                         </div>
                                     </div>
-
                                 </li>
 
-
                                 <li class="timeline-entry left-aligned">
-
                                     <div class="timeline-entry-inner">
-                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>15 mar</span>
-                                        </time>
-
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>Sept. 2017</span></time>
                                         <div class="timeline-icon bg-warning">
                                             <i class="entypo-camera"></i>
                                         </div>
-
                                         <div class="timeline-label">
-                                            {{--<h2><a href="javascript:void(0)">Gopal K Verma </a> <span>changed his</span> <a href="javascript:void(0)">Profile Picture</a></h2>--}}
-
-                                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,"Lorem ipsum
-                                                dolor sit amet, consectetur adipiscing elit.</p>
-
+                                            <p>Open chain. Wallets and transactions publicly browsable</p>
                                         </div>
                                     </div>
-
                                 </li>
 
+                                <li class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>Sept. 2017</span></time>
+                                        <div class="timeline-icon bg-info">
+                                            <i class="entypo-location"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Development of off-chain transactions for instant delivery of bought shares</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry left-aligned">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>Sept. 2017</span></time>
+                                        <div class="timeline-icon bg-warning">
+                                            <i class="entypo-camera"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Proof of Value Transfer (PoVT) protocol implemented</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>Oct. 2017</span></time>
+                                        <div class="timeline-icon bg-info">
+                                            <i class="entypo-location"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>ICO Webpresence design and code implementation</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry left-aligned">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>Nov. 2017</span></time>
+                                        <div class="timeline-icon bg-warning">
+                                            <i class="entypo-camera"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>pre-ICO start with 3 rounds and up to 50% bonus for early investors</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>Q1 2018</span></time>
+                                        <div class="timeline-icon bg-info">
+                                            <i class="entypo-location"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Minimum Viable Product (MVP) of the Exchange released as proof of work</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry left-aligned">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>Q1 2018</span></time>
+                                        <div class="timeline-icon bg-warning">
+                                            <i class="entypo-camera"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Integration of more crypto currencies for the exchange that can also be used to participate in the ICO</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>Q1 2018</span></time>
+                                        <div class="timeline-icon bg-info">
+                                            <i class="entypo-location"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>ICO start with 3 rounds and up to 25% bonus for early investors</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry left-aligned">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>Q2 2018</span></time>
+                                        <div class="timeline-icon bg-warning">
+                                            <i class="entypo-camera"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Instant/feeless off-chain transactions for all supported currencies between accounts</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>Q2 2018</span></time>
+                                        <div class="timeline-icon bg-info">
+                                            <i class="entypo-location"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Exchange beta release</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry left-aligned">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>TBA</span></time>
+                                        <div class="timeline-icon bg-warning">
+                                            <i class="entypo-camera"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Rewardsystem</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>TBA</span></time>
+                                        <div class="timeline-icon bg-info">
+                                            <i class="entypo-location"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Digital Marketplace</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry left-aligned">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-10T03:45"><span>TBA</span></time>
+                                        <div class="timeline-icon bg-warning">
+                                            <i class="entypo-camera"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>IAT integration</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <time class="timeline-time" datetime="2014-01-09T13:22"><span>TBA</span></time>
+                                        <div class="timeline-icon bg-info">
+                                            <i class="entypo-location"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Paymentgateway</p>
+                                        </div>
+                                    </div>
+                                </li>
 
                                 <li class="timeline-entry begin">
-
                                     <div class="timeline-entry-inner">
-
                                         <div class="timeline-icon"
                                              style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
                                             <i class="entypo-flight"></i>
                                         </div>
-
                                     </div>
-
                                 </li>
 
                             </ul>
