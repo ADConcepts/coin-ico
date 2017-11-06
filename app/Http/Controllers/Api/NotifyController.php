@@ -34,11 +34,7 @@ class NotifyController extends Controller
         //$client = Client::create($configuration);
         //$authenticity = $client->verifyCallback($raw_body, $signature); // boolean
 
-        $coinbaseNotification = new CoinbaseNotification();
-        $coinbaseNotification->notification = $raw_body;
-        $coinbaseNotification->save();
-
-       /* $raw_body = [
+        /*$raw_body = [
             "id" => "f30b5c10-cc5b-51dc-8962-2c3d904f9d87",
             "type" => "wallet:addresses:new-payment",
             "data" => [
@@ -89,12 +85,16 @@ class NotifyController extends Controller
             ]
         ];*/
 
+        $coinbaseNotification = new CoinbaseNotification();
+        $coinbaseNotification->notification = json_encode($raw_body);
+        $coinbaseNotification->save();
 
         if (isset($raw_body['data']) && !empty($raw_body['data'])) {
             $currencies = config('app.currencies');
             $address = Address::query()
                 ->where('address', $raw_body['data']['address'])
                 ->first();
+
             if (!$address) {
                 return "false";
             }
@@ -107,37 +107,57 @@ class NotifyController extends Controller
 
             $amount = $raw_body['additional_data']['amount']['amount'] * $exchangeRate->amount;
 
+            $bonus = env('BONUS', 0);
+            $bonusAmount = ($amount * $bonus) / 100;
+
             $payment = new Payment();
             $payment->address_id = $address->id;
             $payment->exchange_rate_id = $exchangeRate->id;
             $payment->notification_id = $raw_body['id'];
-            $payment->amount = $amount;
+            $payment->amount = $amount + $bonusAmount;
             $payment->currency = $currency;
             $payment->currency_transaction_id = $raw_body['additional_data']['transaction']['id'];
             $payment->exchange_rate = $exchangeRate->amount;
             $payment->save();
 
+            //Payment transaction
             $transaction = new Transaction();
+            $transaction->sender_id = 1; // Temp: Admin_id
             $transaction->user_id = $address->user_id;
             $transaction->payment_id = $payment->id;
+            $transaction->transaction_hash = $raw_body['additional_data']['hash'];
             $transaction->type = 'deposit';
             $transaction->amount = $amount;
             $transaction->save();
 
+            //Bonus transaction
+            if (!empty($bonusAmount) && $bonusAmount > 0) {
+                $transaction = new Transaction();
+                $transaction->sender_id = 1; // Temp: Admin_id
+                $transaction->user_id = $address->user_id;
+                /*$transaction->payment_id = $payment->id;*/
+                $transaction->transaction_hash = $raw_body['additional_data']['hash'];
+                $transaction->type = 'bonus';
+                $transaction->amount = $bonusAmount;
+                $transaction->save();
+            }
 
             // Redeem Referral
             $referral = Referral::query()
-                ->where('referral_id',$address->user_id)
+                ->where('referral_id', $address->user_id)
                 ->whereNull('first_buy_at')
                 ->first();
 
+            //Referral transaction
             if($referral){
                 $now = \Carbon\Carbon::now()->toDateTimeString();
 
                 $transaction = new Transaction();
+                $transaction->sender_id = 1; // Temp: Admin_id
                 $transaction->user_id = $referral->user_id;
                 $transaction->referral_id = $referral->id;
-                $transaction->amount = ($amount*5) / 100;
+                $transaction->amount = ($amount * 5) / 100;
+                $transaction->transaction_hash = $raw_body['additional_data']['hash'];
                 $transaction->type = 'referral';
                 $transaction->save();
 

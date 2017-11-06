@@ -20,7 +20,7 @@ class CreateTransactionsTable extends Migration
             $table->unsignedInteger('payment_id')->nullable();
             $table->unsignedInteger('referral_id')->nullable();
             $table->string('transaction_hash');
-            $table->enum('type', ['deposit', 'referral']);
+            $table->enum('type', ['deposit', 'referral', 'bonus']);
             $table->decimal('amount', 25, 10)->nullable();
             $table->timestamps();
 
