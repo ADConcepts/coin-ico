@@ -27,17 +27,6 @@ class NotifyController extends Controller
 
     public function getNotify(Request $request)
     {
-        $raw_body = file_get_contents('php://input');
-
-        $signature = $_SERVER['HTTP_CB_SIGNATURE'];
-        $configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
-        $client = Client::create($configuration);
-        $authenticity = $client->verifyCallback($raw_body, $signature); // boolean
-
-        if (!$authenticity) {
-            return "false";
-        }
-
         /*$raw_body = [
             "id" => "f30b5c10-cc5b-51dc-8962-2c3d904f9d87",
             "type" => "wallet:addresses:new-payment",
@@ -89,12 +78,25 @@ class NotifyController extends Controller
             ]
         ];*/
 
+        $raw_body = file_get_contents('php://input');
+
+        $coinbaseNotification = new CoinbaseNotification();
+        $coinbaseNotification->notification = $raw_body;
+        $coinbaseNotification->save();
+
+        if (empty($_SERVER['HTTP_CB_SIGNATURE'])) {
+            return response(400);
+        }
+        $signature = $_SERVER['HTTP_CB_SIGNATURE'];
+        $configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
+        $client = Client::create($configuration);
+        $authenticity = $client->verifyCallback($raw_body, $signature); // boolean
+
+        if (!$authenticity) {
+            return response(400);
+        }
+
         if (isset($raw_body['data']) && !empty($raw_body['data'])) {
-
-            $coinbaseNotification = new CoinbaseNotification();
-            $coinbaseNotification->notification = json_encode($raw_body);
-            $coinbaseNotification->save();
-
             $currencies = config('app.currencies');
             $address = Address::query()
                 ->where('address', $raw_body['data']['address'])
@@ -140,7 +142,6 @@ class NotifyController extends Controller
                 $transaction = new Transaction();
                 $transaction->sender_id = 1; // Temp: Admin_id
                 $transaction->user_id = $address->user_id;
-                /*$transaction->payment_id = $payment->id;*/
                 $transaction->transaction_hash = $raw_body['additional_data']['hash'];
                 $transaction->type = 'bonus';
                 $transaction->amount = $bonusAmount;
@@ -170,8 +171,7 @@ class NotifyController extends Controller
                 $referral->save();
             }
 
-            return "true";
-
+            return response(200);
         }
 
     }

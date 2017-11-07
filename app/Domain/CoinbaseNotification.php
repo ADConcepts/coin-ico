@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CoinbaseNotification extends Model
 {
-    //
+
+    protected $casts = [
+        'notification' => 'array',
+    ];
 }
