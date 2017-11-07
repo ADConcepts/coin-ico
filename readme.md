@@ -10,7 +10,7 @@ composer install
 php artisan key:generate
 php artisan migrate:fresh --seed
 npm install
-npm run dev
+npm run production
 ```
 
 You can watch the assets for changes and automatically recompile them with
@@ -52,7 +52,7 @@ wallet:notifications:read
 
 ### Webhook URL
 
-> http://www.example.com/api/notify
+> https://cryptedunited.com/api/notify
 
 
 ### For Exchange rate
