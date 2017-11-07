@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/notify', 'Api\NotifyController@getNotify')->name('get:api:notify');
+Route::post('/notify', 'Api\NotifyController@getNotify')->name('post:api:notify');

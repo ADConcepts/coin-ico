@@ -23,7 +23,7 @@
 
 <script src="{{ asset('/js/site.js') }}"></script>
 <script src="{{ asset('/js/sly.min.js') }}"></script>
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 <script>
     $.ajaxSetup({
         headers: {

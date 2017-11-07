@@ -85,7 +85,7 @@ class NotifyController extends Controller
         $coinbaseNotification->save();
 
         if (empty($_SERVER['HTTP_CB_SIGNATURE'])) {
-            return response(400);
+            return response('Bad signature!', 400);
         }
         $signature = $_SERVER['HTTP_CB_SIGNATURE'];
         $configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
@@ -93,7 +93,7 @@ class NotifyController extends Controller
         $authenticity = $client->verifyCallback($raw_body, $signature); // boolean
 
         if (!$authenticity) {
-            return response(400);
+            return response('Authentication failed!', 400);
         }
 
         if (isset($raw_body['data']) && !empty($raw_body['data'])) {
@@ -171,7 +171,7 @@ class NotifyController extends Controller
                 $referral->save();
             }
 
-            return response(200);
+            return response('success', 200);
         }
 
     }
