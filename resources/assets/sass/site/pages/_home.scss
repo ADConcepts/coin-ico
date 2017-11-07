@@ -587,6 +587,7 @@
   border-left: none;
   padding-right: 5px;
   text-align: right;
+  right:0;
 }
 
 .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
@@ -689,13 +690,14 @@
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
-  position: relative;
+  position: absolute;
   background: transparent;
   padding: 0;
   margin-left: 24px;
-  margin-top: -25px;
+  margin-top: 0;
   padding-left: 5px;
   border-left: 1px solid $primary;
+  transform: translateY(-30%);
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2,
@@ -2484,6 +2486,7 @@ footer {
     border-left: none;
     padding-right: 15px;
     text-align: right;
+    right:0;
   }
 
   .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
@@ -2526,13 +2529,17 @@ footer {
   }
 
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
-    position: relative;
+    /*position: relative;*/
     background: transparent;
     padding: 0;
     margin-left: 40px;
-    margin-top: -25px;
+    /*margin-top: -25px;*/
     padding-left: 15px;
     border-left: 1px solid $primary;
+    position: absolute;
+    margin-top: 0;
+    bottom: 0;
+    transform: translateY(30%);
   }
 
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2,
