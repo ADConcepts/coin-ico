@@ -83,7 +83,9 @@ class WalletController extends Controller
 
         $pageTitle = 'Transaction detail';
 
-        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser', 'pageTitle', 'transactionCurrency', 'transactionExchangeRate', 'paymentTransaction'));
+        $bonusTransaction = false;
+
+        return view('transaction-detail', compact('transactions', 'total', 'transactionHash', 'adminUser', 'pageTitle', 'transactionCurrency', 'transactionExchangeRate', 'paymentTransaction', 'bonusTransaction'));
     }
 
     public function getTermsOfConditions()

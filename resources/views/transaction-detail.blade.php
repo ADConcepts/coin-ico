@@ -45,6 +45,11 @@
                                                 {{ $transaction->amount }}
                                             </div>
                                         </div>
+                                        <?php
+                                            if(!$bonusTransaction) {
+                                                $bonusTransaction = ($transaction->type == 'bonus') ? true : false;
+                                            }
+                                        ?>
                                     @endforeach
                                     <div class="row row-no-margin">
                                         <div class="col-sm-4 col-md-offset-9">
@@ -91,14 +96,16 @@
                                 <a href="https://blockchain.info/tx/{{ $transactionHash }}" target="_blank">{{ $transactionHash }}</a>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <strong>Effective Bonus: </strong>
+                        @if ($bonusTransaction)
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <strong>Effective Bonus: </strong>
+                                </div>
+                                <div class="col-md-3">
+                                    50% (pre-ICO 1st Round)
+                                </div>
                             </div>
-                            <div class="col-md-3">
-                                50% (pre-ICO 1st Round)
-                            </div>
-                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
