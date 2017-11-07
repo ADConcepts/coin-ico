@@ -78,7 +78,8 @@ class NotifyController extends Controller
             ]
         ];*/
 
-        $raw_body = file_get_contents('php://input');
+        //$raw_body = file_get_contents('php://input');
+        $raw_body = $request->json()->all();
 
         $coinbaseNotification = new CoinbaseNotification();
         $coinbaseNotification->notification = $raw_body;
@@ -103,7 +104,7 @@ class NotifyController extends Controller
                 ->first();
 
             if (!$address) {
-                return "false";
+                return response('Address not found.', 400);
             }
             $currency = $currencies[$raw_body['additional_data']['amount']['currency']];
 
