@@ -37,7 +37,22 @@ Add COINBASE_BITCOIN_ACCOUNT_ID in your .env file
 
 Add COINBASE_LITECOIN_ACCOUNT_ID in your .env file
 
-https://developers.coinbase.com/
+####Permissions needed in coinbase app
+
+wallet:account:read
+
+wallet:addresses:create
+
+wallet:addresses:read
+
+wallet:notifications:read
+
+> https://developers.coinbase.com/
+
+
+### Webhook URL
+
+> http://www.example.com/api/notify
 
 
 ### For Exchange rate
@@ -52,8 +67,3 @@ Add LITECOIN_EXCHANGE_RATE in your .env file
 ### For Bonus(%)
 
 Add BONUS  in your .env file
-
-
-### Webhook URL
-
-http://www.example.com/api/notify
