@@ -40,12 +40,34 @@ $(document).ready(function(){
     window.wow.init();
 
     /*clock js*/
-    var finalDate = new Date(window.counterEndDate);
-
+    /*var finalDate = new Date(window.counterEndDate);
     $('.getting-started').countdown(finalDate) .on('update.countdown', function(event) {
         $(this).html(event.strftime('%n : %H : %M : %S'));
-    });
+    });*/
     /* clock js end */
+
+    /* custom countdown start */
+    // Set the date we're counting down to
+    var countDownDate = new Date(window.counterEndDate).getTime();
+    var now = new Date(window.currentTime).getTime();
+    var distance = countDownDate - now;
+
+    var x = setInterval(function() {
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        var timer = days + " : " + hours + " : " + minutes + " : " + seconds ;
+
+        $('.getting-started').html(timer);
+
+        distance = distance - 1000;
+
+    }, 1000);
+
+    /* custom countdown end */
 
     /*timeline*/
 

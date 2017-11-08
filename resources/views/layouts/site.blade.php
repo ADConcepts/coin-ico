@@ -52,6 +52,7 @@
 </script>
 <script>
     window.counterEndDate = '{{ env('COUNTER_END_DATE') }}';
+    window.currentTime = '{{ date('Y/m/d h:i:s') }}';
 </script>
 @yield('script')
 </body>

@@ -80,3 +80,7 @@ Add REDIRECT_HTTPS with true value in .env file
 ### For Update Countdown
 
 Add `COUNTER_END_DATE` in your .env file. date format should be `YYYY-MM-DD`.
+
+### For Add/Update admin accounts email
+
+Update `adminEmails` in `config/app.php` file.

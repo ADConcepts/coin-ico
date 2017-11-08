@@ -557,7 +557,7 @@
     <div class="developed">
 
           <div class="team-developed">
-              <h1>Developed by the International Teams of</h1>
+              <h1 class="wow fadeInUp">Developed by the International Teams of</h1>
               <div class="team-logos clearfix">
                   <div class="team-logo-wrap wow slideInLeft">
                       <a href="https://levaral.com/" target="_blank" class="team-logo">
