@@ -16,6 +16,7 @@ class CreateCoinbaseNotificationsTable extends Migration
         Schema::create('coinbase_notifications', function (Blueprint $table) {
             $table->increments('id');
             $table->json('notification');
+            $table->string('error')->nullable();
             $table->timestamps();
         });
     }

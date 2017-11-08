@@ -78,7 +78,6 @@ class NotifyController extends Controller
             ]
         ];*/
 
-        //$raw_body = file_get_contents('php://input');
         $raw_body = $request->json()->all();
 
         $coinbaseNotification = new CoinbaseNotification();
@@ -86,7 +85,10 @@ class NotifyController extends Controller
         $coinbaseNotification->save();
 
         if (empty($_SERVER['HTTP_CB_SIGNATURE'])) {
-            return response('Bad signature!', 400);
+            $errorMsg = 'Bad signature!';
+            $coinbaseNotification->error = $errorMsg;
+            $coinbaseNotification->save();
+            return response($errorMsg, 400);
         }
         $signature = $_SERVER['HTTP_CB_SIGNATURE'];
         $configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
@@ -94,7 +96,10 @@ class NotifyController extends Controller
         $authenticity = $client->verifyCallback($raw_body, $signature); // boolean
 
         if (!$authenticity) {
-            return response('Authentication failed!', 400);
+            $errorMsg = 'Authentication failed!';
+            $coinbaseNotification->error = $errorMsg;
+            $coinbaseNotification->save();
+            return response($errorMsg, 400);
         }
 
         if (isset($raw_body['data']) && !empty($raw_body['data'])) {
@@ -104,7 +109,10 @@ class NotifyController extends Controller
                 ->first();
 
             if (!$address) {
-                return response('Address not found.', 400);
+                $errorMsg = 'Address not found!';
+                $coinbaseNotification->error = $errorMsg;
+                $coinbaseNotification->save();
+                return response($errorMsg, 400);
             }
             $currency = $currencies[$raw_body['additional_data']['amount']['currency']];
 
@@ -172,7 +180,7 @@ class NotifyController extends Controller
                 $referral->save();
             }
 
-            return response('success', 200);
+            return response('Success!', 200);
         }
 
     }
