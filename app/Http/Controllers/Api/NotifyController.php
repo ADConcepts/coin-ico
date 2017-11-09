@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Coinbase\Wallet\Client;
 use Coinbase\Wallet\Configuration;
+use Mockery\Exception;
 
 class NotifyController extends Controller
 {
@@ -78,6 +79,7 @@ class NotifyController extends Controller
             ]
         ];*/
 
+        $rawBody = file_get_contents('php://input');
         $raw_body = $request->json()->all();
 
         $coinbaseNotification = new CoinbaseNotification();
@@ -90,10 +92,17 @@ class NotifyController extends Controller
             $coinbaseNotification->save();
             return response($errorMsg, 400);
         }
+
         $signature = $_SERVER['HTTP_CB_SIGNATURE'];
         $configuration = Configuration::apiKey(config('coinbase.apiKey'), config('coinbase.apiSecret'));
         $client = Client::create($configuration);
-        $authenticity = $client->verifyCallback($raw_body, $signature); // boolean
+        try {
+            $authenticity = $client->verifyCallback($rawBody, $signature); // boolean
+        } catch (\Exception $e) {
+            $coinbaseNotification->error = 'Verification Error!';
+            $coinbaseNotification->save();
+            return response('Internal error!', 400);
+        }
 
         if (!$authenticity) {
             $errorMsg = 'Authentication failed!';
