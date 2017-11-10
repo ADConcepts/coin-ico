@@ -20,7 +20,7 @@
 
                         <div class="well">{{ route('get:referral:code', $user->referral_code) }}</div>
 
-                        <form class="form-horizontal" method="POST" action="{{ route('post:refer') }}">
+                        {{--<form class="form-horizontal" method="POST" action="{{ route('post:refer') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('emails') ? ' has-error' : '' }}">
@@ -44,7 +44,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </form>--}}
 
                         <div class="table-responsive">
                         <table class="table table-bordered">
