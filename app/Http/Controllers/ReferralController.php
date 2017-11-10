@@ -79,7 +79,7 @@ class ReferralController extends Controller
             $referral->created_at = $now;
             $referral->updated_at = $now;
             $referral->save();
-            $referral->notify(new ReferredByFriend($user));
+            //$referral->notify(new ReferredByFriend($user));
         }
 
         if ($validEmails) {
