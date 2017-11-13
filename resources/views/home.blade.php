@@ -13,19 +13,16 @@
                    <span class="stamp">
 
                         <div class="clock">
-                            <span class="ico-top">ICO Starts in</span> <span class="getting-started"></span>
+                            <span class="ico-top">Crypted United</span>
                         </div>
 
                         <div>
                             <ul class="social">
-                                {{--<li><a href="javascript:void(0)"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-envelope" aria-hidden="true"></i></a> </li>--}}
                                 @guest
-                                    <li><a href="{{ route('login') }}">Login</a> </li>
-                                    @else
-                                        <li>
+                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                @else
+                                    <li>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
@@ -36,7 +33,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                        @endguest
+                                @endguest
                             </ul>
                         </div>
                    </span>
@@ -53,12 +50,12 @@
                         <div class="slide-part clearfix">
                             <div class="slide-crypted wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
                                 <a href="{{ route('home') }}"><h1>Crypted United</h1></a>
-                                <p>Shape of future,<br> Own the company, <br> Be the chnage</p>
+                                <p>Shape the future<br> Own the company <br> Be the change</p>
                             </div>
 
                             <div class="big-ico wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
 
-                                <h1>ICO STARTS IN</h1>
+                                <h1>pre-ICO 1st Round</h1>
                                 <span class="getting-started big-time"></span>
 
                                 <div>
@@ -66,6 +63,12 @@
                                     <span class="b-day">HOURS</span>
                                     <span class="b-day">MINUTES</span>
                                 </div>
+                                <br />
+                                @if (env('BONUS', 0) > 0)
+                                    <div class="clearfix">
+                                        <span>Bonus effective: {{ env('BONUS', 0) }}%</span>
+                                    </div>
+                                @endif
 
                             </div>
 
@@ -74,11 +77,10 @@
                         <div class="btn-slide">
                             @guest
                                 <a href="{{ route('register') }}" class="btn primary">CREATE ACCOUNT</a>
-                                @else
-                                    <a href="{{ route('get:dashboard') }}" class="btn primary">DASHBOARD</a>
-                                    @endguest
+                            @else
+                                <a href="{{ route('get:dashboard') }}" class="btn primary">DASHBOARD</a>
+                            @endguest
                         </div>
-
 
                     </div>
                 </div>
@@ -109,8 +111,6 @@
                 <h2>Be the change</h2>
                 <p>Start proposals for new projects to develop and suggest changes or new features for existing services. As a developer/designer become part of the team and get paid for contributions.</p>
             </div>
-
-
         </div>
     </div>
 
@@ -123,8 +123,7 @@
             </div>
 
             <div class="thomas-words wow slideInRight" data-wow-delay="0.5" data-wow-duration="2s">
-                <h2>“ I believe that banking institutions are more dan&shy;gerous to our liberties than standing armies.
-                    ”</h2>
+                <h2>“ I believe that banking institutions are more dan&shy;gerous to our liberties than standing armies. ”</h2>
                 <p>Thomas Jefferson, 1802</p>
             </div>
 
@@ -135,7 +134,7 @@
     <div class="container">
 
         <div class="planned">
-            <h1>Planned Project</h1>
+            <h1>Planned Projects</h1>
 
             <div class="project-right">
 
@@ -161,12 +160,10 @@
 
                 <div class="right-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
 
-                    <h2>Digital MarketPlace</h2>
-                    <p>For everything digital. Buy/sell Skills, Expertise and digital items. Pay and accept in your
-                        preferred digital currency.</p>
+                    <h2>Digital Marketplace</h2>
+                    <p>For everything digital. Buy/sell skills, expertise and digital items. Pay and accept in your preferred digital currency.</p>
 
                 </div>
-
 
             </div>
 
@@ -192,7 +189,6 @@
                 <div class="left-img wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                     <img src="/images/pp4.png" align="project" class="img-responsive">
                 </div>
-
 
                 <div class="right-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
 
@@ -234,7 +230,6 @@
 
                 </div>
 
-
             </div>
 
             <div class="project-right">
@@ -267,7 +262,6 @@
 
                 </div>
 
-
             </div>
         </div>
 
@@ -279,8 +273,8 @@
 
             <div class="">
                 <div class="ford-words wow slideInLeft" data-wow-delay="0.5" data-wow-duration="2s">
-                    <h2>“It is well enough that people of the nation do not under&shy;stand our banking and monetary
-                        system, for if they did, I believe there would be a revolution before tomorrow morning.””</h2>
+                    <h2>“ It is well enough that people of the nation do not under&shy;stand our banking and monetary
+                        system, for if they did, I believe there would be a revolution before tomorrow morning. ”</h2>
                     <p>Henry Ford, 1922</p>
                 </div>
 
@@ -503,7 +497,7 @@
                                             <i class="entypo-camera"></i>
                                         </div>
                                         <div class="timeline-label">
-                                            <p>IAT integration</p>
+                                            <p>FIAT integration</p>
                                         </div>
                                     </div>
                                 </li>
@@ -558,7 +552,7 @@
             </div>
 
             <div class="bill-words wow slideInRight" data-wow-delay="0.5" data-wow-duration="2s">
-                <h2>“Banking is necessary, Banks are not!”</h2>
+                <h2>“ Banking is necessary, Banks are not! ”</h2>
                 <p>Bill Gates, 1994</p>
             </div>
 
@@ -652,7 +646,7 @@
 
             <hr class="line">
 
-            <ul class="coin-logo">
+            {{--<ul class="coin-logo">
 
                 <li class="wow zoomIn" data-wow-delay="0.5" data-wow-duration="1s"><a href="javascript:void(0)"><img
                                 src="/images/bitcoin.png" alt="img" class="img-responsive"></a></li>
@@ -665,7 +659,7 @@
 
             </ul>
 
-            <hr class="line">
+            <hr class="line">--}}
 
         </div>
 

@@ -78,6 +78,7 @@ class RegisterController extends Controller
         event(new Registered($user = $this->create($request->all())));
 
         $this->guard()->login($user);
+        $now = \Carbon\Carbon::now()->toDateTimeString();
 
         if(\Session::has('code') && \Session::has('referral_id')){
             $code = \Session::get('code');
@@ -89,12 +90,24 @@ class RegisterController extends Controller
                 ->first();
 
             if($referral) {
-                $now = \Carbon\Carbon::now()->toDateTimeString();
                 $referral->referral_id = $user->id;
                 $referral->email = $user->email;
                 $referral->registered_at = $now;
                 $referral->save();
             }
+        } else {
+            $adminEmails = config('app.adminEmails');
+            $adminUser = User::query()->whereIn('email', $adminEmails)->first();
+            $referral = new Referral();
+            $referral->user_id = $adminUser->id;
+            $referral->referral_id = $user->id;
+            $referral->email = $user->email;
+            $referral->referral_code = $adminUser->referral_code;
+            $referral->registered_at = $now;
+            $referral->first_buy_at = NULL;
+            $referral->created_at = $now;
+            $referral->updated_at = $now;
+            $referral->save();
         }
 
         $user->notify(new EmailVerification($user));

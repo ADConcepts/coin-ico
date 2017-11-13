@@ -238,6 +238,11 @@ return [
         'BTC' => 'bitcoin',
         'LTC' => 'litecoin',
         'ETH' => 'ethereum'
+    ],
+
+    'adminEmails' => [
+        'user2@mail.com',
+        'user3@mail.com'
     ]
 
 ];
