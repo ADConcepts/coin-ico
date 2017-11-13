@@ -122,7 +122,7 @@
                     <tbody>
                     <tr>
                         <td align="center" valign="middle" class="logo">
-                            <a href="#"><img src="http://coin-ico.app/images/red-logo.png" alt="logo"></a>
+                            <a href="#"><img src="{{asset('/images/red-logo.png')}}" alt="logo"></a>
                         </td>
 
                     </tr>
