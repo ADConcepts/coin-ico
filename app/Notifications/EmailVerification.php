@@ -42,11 +42,14 @@ class EmailVerification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
+        $bottomText = 'You receive this mail because you or someone else used your email address to register an account on www.cryptedunited.com If you didn\'t create the account, you can ignore this email';
         return (new MailMessage)
             ->subject('Verify your email')
-            ->greeting('Hello!')
+            ->greeting('Hello '.$this->user->name.'!')
             ->line('Click the below link to verify your email.')
-            ->action('Verify', url(route('get:user:confirm:email', ['token' => $this->user->email_token], false)));
+            ->action('Verify', url(route('get:user:confirm:email', ['token' => $this->user->email_token], false)))
+            ->line('Welcome to CryptedUnited!')
+            ->view('vendor.notifications.email', compact('bottomText'));
 
     }
 
@@ -59,7 +62,7 @@ class EmailVerification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            //
+
         ];
     }
 }

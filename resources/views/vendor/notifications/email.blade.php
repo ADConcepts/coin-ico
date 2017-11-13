@@ -13,6 +13,12 @@
             font-family: Trebuchet MS, sans-serif;
         }
 
+        p {
+            color: #74787E;
+            line-height: 1.5em;
+            font-family: Trebuchet MS, sans-serif;
+        }
+
         a {
             text-decoration: none !important;
         }
@@ -93,7 +99,7 @@
         }
 
         /* regular CSS styles go here */
-        table.container {
+        table {
 
         }
 
@@ -104,7 +110,7 @@
 <center>
 
 
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF" style="background-color: #f5f8fa;">
         <tr>
             <td height="50" style="font-size:10px; line-height:10px;">&nbsp;</td>
         </tr>
@@ -145,7 +151,19 @@
                             <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
                                 <tbody>
                                 <tr class="title" align="left">
-                                    <td><p>Hello!</p></td>
+                                    <td>
+                                        <p>
+                                            @if (! empty($greeting))
+                                                {{ $greeting }}
+                                            @else
+                                                @if ($level == 'error')
+                                                    Whoops!
+                                                @else
+                                                    Hello!
+                                                @endif
+                                            @endif
+                                        </p>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -213,7 +231,14 @@
                                 <tbody>
                                 <tr class="title3">
                                     <td>
-                                        <p>Regards, <br> CryptedUnited</p>
+                                        <p>
+                                            {{-- Salutation --}}
+                                            @if (! empty($salutation))
+                                                {{ $salutation }}
+                                            @else
+                                                Regards,<br>{{ config('app.name') }}
+                                            @endif
+                                        </p>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -228,7 +253,9 @@
 
                             <table width="600" cellpadding="0" cellspacing="0" border="0" class="container">
                                 <tr>
-                                    <td height="20" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                                    <td height="20" style="font-size:10px; line-height:10px;">
+                                        {{ $bottomText or '' }}
+                                    </td>
                                 </tr>
                             </table>
                         </td>
