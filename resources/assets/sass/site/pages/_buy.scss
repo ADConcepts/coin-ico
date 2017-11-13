@@ -115,11 +115,12 @@ body {
 
   h1 {
       font-size: 22px;
-      font-family: $normal-font;
-      color: rgb(0, 0, 0);
+      color: $primary;
       font-weight: bold;
       text-align: center;
       }
+
+
 
   hr {
     border-top: 1px solid #acacac;
@@ -147,6 +148,14 @@ body {
   .seperator {
     padding: 0;
     margin: 15px 0;
+  }
+
+  .welcome-text {
+    padding: 40px 0 10px 0;
+
+    p {
+      font-size: 1.2em !important;
+    }
   }
 
 }
@@ -443,6 +452,10 @@ table.data-history ,.no-footer {
   }
 }
 
+.welcome-link {
+  color: $primary;
+}
+
 
 @media (min-width: $screen-xxs) {
 
@@ -566,10 +579,6 @@ table.data-history ,.no-footer {
 
     h1 {
       font-size: 42px;
-      font-family: $normal-font;
-      color: rgb(0, 0, 0);
-      font-weight: bold;
-      text-align: center;
     }
 
     hr {
@@ -716,10 +725,6 @@ table.data-history ,.no-footer {
 
     h1 {
       font-size: 42px;
-      font-family: $normal-font;
-      color: rgb(0, 0, 0);
-      font-weight: bold;
-      text-align: center;
     }
 
     hr {

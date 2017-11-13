@@ -747,11 +747,11 @@
                             <h4>Connect</h4>
 
                             <ul>
-                                <li><i class="fa fa-facebook"></i><a href="javascript:void(0)">Facebook</a></li>
-                                <li><i class="fa fa-google"></i><a href="javascript:void(0)">Google</a></li>
-                                <li><i class="fa fa-twitter"></i><a href="javascript:void(0)">Twitter</a></li>
-                                <li><i class="fa fa-youtube-play"></i><a href="javascript:void(0)">Youtube</a></li>
-                                <li><i class="fa fa-instagram"></i><a href="javascript:void(0)">Instagram</a></li>
+                                <li><i class="fa fa-slack"></i><a href="https://join.slack.com/t/cryptedunited/shared_invite/enQtMjU0MjU4NTY3MDI5LWJiZWI3MmNjYTQ4OTFhYjc5ZWM2YTczZDRhNzhjZGJkMjU1YThkMzgyNGEzZGI5MzljMDdmYTVjZmFkMzEzYWM">Slack</a></li>
+                                <li><i class="fa fa-reddit"></i><a href="https://www.reddit.com/r/CryptedUnited/">Reddit</a></li>
+                                <li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/CryptedUnited-335452040260167/">Facebook</a></li>
+                                {{--<li><i class="fa fa-youtube-play"></i><a href="javascript:void(0)">Youtube</a></li>
+                                <li><i class="fa fa-instagram"></i><a href="javascript:void(0)">Instagram</a></li>--}}
                             </ul>
 
 

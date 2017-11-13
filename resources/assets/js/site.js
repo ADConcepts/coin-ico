@@ -10,7 +10,7 @@
 try {
     window.$ = window.jQuery = require('jquery');
 
-    require('bootstrap-sass');
+    /*require('bootstrap-sass');*/
     require('jquery-countdown');
 
     /*require('sly-extended/dist/sly.js');*/
@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     /*clock js*/
 
-    $('.getting-started').countdown('2017/11/01', function(event) {
+    $('.getting-started').countdown('2017/12/01', function(event) {
         /*$(this).html(event.strftime('%w weeks %d days %H:%M:%S'));*/
         $(this).html(event.strftime('%d : %H : %M'));
     });

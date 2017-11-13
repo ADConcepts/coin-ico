@@ -94,4 +94,10 @@ class WalletController extends Controller
         return view('terms', compact('pageTitle'));
     }
 
+    public function getWhitePaper()
+    {
+        $pageTitle = 'White paper';
+        return view('white-paper', compact('pageTitle'));
+    }
+
 }
