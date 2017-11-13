@@ -93,6 +93,7 @@
                                 <select class="fc" name="residence_country_id" id="residence_country_id">
                                     <optgroup>
                                         <option value="" disabled selected>Select Country of Residence*</option>
+                                        <option value="0">Non US Citizen</option>
                                         @foreach($countries as  $country)
                                             <option value="{{$country->id}}">{{$country->name}}</option>
                                         @endforeach
@@ -108,6 +109,7 @@
                                 <label class="control-label">Country of Birth (Nationality):</label>
                                 <select class="fc" name="birth_country_id" id="birth_country_id">
                                     <option value="" disabled selected>Select Nationality*</option>
+                                    <option value="0">Non US Citizen</option>
                                     @foreach($countries as  $country)
                                         <option value="{{$country->id}}">{{$country->name}}</option>
                                     @endforeach
@@ -118,13 +120,15 @@
                                     </span>
                                 @endif
                             </div>
-
+                            <div class="form-group fg">
+                                <span class="text-info">Country of Residence and Birth are mandatory only for US citizens. If you are neither, you can select 'Non US Citizen'.</span>
+                            </div>
                             <div class="fg">
                                 <input class="styled-checkbox" id="terms" type="checkbox" value="value1">
                                 <label for="terms"></label>
                                 <label>
-                                    <a href="{{ route('get:terms') }}" target="_blank">
-                                        Accept Terms of Service
+                                    <a href="{{ route('get:terms') }}" target="_blank" class="text-info">
+                                        Crowdsale Agreement
                                     </a>
                                 </label>
                             </div>
