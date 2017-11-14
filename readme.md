@@ -25,6 +25,11 @@ Note: Use the following command if Webpack isn't updating when your files change
 npm run watch-poll
 ```
 
+### For Update Exchange rate 
+```$xslt
+php artisan schedule:run
+```
+
 ### For Coinbase API
 
 Add COINBASE_APP_KEY in your .env file
