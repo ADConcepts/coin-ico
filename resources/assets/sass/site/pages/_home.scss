@@ -98,16 +98,16 @@
   text-align: center;
   float: right;
   background-color: rgba(255, 255, 255, 0.15);
-  padding: 8px 10px;
+  padding: 8px 5px;
   border-radius: 10px;
 
   h1 {
-    font-size: 16px;
+    font-size: 14px;
     font-family: $normal-font;
   }
 
   .big-time {
-    font-size: 25px;
+    font-size: 22px;
     font-family: $extra-font;
     font-weight: 300;
   }
@@ -115,7 +115,7 @@
   .b-day {
     padding: 0 1px;
     font-family: $light-font;
-    font-size: 10px;
+    font-size: 8px;
   }
   .b-hour {
   }
@@ -1085,7 +1085,7 @@ footer {
     padding-left: 30;
 
     h1 {
-      font-size: 24px;
+      font-size: 20px;
       text-align: left;
       font-weight: 700;
 
@@ -1113,21 +1113,21 @@ footer {
   .big-ico {
     text-align: center;
     float: right;
-    padding: 15px 20px;
+    padding: 15px 5px;
     border-radius: 10px;
 
     h1 {
-      font-size: 24px;
+      font-size: 22px;
     }
 
     .big-time {
-      font-size: 35px;
+      font-size: 25px;
       font-weight: 300;
     }
 
     .b-day {
-      padding: 0 5px;
-      font-size: 14px;
+      padding: 0 2px;
+      font-size: 10px;
     }
 
   }
@@ -1234,7 +1234,7 @@ footer {
   .big-ico {
     text-align: center;
     float: right;
-    padding: 15px 20px;
+    padding: 15px 10px;
     border-radius: 10px;
 
     h1 {
@@ -1242,13 +1242,13 @@ footer {
     }
 
     .big-time {
-      font-size: 35px;
+      font-size: 28px;
       font-weight: 300;
     }
 
     .b-day {
-      padding: 0 5px;
-      font-size: 14px;
+      padding: 0 2px;
+      font-size: 10px;
     }
 
   }
@@ -1588,7 +1588,7 @@ footer {
   .big-ico {
     text-align: center;
     float: right;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
 
     h1 {
@@ -1601,8 +1601,8 @@ footer {
     }
 
     .b-day {
-      padding: 0 5px;
-      font-size: 14px;
+      padding: 0 2px;
+      font-size: 12px;
     }
 
   }
@@ -1978,20 +1978,20 @@ footer {
   .big-ico {
     text-align: center;
     float: right;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
 
     h1 {
-      font-size: 30px;
+      font-size: 25px;
     }
 
     .big-time {
-      font-size: 45px;
+      font-size: 40px;
       font-weight: 300;
     }
 
     .b-day {
-      padding: 0 25px;
+      padding: 0 5px;
     }
     .b-hour {
     }
@@ -2238,12 +2238,13 @@ footer {
     }
 
     .big-time {
-      font-size: 75px;
+      font-size: 65px;
       font-weight: 300;
     }
 
     .b-day {
-      padding: 0 37px;
+      padding: 0 15px;
+      font-size: 18px;
     }
     .b-hour {
     }
