@@ -456,6 +456,11 @@ table.data-history ,.no-footer {
   color: $primary;
 }
 
+.font-source-code {
+  font-family: $font-family-source-code !important;
+  font-size: 1.1em;
+  font-weight: 600;
+}
 
 @media (min-width: $screen-xxs) {
 

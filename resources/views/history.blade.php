@@ -40,7 +40,7 @@
                 ajax: '{{ route('get:history:data-table') }}',
                 columns: [
                     {"data":"created_at", "name":"created_at"},
-                    {"data":"transaction_hash", "name":"transaction_hash", "orderable":false, "searchable":false},
+                    {"data":"transaction_hash", "name":"transaction_hash", "orderable":false, "searchable":false, "class":"font-source-code"},
                     {"data":"amount", "name":"amount"}
                 ],
                 "order": [

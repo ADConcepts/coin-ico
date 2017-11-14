@@ -6,7 +6,7 @@
         <div class="col-sm-12">
             <div class="select-currency">
                 <h4>
-                    <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $walletId]) }}">{{ $walletId }}</a>
+                    <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $walletId]) }}" class="font-source-code">{{ $walletId }}</a>
 
                     <div class="pull-right">
                         @if ($user && $user->id != 1 && !$user->is_admin)
@@ -49,7 +49,7 @@
                 ajax: '{{ route('get:wallet:data-table', ['wallet_id' => $walletId]) }}',
                 columns: [
                     {"data":"created_at", "name":"created_at"},
-                    {"data":"transaction_hash", "name":"transaction_hash", "orderable":false, "searchable":false},
+                    {"data":"transaction_hash", "name":"transaction_hash", "orderable":false, "searchable":false, "class":"font-source-code"},
                     {"data":"amount", "name":"amount"}
                 ],
                 "order": [

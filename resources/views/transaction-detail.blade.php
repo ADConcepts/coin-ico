@@ -12,7 +12,7 @@
             </div>
             <div class="select-currency">
                 <h5>
-                    <a href="{{ route("get:transaction:transaction_hash", ["transaction_hash" => $transactionHash]) }}">{{ $transactionHash }}</a>
+                    <a href="{{ route("get:transaction:transaction_hash", ["transaction_hash" => $transactionHash]) }}" class="font-source-code">{{ $transactionHash }}</a>
                 </h5>
 
                 <hr class="seperator">
@@ -22,7 +22,7 @@
                         <tbody>
                             <tr class="tabel-heading">
                                 <td>
-                                    <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $adminUser->wallet_id]) }}" target="_blank" title="{{ $adminUser->wallet_id }}">
+                                    <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $adminUser->wallet_id]) }}" target="_blank" title="{{ $adminUser->wallet_id }}" class="font-source-code">
                                         {{ $adminUser->wallet_id }}
                                     </a>
                                     ({{ $transactionCurrency }})
@@ -37,7 +37,7 @@
                                                 {{ $transaction->created_at }}
                                             </div>
                                             <div class="col-sm-6">
-                                                <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $transaction->user->wallet_id]) }}" target="_blank" title="{{ $transaction->user->wallet_id }}">
+                                                <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $transaction->user->wallet_id]) }}" target="_blank" title="{{ $transaction->user->wallet_id }}" class="font-source-code">
                                                     {{ $transaction->user->wallet_id }}
                                                 </a>
                                             </div>
@@ -93,7 +93,7 @@
                                 <strong>Reference TX: </strong>
                             </div>
                             <div class="col-md-3">
-                                <a href="https://blockchain.info/tx/{{ $transactionHash }}" target="_blank">{{ $transactionHash }}</a>
+                                <a href="https://blockchain.info/tx/{{ $transactionHash }}" target="_blank" class="font-source-code">{{ $transactionHash }}</a>
                             </div>
                         </div>
                         @if ($bonusTransaction)
