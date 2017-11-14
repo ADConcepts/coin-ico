@@ -23,8 +23,17 @@
 
                                 <div class="current-detail">
                                     <strong class="currency">Expected coins: </strong>
-                                    <span>1 {{ ucfirst($currency) }} => {{ round($exchangeRate->amount,2) }}
-                                        coins</span>
+                                    <span>1 {{ ucfirst($currency) }} => ${{ round($exchangeRate->dollar) }}</span>
+                                    <br />
+
+                                    <strong class="currency">&nbsp;</strong>
+                                    <span>1 coin => ${{ config('app.exchangeRate.' . $currency) }}</span>
+                                    <br />
+
+                                    <strong class="currency">&nbsp;</strong>
+                                    <span>1 {{ ucfirst($currency) }} => {{ round($exchangeRate->amount, 2) }} coins</span>
+                                    <br />
+
                                 </div>
                             </div>
                         </div>

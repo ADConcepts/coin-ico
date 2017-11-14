@@ -78,8 +78,7 @@ class ExchangeRates extends Command
             $exchangeRate->dollar = $value->price_usd;
 
             $rate = config('app.exchangeRate')[$value->id];
-            $amount = $value->price_usd * $rate;
-            $exchangeRate->amount = $amount;
+            $exchangeRate->amount = (1 * $value->price_usd) / $rate;
 
             $exchangeRate->save();
         }

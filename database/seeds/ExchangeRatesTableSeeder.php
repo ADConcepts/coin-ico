@@ -46,7 +46,7 @@ class ExchangeRatesTableSeeder extends Seeder
 
                 $exchangeRates[] = [
                     'currency' => $currency['currency'],
-                    'amount' => $dollar * config('app.exchangeRate.' . $currency['currency']),
+                    'amount' => (1 * $dollar) / config('app.exchangeRate.' . $currency['currency']),
                     'dollar' => $dollar,
                     'start_date' => $date->toDateTimeString(),
                     'end_date' => $day == 0 ? null : $date->copy()->addDay(),
