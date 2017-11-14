@@ -8,9 +8,9 @@
             <div class="left-vpad">
                 <a href="{{ route('home') }}"><h1>Crypted United</h1></a>
 
-                <p>Shape the future, <br>
-                    Own the company, <br>
-                    Be the change</p>
+                <p>Shape the Future<br>
+                    Own the Company<br>
+                    Be the Change</p>
             </div>
         </div>
 

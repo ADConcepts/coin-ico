@@ -50,7 +50,7 @@
                         <div class="slide-part clearfix">
                             <div class="slide-crypted wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
                                 <a href="{{ route('home') }}"><h1>Crypted United</h1></a>
-                                <p>Shape the future<br> Own the company <br> Be the change</p>
+                                <p>Shape the Future<br> Own the Company <br> Be the Change</p>
                             </div>
 
                             <div class="big-ico wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -99,17 +99,17 @@
                 beyond <br class="hidden-xs"> borders and nationalities.</h1>
 
             <div class="part wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h2>Shape the future | 1 Share = 1 Vote</h2>
+                <h2>Shape the Future | 1 Share = 1 Vote</h2>
                 <p>Every owner of shares will be able to vote on decisions regarding the future path and development of the company.</p>
             </div>
 
             <div class="part wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h2>Own the company | 1 Coin = 1 Share</h2>
+                <h2>Own the Company | 1 Coin = 1 Share</h2>
                 <p>As shareholder of coins, you'll receive dividends for your investment simply by holding on to your shares.</p>
             </div>
 
             <div class="part wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h2>Be the change</h2>
+                <h2>Be the Change</h2>
                 <p>Start proposals for new projects to develop and suggest changes or new features for existing services. As a developer/designer become part of the team and get paid for contributions.</p>
             </div>
         </div>
@@ -744,11 +744,11 @@
                             <h4>Connect</h4>
 
                             <ul>
-                                <li><i class="fa fa-slack"></i><a href="https://join.slack.com/t/cryptedunited/shared_invite/enQtMjU0MjU4NTY3MDI5LWJiZWI3MmNjYTQ4OTFhYjc5ZWM2YTczZDRhNzhjZGJkMjU1YThkMzgyNGEzZGI5MzljMDdmYTVjZmFkMzEzYWM">Slack</a></li>
-                                <li><i class="fa fa-reddit"></i><a href="https://www.reddit.com/r/CryptedUnited/">Reddit</a></li>
-                                <li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/CryptedUnited-335452040260167/">Facebook</a></li>
-                                {{--<li><i class="fa fa-youtube-play"></i><a href="javascript:void(0)">Youtube</a></li>
-                                <li><i class="fa fa-instagram"></i><a href="javascript:void(0)">Instagram</a></li>--}}
+                                <li><i class="fa fa-slack"></i><a href="https://join.slack.com/t/cryptedunited/shared_invite/enQtMjU0MjU4NTY3MDI5LWJiZWI3MmNjYTQ4OTFhYjc5ZWM2YTczZDRhNzhjZGJkMjU1YThkMzgyNGEzZGI5MzljMDdmYTVjZmFkMzEzYWM" target="_blank">Slack</a></li>
+                                <li><i class="fa fa-reddit"></i><a href="https://www.reddit.com/r/CryptedUnited/" target="_blank">Reddit</a></li>
+                                <li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/CryptedUnited-335452040260167/" target="_blank">Facebook</a></li>
+                                <li><i class="fa fa-twitter"></i><a href="https://twitter.com/CryptedUnited" target="_blank">Twitter</a></li>
+                                <li><i class="fa fa-medium"></i><a href="https://medium.com/@cryptedunited" target="_blank">Medium</a></li>
                             </ul>
 
 
