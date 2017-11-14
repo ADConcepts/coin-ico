@@ -561,11 +561,21 @@
 
     </div>
 
+
+    <div class="developed">
+
+          <div class="team-developed">
+            <h1>Developed by</h1>
+            <img src="/images/levaral-logo.png" alt="logo" />
+            <p><a href="#"> www.levaral.com </a></p>
+          </div>
+
+    </div>
     <div class="container">
 
         <div class="row">
 
-            <div class="team-title">
+            {{--<div class="team-title">
                 <h1>Team</h1>
 
                 <div class="team-inner-title">
@@ -624,7 +634,10 @@
                     </div>
                 </div>
 
-            </div>
+            </div>--}}
+
+
+
 
         </div>
 
