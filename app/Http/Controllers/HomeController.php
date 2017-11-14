@@ -57,4 +57,10 @@ class HomeController extends Controller
             ->rawColumns(['transaction_hash'])
             ->make(true);
     }
+
+    public function getPolls(Request $request)
+    {
+        $pageTitle = 'Polls';
+        return view('polls', compact('pageTitle'));
+    }
 }

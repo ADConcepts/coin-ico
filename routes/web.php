@@ -27,6 +27,7 @@ Route::get('/home', 'HomeController@getIndex')->name('get:home');
 Route::get('/dashboard', 'HomeController@getDashboard')->name('get:dashboard');
 Route::get('/historyData/', 'HomeController@getHistoryDataTable')->name('get:history:data-table');
 Route::get('/history', 'HomeController@getHistory')->name('get:history');
+Route::get('/polls', 'HomeController@getPolls')->name('get:polls');
 
 Route::get('/buy', 'BuyController@getBuy')->name('get:buy')->middleware(['auth','verify-email']);
 

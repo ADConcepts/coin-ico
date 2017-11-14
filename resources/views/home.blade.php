@@ -565,9 +565,11 @@
     <div class="developed">
 
           <div class="team-developed">
-            <h1>Developed by</h1>
-            <img src="/images/levaral-logo.png" alt="logo" />
-            <p><a href="#"> www.levaral.com </a></p>
+              <h1>Developed by</h1>
+              <a href="https://levaral.com/" target="_blank">
+                  <img src="/images/levaral-logo.png" alt="logo"/>
+              </a>
+              <p><a href="https://levaral.com/" target="_blank"> www.levaral.com </a></p>
           </div>
 
     </div>
@@ -718,6 +720,9 @@
                                 <li>
                                     <a href="{{ route('get:refer') }}">Refer</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('get:polls') }}">Polls</a>
+                                </li>
                             </ul>
 
                         </div>
@@ -738,7 +743,7 @@
                                         <li>
                                             <a href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
+                                                document.getElementById('logout-form').submit();">
                                                 Logout
                                             </a>
 
@@ -746,7 +751,7 @@
                                                 {{ csrf_field() }}
                                             </form>
                                         </li>
-                                        @endguest
+                                    @endguest
                             </ul>
                         </div>
                     </div>

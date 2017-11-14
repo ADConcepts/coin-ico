@@ -56,6 +56,9 @@
                             <li class="{{ (\Request::route()->getName() == 'get:refer') ? 'left-active' : '' }}">
                                 <a href="{{ route('get:refer') }}">Refer</a>
                             </li>
+                            <li class="{{ (\Request::route()->getName() == 'get:polls') ? 'left-active' : '' }}">
+                                <a href="{{ route('get:polls') }}">Polls</a>
+                            </li>
                         @endauth
                     </ul>
 
