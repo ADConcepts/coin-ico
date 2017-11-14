@@ -19,7 +19,7 @@
     <title>{{ isset($pageTitle) ? $pageTitle.' - ' : '' }}{{ config('app.name', 'CryptedUnited') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('/css/site.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/site.css', env('REDIRECT_HTTPS')) }}" rel="stylesheet">
 
     <!-- Scripts -->
 </head>
@@ -29,8 +29,8 @@
 @yield('content')
 
 
-<script src="{{ asset('/js/site.js') }}"></script>
-<script src="{{ asset('/js/sly.min.js') }}"></script>
+<script src="{{ asset('/js/site.js', env('REDIRECT_HTTPS')) }}"></script>
+<script src="{{ asset('/js/sly.min.js', env('REDIRECT_HTTPS')) }}"></script>
 <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 <script>
     $.ajaxSetup({

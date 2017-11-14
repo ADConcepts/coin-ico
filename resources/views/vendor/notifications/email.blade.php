@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Coin-ICO</title>
+    <title>CryptedUnited</title>
 
     <style type="text/css">
 
@@ -122,7 +122,7 @@
                     <tbody>
                     <tr>
                         <td align="center" valign="middle" class="logo">
-                            <a href="#"><img src="{{asset('/images/red-logo.png')}}" alt="logo"></a>
+                            <a href="#"><img src="{{ asset('/images/red-logo.png', env('REDIRECT_HTTPS')}}" alt="logo"></a>
                         </td>
 
                     </tr>

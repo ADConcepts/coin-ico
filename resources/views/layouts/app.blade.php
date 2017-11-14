@@ -19,8 +19,8 @@
     <title>{{ isset($pageTitle) ? $pageTitle.' - ' : '' }}{{ config('app.name', 'CryptedUnited') }}</title>
 
     <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/app.css', env('REDIRECT_HTTPS')) }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -108,9 +108,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('/js/app.js') }}"></script>
-    <script src="{{ asset('/js/site.js') }}"></script>
-    <script src="{{ asset('/js/sly.min.js') }}"></script>
+    <script src="{{ asset('/js/app.js', env('REDIRECT_HTTPS')) }}"></script>
+    <script src="{{ asset('/js/site.js', env('REDIRECT_HTTPS')) }}"></script>
+    <script src="{{ asset('/js/sly.min.js', env('REDIRECT_HTTPS')) }}"></script>
     <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script>
         $.ajaxSetup({

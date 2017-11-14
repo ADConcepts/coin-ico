@@ -62,6 +62,7 @@
                                     <span class="b-day">DAYS</span>
                                     <span class="b-day">HOURS</span>
                                     <span class="b-day">MINUTES</span>
+                                    <span class="b-day">SECONDS</span>
                                 </div>
                                 <br />
                                 @if (env('BONUS', 0) > 0)

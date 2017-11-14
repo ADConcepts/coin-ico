@@ -40,7 +40,7 @@ $(document).ready(function(){
 
     $('.getting-started').countdown('2017/12/01', function(event) {
         /*$(this).html(event.strftime('%w weeks %d days %H:%M:%S'));*/
-        $(this).html(event.strftime('%d : %H : %M'));
+        $(this).html(event.strftime('%d : %H : %M : %S'));
     });
 
     /* clock js end */
