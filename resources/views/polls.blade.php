@@ -17,27 +17,44 @@
                         </div>
                         <hr />
 
-                        <div class="clearfix text-center welcome-text">
-                            <div class="clearfix">
-                                <h4 class="pull-left"><strong>We are looking for a name and have decided that a CrowdOwned Coin deserves a CrowdSourced name.</strong></h4>
-                                <div class="pull-right view-history">
-                                    <a href="" class="btn btn-sm">Vote Now!</a>
+                        <div class="clearfix welcome-text">
+                            <div class="row clearfix">
+                                <div class="col-md-10">
+                                    <h4 class="pull-left">
+                                        <strong>We are looking for a name and have decided that a CrowdOwned Coin deserves a CrowdSourced name.</strong>
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-2 view-history">
+                                    <a href="" class="btn btn-sm pull-right">Vote Now!</a>
                                 </div>
                             </div>
                             <br />
 
-                            <div class="clearfix">
-                                <h4 class="pull-left"><strong>As announced are you to vote how dividends will be distributed to the shareholders.</strong></h4>
-                                <div class="pull-right view-history">
-                                    <a href="" class="btn btn-sm">Vote Now!</a>
+                            <div class="row clearfix">
+                                <div class="col-md-10">
+                                    <h4 class="pull-left">
+                                        <strong>As announced are you to vote how dividends will be distributed to the shareholders.</strong>
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-2 view-history">
+                                    <a href="" class="btn btn-sm pull-right">Vote Now!</a>
                                 </div>
                             </div>
                             <br />
 
-                            <div class="clearfix">
-                                <h4 class="pull-left"><strong>[POP] Which is your favorite Coin right now?</strong></h4>
-                                <div class="pull-right view-history">
-                                    <a href="" class="btn btn-sm">Vote Now!</a>
+                            <div class="row clearfix">
+                                <div class="col-md-10">
+                                    <h4 class="pull-left">
+                                        <strong>[POP] Which is your favorite Coin right now?</strong>
+                                        <br />
+                                        <small>Polls will be developed during pre-ICO and start after the pre-ICO is finished. Only shareholders will be able to vote.</small>
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-2 view-history">
+                                    <a href="" class="btn btn-sm pull-right">Vote Now!</a>
                                 </div>
                             </div>
 

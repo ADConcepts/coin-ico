@@ -47,18 +47,35 @@
                         </form>--}}
 
                         <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <tr class="tabel-heading">
-                                <th>Total referred</th>
-                                <th>Coins the referrals bought</th>
-                                <th>Referral credit</th>
-                            </tr>
-                            <tr>
-                                <td> {{ $referrals->count() }} </td>
-                                <td> {{ $referralUserEarning }} </td>
-                                <td> {{ $referralEarning }} </td>
-                            </tr>
-                        </table>
+                            <table class="table table-bordered">
+                                <tr class="tabel-heading">
+                                    <th>Total referred</th>
+                                    <th>Coins the referrals bought</th>
+                                    <th>Referral credit</th>
+                                </tr>
+                                <tr>
+                                    <td> {{ $referrals->count() }} </td>
+                                    <td> {{ $referralUserEarning }} </td>
+                                    <td> {{ $referralEarning }} </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md-12">
+                            <img src="https://i.imgur.com/CBcOCod.png" alt="CryptedUnited" width="728" height="90"/>
+                        </div>
+                        <div class="col-md-12 crypted-images">
+                            <img src="https://i.imgur.com/iMQTnOl.png" alt="CryptedUnited" width="300" height="600"/>
+                            <img src="https://i.imgur.com/ci0RbGs.png" alt="CryptedUnited" width="300" height="250"/>
+                            <img src="https://i.imgur.com/aSG0NPa.png" alt="CryptedUnited" width="300" height="250"/>
+                            <img src="https://i.imgur.com/qX39SiU.png" alt="CryptedUnited" width="300" height="250"/>
+                            <img src="https://i.imgur.com/STd6PfP.png" alt="CryptedUnited" width="300" height="250"/>
+                            <img src="https://i.imgur.com/4sCWctX.png" alt="CryptedUnited" width="300" height="250"/>
+                            <img src="https://i.imgur.com/CQdZlrY.png" alt="CryptedUnited" width="336" height="280"/>
+                            <img src="https://i.imgur.com/2y0J3yU.png" alt="CryptedUnited" width="336" height="280"/>
+                            <img src="https://i.imgur.com/WoLGokh.png" alt="CryptedUnited" width="336" height="280"/>
+                            <img src="https://i.imgur.com/lPoPvzK.png" alt="CryptedUnited" width="336" height="280"/>
+                            <img src="https://i.imgur.com/3Mvvlob.png" alt="CryptedUnited" width="336" height="280"/>
                         </div>
 
                     </div>
@@ -66,4 +83,20 @@
             </div>
         </div>
     </div>
+    <style>
+        .crypted-images {
+            -webkit-column-count: 3; /* Chrome, Safari, Opera */
+            -moz-column-count: 3; /* Firefox */
+            column-count: 3;
+            margin-top: 7px;
+        }
+        .crypted-images img{ width: 100%; padding: 7px 0;}
+        @media (max-width: 500px) {
+            .crypted-images {
+                -webkit-column-count: 1; /* Chrome, Safari, Opera */
+                -moz-column-count: 1; /* Firefox */
+                column-count: 1;
+            }
+        }
+    </style>
 @endsection
