@@ -642,6 +642,8 @@
                                 src="/images/laravel.png" alt="img" class="img-responsive"></a></li>
                 <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="javascript:void(0)"><img
                                 src="/images/mysql.png" alt="img" class="img-responsive"></a></li>
+                <li class="wow zoomIn" data-wow-delay="4" data-wow-duration="3s"><a href="javascript:void(0)"><img
+                                src="/images/ubuntu.png" alt="img" class="img-responsive"> </a> </li>
             </ul>
 
             <hr class="line">

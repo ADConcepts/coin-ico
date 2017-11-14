@@ -512,14 +512,15 @@
             <ul class="lang">
                 <li class="wow zoomIn" data-wow-delay="0.5" data-wow-duration="1s"><a href="#"><img
                                 src="/images/php.png" alt="img" class="img-responsive"></a></li>
-                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="#"><img src="/images/v.png"
-                                                                                                    alt="img"
-                                                                                                    class="img-responsive"></a>
+                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="#">
+                        <img src="/images/v.png" alt="img" class="img-responsive"></a>
                 </li>
                 <li class="wow zoomIn" data-wow-delay="2" data-wow-duration="2s"><a href="#"><img
                                 src="/images/laravel.png" alt="img" class="img-responsive"></a></li>
                 <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="#"><img
                                 src="/images/mysql.png" alt="img" class="img-responsive"></a></li>
+                <li class="wow zoomIn" data-wow-delay="4" data-wow-duration="3s"><a href="#"><img
+                                src="/images/ubuntu.png" alt="img" class="img-responsive"> </a> </li>
             </ul>
 
             <hr class="line">
@@ -534,6 +535,7 @@
                                 src="/images/coinnoon.png" alt="img" class="img-responsive"></a></li>
                 <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="#"><img
                                 src="/images/smatico.png" alt="img" class="img-responsive"></a></li>
+
 
             </ul>
 
@@ -609,7 +611,6 @@
                                 <li><i class="fa fa-youtube-play"></i><a href="#">Youtube</a></li>
                                 <li><i class="fa fa-instagram"></i><a href="#">Instagram</a></li>
                             </ul>
-
 
                         </div>
 
