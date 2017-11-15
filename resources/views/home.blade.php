@@ -556,11 +556,30 @@
     <div class="developed">
 
           <div class="team-developed">
-              <h1>Developed by</h1>
-              <a href="https://levaral.com/" target="_blank">
-                  <img src="/images/levaral-logo.png" alt="logo"/>
-              </a>
-              <p><a href="https://levaral.com/" target="_blank"> www.levaral.com </a></p>
+              <h1>Developed by the International Teams of</h1>
+              <div class="team-logos clearfix">
+                  <div class="team-logo-wrap">
+                      <a href="https://levaral.com/" target="_blank" class="team-logo">
+                          <img src="/images/levaral.png" alt="www.levaral.com"/>
+                          <span>www.levaral.com</span>
+                      </a>
+                  </div>
+
+                  <div class="team-logo-wrap">
+                      <a href="https://levaral.com/" target="_blank" class="team-logo">
+                          <img src="/images/ad_concepts.png" alt="AD concepts"/>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="flags">
+                  <img src="/images/flags/1.png" alt="logo"/>
+                  <img src="/images/flags/2.png" alt="logo"/>
+                  <img src="/images/flags/3.png" alt="logo"/>
+                  <img src="/images/flags/4.png" alt="logo"/>
+                  <img src="/images/flags/5.png" alt="logo"/>
+                  <img src="/images/flags/6.png" alt="logo"/>
+              </div>
           </div>
 
     </div>

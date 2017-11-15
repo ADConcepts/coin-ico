@@ -770,7 +770,6 @@
   min-height: 300px;
   display: table;
   width: 100%;
-  background-image: url("/images/about.png");
 
   .team-developed {
 
@@ -796,6 +795,37 @@
       }
     }
 
+    .flags {
+      margin-top: 20px;
+      img {
+        margin: 0 15px;
+      }
+    }
+
+  }
+
+  .team-logos {
+
+  }
+
+  .team-logo-wrap {
+    margin-top: 50px;
+    text-align: center;
+
+    span {
+      font-size: 22px;
+      color: #666;
+      display: block;
+      margin-top: 12px;
+    }
+  }
+
+  .team-logo {
+    display: inline-block;
+
+    img {
+      padding-top: 0;
+    }
   }
 
 }
@@ -1856,7 +1886,6 @@ footer {
     min-height: 500px;
     display: table;
     width: 100%;
-    background-image: url("/images/about.png");
 
     .team-developed {
 
@@ -1882,6 +1911,22 @@ footer {
         }
       }
 
+    }
+
+    .team-logos {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .team-logo-wrap {
+      float: left;
+      width: 50%;
+      margin-top: 70px;
+
+      img {
+        padding-top: 0;
+      }
     }
 
   }
@@ -2097,7 +2142,6 @@ footer {
     min-height: 600px;
     display: table;
     width: 100%;
-    background-image: url("/images/about.png");
 
     .team-developed {
 
@@ -2123,6 +2167,12 @@ footer {
         }
       }
 
+    }
+
+    .team-logo-wrap {
+      img {
+        padding-top: 0;
+      }
     }
 
   }
