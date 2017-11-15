@@ -723,6 +723,9 @@
                                 <li>
                                     <a href="{{ route('get:polls') }}">Polls</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('get:white-paper') }}">Whitepaper</a>
+                                </li>
                             </ul>
 
                         </div>

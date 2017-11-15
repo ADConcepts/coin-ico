@@ -59,6 +59,9 @@
                             <li class="{{ (\Request::route()->getName() == 'get:polls') ? 'left-active' : '' }}">
                                 <a href="{{ route('get:polls') }}">Polls</a>
                             </li>
+                            <li class="{{ (\Request::route()->getName() == 'get:white-paper') ? 'left-active' : '' }}">
+                                <a href="{{ route('get:white-paper') }}">Whitepaper</a>
+                            </li>
                         @endauth
                     </ul>
 
