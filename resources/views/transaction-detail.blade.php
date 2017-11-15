@@ -76,7 +76,7 @@
                                 <strong>Exchangerate at Time of Purchase: </strong>
                             </div>
                             <div class="col-md-3">
-                                {{ $transactionExchangeRate }}
+                                ${{ $transactionExchangeRate }}
                             </div>
                         </div>
                         <div class="row">
