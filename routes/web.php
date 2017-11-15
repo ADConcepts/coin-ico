@@ -43,6 +43,7 @@ Route::get('/transaction/{transaction_hash}', 'WalletController@getTransactionDe
 
 Route::get('/terms', 'WalletController@getTermsOfConditions')->name('get:terms');
 Route::get('/whitepaper', 'WalletController@getWhitePaper')->name('get:white-paper');
+Route::get('/whitepaper/download/{fileName}', 'WalletController@getWhitePaperDownload')->name('get:white-paper:download');
 
 Route::get('/commands', function () {
     Artisan::call('exchange:rates');

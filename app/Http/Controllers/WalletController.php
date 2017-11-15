@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use App\User;
 use App\Domain\Transaction\Transaction;
+use Illuminate\Support\Facades\File;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Config;
 
@@ -98,6 +99,17 @@ class WalletController extends Controller
     {
         $pageTitle = 'White paper';
         return view('white-paper', compact('pageTitle'));
+    }
+
+    public function getWhitePaperDownload($fileName)
+    {
+        if(File::exists(storage_path('app/public/uploads/white-paper/' . $fileName)))
+        {
+            return response()->download(storage_path('app/public/uploads/white-paper/' . $fileName));
+        }
+        else{
+            return redirect()->route('get:white-paper')->with('error', 'File not found.');
+        }
     }
 
 }

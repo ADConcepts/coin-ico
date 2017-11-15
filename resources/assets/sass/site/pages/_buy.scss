@@ -415,6 +415,31 @@ table.data-history ,.no-footer {
 
 }
 
+.crypted-btn {
+  a {
+    text-decoration: none;
+    background-color: $primary;
+    color: #fff;
+    font-size: 15px;
+    font-family: $normal-font;
+    font-weight: 400;
+    border-color: $primary;
+
+
+    &:hover {
+      background-color: #fff;
+      color: $primary;
+      border-color: $primary;
+    }
+
+    &:focus {
+      background-color: $primary;
+      color: #fff;
+      border-color: $primary;
+    }
+  }
+}
+
 .fg1 {
   margin-bottom: 30px;
 
