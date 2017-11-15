@@ -122,7 +122,7 @@
                     <tbody>
                     <tr>
                         <td align="center" valign="middle" class="logo">
-                            <a href="#"><img src="{{ asset('/images/red-logo.png', env('REDIRECT_HTTPS')}}" alt="logo"></a>
+                            <a href="#"><img src="{{ asset('/images/red-logo.png', env('REDIRECT_HTTPS')) }}" alt="logo"></a>
                         </td>
 
                     </tr>
