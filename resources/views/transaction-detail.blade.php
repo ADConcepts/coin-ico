@@ -25,7 +25,6 @@
                                     <a href="{{ route('get:wallet:wallet_id', ['wallet_id' => $adminUser->wallet_id]) }}" target="_blank" title="{{ $adminUser->wallet_id }}" class="font-source-code">
                                         {{ $adminUser->wallet_id }}
                                     </a>
-                                    ({{ $transactionCurrency }})
                                 </td>
                                 <td>
                                    <i class="fa fa-arrow-right fa-2x text-color" ></i>

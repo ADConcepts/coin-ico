@@ -41,7 +41,7 @@
                 columns: [
                     {"data":"created_at", "name":"created_at"},
                     {"data":"transaction_hash", "name":"transaction_hash", "orderable":false, "searchable":false, "class":"font-source-code"},
-                    {"data":"amount", "name":"amount"}
+                    {"data":"amount", "name":"amount", "class":"text-right"}
                 ],
                 "order": [
                     [0, 'asc']
