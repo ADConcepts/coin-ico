@@ -104,12 +104,29 @@ class AppSeeder extends Seeder
     public function fakeReferralTransaction($referral, $payment)
     {
         return [
+            'sender_id' => 1,
             'user_id' => $referral->user_id,
             'payment_id' => null,
             'referral_id' => $referral->id,
             'transaction_hash' => $payment->transaction->transaction_hash,
             'type' => 'referral',
             'amount' => ($payment->amount * 5) / 100 * $payment->exchange_rate,
+            'created_at' => $payment->created_at,
+            'updated_at' => $payment->created_at,
+        ];
+    }
+
+    public function fakeBonusTransaction($payment)
+    {
+        $bonus = env('BONUS', 0);
+        return [
+            'sender_id' => 1,
+            'user_id' => $payment->address->user_id,
+            'payment_id' => null,
+            'referral_id' => null,
+            'transaction_hash' => $payment->transaction->transaction_hash,
+            'type' => 'bonus',
+            'amount' => ($payment->amount * $bonus) / 100 * $payment->exchange_rate,
             'created_at' => $payment->created_at,
             'updated_at' => $payment->created_at,
         ];

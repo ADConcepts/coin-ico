@@ -23,6 +23,7 @@ class UsersReferralSeeder extends AppSeeder
         // 4) 15 payments
         // 5) 15 deposit transactions
         // 6) 15 referral transactions
+        // 7) 10 bonus transactions
 
 
         // 1)
@@ -75,8 +76,8 @@ class UsersReferralSeeder extends AppSeeder
         Payment::insert($payments);
 
         // 5)
-        $payments = Payment::with('address')->get();
-        $payments = $payments->slice(91, 15);
+        $allPayments = Payment::with('address')->get();
+        $payments = $allPayments->slice(91, 15);
         $transactions = [];
         foreach ($payments as $payment) {
             $transactions[] = $this->fakeTransaction($payment);
@@ -96,5 +97,17 @@ class UsersReferralSeeder extends AppSeeder
         }
 
         Transaction::insert($transactions);
+
+        // 7)
+        $bonus = env('BONUS', 0);
+        if ($bonus > 0) {
+            $payments = $allPayments->slice(96, 10);
+            $transactions = [];
+            foreach ($payments as $payment) {
+                $transactions[] = $this->fakeBonusTransaction($payment);
+            }
+
+            Transaction::insert($transactions);
+        }
     }
 }

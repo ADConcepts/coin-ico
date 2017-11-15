@@ -68,11 +68,23 @@ class UsersSeeder extends AppSeeder
         Payment::insert($payments);
 
         // 4)
-        $payments = Payment::with('address')->get();
+        $allPayments = Payment::with('address')->get();
         $transactions = [];
-        foreach ($payments as $payment) {
+        foreach ($allPayments as $payment) {
             $transactions[] = $this->fakeTransaction($payment);
         }
         Transaction::insert($transactions);
+
+        // 6)
+        $bonus = env('BONUS', 0);
+        if ($bonus > 0) {
+            $payments = $allPayments->slice(40, 30);
+            $transactions = [];
+            foreach ($payments as $payment) {
+                $transactions[] = $this->fakeBonusTransaction($payment);
+            }
+
+            Transaction::insert($transactions);
+        }
     }
 }
