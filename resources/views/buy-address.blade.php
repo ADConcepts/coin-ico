@@ -52,10 +52,10 @@
 
                         <div class="col-sm-6">
                             <div class="pb">
-                                <div class="current-detail">
+                                <div class="current-detail crypted-btn">
                                     <strong class="currency">Coins to send:</strong>
                                     <span><input type="text" name="coins" id="coins" /></span>
-                                    <button class="btn btn-primary pull-right" id="calculate">Calculate</button>
+                                    <a class="btn btn-primary pull-right" id="calculate">Calculate</a>
                                 </div>
                                 <div class="current-detail pull-right">
 
@@ -63,7 +63,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-5 col-sm-offset-1">
+                        <div class="col-sm-6">
                             <div class="pb hidden" id="result">
                                 <div class="current-detail">
                                     <strong class="currency">Expected coins: </strong>
@@ -98,25 +98,39 @@
 
 @section('script')
     <script>
-        var exchangeRate = "{{ $exchangeRate->amount }}";
-        var bonus = "{{ $bonus }}";
-        $(document).on('click', '#calculate', function(){
-            _coins = $('#coins');
-            if (_coins.val() && $.isNumeric(_coins.val())) {
-                $('#error').addClass('hidden');
-                $('#result').removeClass('hidden');
-                var coins = parseFloat(_coins.val());
-                var expected_coins = exchangeRate * coins;
-                var bonus_coins = (expected_coins * bonus) / 100;
-                var total = expected_coins + bonus_coins;
+        let exchangeRate = "{{ $exchangeRate->amount }}";
+        let bonus = "{{ $bonus }}";
+        $(document).ready(function() {
+            $(document).on('click', '#calculate', function () {
+                _coins = $('#coins');
+                if (_coins.val() && $.isNumeric(_coins.val())) {
+                    $('#error').addClass('hidden');
+                    $('#result').removeClass('hidden');
+                    let coinsVal = _coins.val();
 
-                $('#expected_coins').text(expected_coins.toFixed(10) + ' coins');
-                $('#bonus_coins').text( bonus_coins.toFixed(10) + ' coins');
-                $('#total').text(total.toFixed(10) + ' coins');
-            } else {
-                $('#error').removeClass('hidden');
-                $('#result').addClass('hidden');
-            }
+                    coinsVal = parseFloat(coinsVal);
+                    exchangeRate = parseFloat(exchangeRate);
+                    bonus = parseFloat(bonus);
+
+                    let expected_coins = exchangeRate * coinsVal;
+                    expected_coins = parseFloat(expected_coins).toFixed(10);
+                    let ec = new window.bigdecimal.BigDecimal(expected_coins);
+
+                    let bonus_coins = ((expected_coins * bonus) / 100);
+                    bonus_coins = parseFloat(bonus_coins).toFixed(10);
+                    let bc = new window.bigdecimal.BigDecimal(bonus_coins);
+
+                    let total = ec.add(bc);
+
+                    $('#expected_coins').text(expected_coins + ' coins');
+                    $('#bonus_coins').text(bonus_coins + ' coins');
+                    $('#total').text(total + ' coins');
+                } else {
+                    $('#error').removeClass('hidden');
+                    $('#result').addClass('hidden');
+                }
+            });
         });
+
     </script>
 @endsection

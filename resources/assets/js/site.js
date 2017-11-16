@@ -27,11 +27,20 @@ try {
         offset:       0,          // distance to the element when triggering the animation (default is 0)
         mobile:       false        // trigger animations on mobile devices (true is default)
     });
+
+    window.bigdecimal = require("bigdecimal");
 } catch (e) {}
 
 
 /* Custom JS */
 $(document).ready(function(){
+
+    var i = new bigdecimal.BigDecimal("5966183.9999999990");
+    var j = new bigdecimal.BigDecimal("2983091.9999999995");
+    console.log("i is " + i);
+    console.log("j is " + j);
+    console.log("i + j = " + i.add(j));
+
 
     /*wowjs initialization*/
     window.wow.init();
