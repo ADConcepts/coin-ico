@@ -12,6 +12,7 @@ try {
 
     /*require('bootstrap-sass');*/
     require('jquery-countdown');
+    var moment = require('moment-timezone');
 
     /*require('sly-extended/dist/sly.js');*/
     //require('resources/assets/js/sly');
@@ -35,19 +36,13 @@ try {
 /* Custom JS */
 $(document).ready(function(){
 
-    var i = new bigdecimal.BigDecimal("5966183.9999999990");
-    var j = new bigdecimal.BigDecimal("2983091.9999999995");
-    console.log("i is " + i);
-    console.log("j is " + j);
-    console.log("i + j = " + i.add(j));
-
-
     /*wowjs initialization*/
     window.wow.init();
 
     /*clock js*/
-
-    $('.getting-started').countdown('2017/12/01', function(event) {
+    //var endDate = new Date("2017-11-21 00:00");
+    var endDate = moment('2017-11-30').tz('Asia/Kolkata').format('YYYY/MM/DD');
+    $('.getting-started').countdown(endDate, function(event) {
         /*$(this).html(event.strftime('%w weeks %d days %H:%M:%S'));*/
         $(this).html(event.strftime('%d : %H : %M : %S'));
     });

@@ -25,6 +25,7 @@
     "bigdecimal": "^0.6.1",
     "font-awesome": "^4.7.0",
     "jquery-countdown": "^2.2.0",
+    "moment-timezone": "^0.5.14",
     "sly-extended": "0.0.1",
     "wowjs": "^1.1.3"
   }
