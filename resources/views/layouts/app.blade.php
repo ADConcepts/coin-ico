@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Meta tags -->
+    <meta name="author" content="Crypted United">
+    <meta name="description" content="Participate in our ICO to own a Share of our Cryptocurrency Platform and receive Dividends.">
+    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Crypted United | 1 Coin - 1 Share - 1 Vote" />
+    <meta property="og:description" content="Participate in our ICO to own a Share of our Cryptocurrency Platform and receive Dividends." />
+    <meta property="og:image" content="{{ asset('/images/og-image.png', env('REDIRECT_HTTPS')) }}" />
+
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
