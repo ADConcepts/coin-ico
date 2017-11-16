@@ -53,3 +53,16 @@ Route::get('/commands', function () {
 Route::get('/frontend/{any}', function (\Illuminate\Http\Request $request) {
     return view(implode('.', explode('/', $request->path())));
 })->where('any', '.*');
+
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
+    Route::get('/', 'AdminController@getDashboard')->name('get:dashboard:admin');
+
+    Route::get('/users', 'AdminController@getUserList')->name('get:users:list');
+    Route::get('/users/json', 'AdminController@getUserJson')->name('get:users:json');
+
+    Route::get('/transactions', 'AdminController@getTransactionList')->name('get:transactions:list');
+    Route::get('/transactions/json', 'AdminController@getTransactionJson')->name('get:transactions:json');
+
+    Route::get('/referrals', 'AdminController@getReferralList')->name('get:referrals:list');
+    Route::get('/referrals/json', 'AdminController@getReferralJson')->name('get:referrals:json');
+});
