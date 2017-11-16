@@ -105,7 +105,8 @@
             if (_coins.val() && $.isNumeric(_coins.val())) {
                 $('#error').addClass('hidden');
                 $('#result').removeClass('hidden');
-                var expected_coins = exchangeRate * _coins.val();
+                var coins = parseFloat(_coins.val());
+                var expected_coins = exchangeRate * coins;
                 var bonus_coins = (expected_coins * bonus) / 100;
                 var total = expected_coins + bonus_coins;
 
