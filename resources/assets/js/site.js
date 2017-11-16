@@ -40,10 +40,8 @@ $(document).ready(function(){
     window.wow.init();
 
     /*clock js*/
-    //var endDate = new Date("2017-11-21 00:00");
-    var endDate = moment('2017-11-30').tz('Asia/Kolkata').format('YYYY/MM/DD');
+    var endDate = moment('2017-11-30').tz('UTC').format('YYYY/MM/DD');
     $('.getting-started').countdown(endDate, function(event) {
-        /*$(this).html(event.strftime('%w weeks %d days %H:%M:%S'));*/
         $(this).html(event.strftime('%d : %H : %M : %S'));
     });
 
