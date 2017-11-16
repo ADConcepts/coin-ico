@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Domain\Transaction\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -32,4 +33,23 @@ class AdminController extends Controller
             ->rawColumns(['wallet_id'])
             ->make(true);
     }
+
+    public function getTransactionList(Request $request)
+    {
+        $pageTitle = 'Transactions';
+        return view('admin.transactions', compact('pageTitle'));
+    }
+
+    public function getTransactionJson(Request $request)
+    {
+        $transactions = Transaction::all();
+
+        return Datatables::of($transactions)
+            ->addColumn('transaction_hash', function ($transaction) {
+                return '<a href="'.route("get:transaction:transaction_hash", ["transaction_hash" => $transaction->transaction_hash]).'">'.$transaction->transaction_hash.'</a>';
+            })
+            ->rawColumns(['transaction_hash'])
+            ->make(true);
+    }
+
 }
