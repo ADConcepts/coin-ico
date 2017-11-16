@@ -62,21 +62,57 @@
                         </div>
 
                         <div class="col-sm-12">
-                            <img src="https://i.imgur.com/CBcOCod.png" alt="CryptedUnited" class="img-responsive"/>
+                            <a href="https://i.imgur.com/CBcOCod.png" target="_blank">
+                                <img src="https://i.imgur.com/CBcOCod.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">90x728</p>
+                            </a>
                         </div>
                             
                         <div class="col-sm-12 crypted-images">
-                            <img src="https://i.imgur.com/iMQTnOl.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/ci0RbGs.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/aSG0NPa.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/qX39SiU.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/STd6PfP.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/4sCWctX.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/CQdZlrY.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/2y0J3yU.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/WoLGokh.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/lPoPvzK.png" alt="CryptedUnited" class="img-responsive"/>
-                            <img src="https://i.imgur.com/3Mvvlob.png" alt="CryptedUnited" class="img-responsive"/>
+                            <a href="https://i.imgur.com/iMQTnOl.png" target="_blank">
+                                <img src="https://i.imgur.com/iMQTnOl.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">300x600</p>
+                            </a>
+                            <a href="https://i.imgur.com/ci0RbGs.png" target="_blank">
+                                <img src="https://i.imgur.com/ci0RbGs.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">300x250</p>
+                            </a>
+                            <a href="https://i.imgur.com/aSG0NPa.png" target="_blank">
+                                <img src="https://i.imgur.com/aSG0NPa.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">300x250</p>
+                            </a>
+                            <a href="https://i.imgur.com/qX39SiU.png" target="_blank">
+                                <img src="https://i.imgur.com/qX39SiU.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">300x250</p>
+                            </a>
+                            <a href="https://i.imgur.com/STd6PfP.png" target="_blank">
+                                <img src="https://i.imgur.com/STd6PfP.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">300x250</p>
+                            </a>
+                            <a href="https://i.imgur.com/4sCWctX.png" target="_blank">
+                                <img src="https://i.imgur.com/4sCWctX.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">300x250</p>
+                            </a>
+                            <a href="https://i.imgur.com/CQdZlrY.png" target="_blank">
+                                <img src="https://i.imgur.com/CQdZlrY.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">336x280</p>
+                            </a>
+                            <a href="https://i.imgur.com/2y0J3yU.png" target="_blank">
+                                <img src="https://i.imgur.com/2y0J3yU.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">336x280</p>
+                            </a>
+                            <a href="https://i.imgur.com/WoLGokh.png" target="_blank">
+                                <img src="https://i.imgur.com/WoLGokh.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">336x280</p>
+                            </a>
+                            <a href="https://i.imgur.com/lPoPvzK.png" target="_blank">
+                                <img src="https://i.imgur.com/lPoPvzK.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">336x280</p>
+                            </a>
+                            <a href="https://i.imgur.com/3Mvvlob.png" target="_blank">
+                                <img src="https://i.imgur.com/3Mvvlob.png" alt="CryptedUnited" class="img-responsive"/>
+                                <p class="font-source-code text-center">336x280</p>
+                            </a>
                         </div>
 
                     </div>
