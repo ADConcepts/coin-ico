@@ -23,7 +23,7 @@
 
                                 <div class="current-detail">
                                     <strong class="currency">Expected coins: </strong>
-                                    <span>1 {{ ucfirst($currency) }} => ${{ round($exchangeRate->dollar) }}</span>
+                                    <span>1 {{ ucfirst($currency) }} => ${{ number_format($exchangeRate->dollar, 2, '.', '') }}</span>
                                     <br />
 
                                     <strong class="currency">&nbsp;</strong>
@@ -31,7 +31,7 @@
                                     <br />
 
                                     <strong class="currency">&nbsp;</strong>
-                                    <span>1 {{ ucfirst($currency) }} => {{ round($exchangeRate->amount, 2) }} coins</span>
+                                    <span>1 {{ ucfirst($currency) }} => {{ number_format($exchangeRate->amount, 10, '.', '') }} coins</span>
                                     <br />
 
                                 </div>
@@ -109,9 +109,9 @@
                 var bonus_coins = (expected_coins * bonus) / 100;
                 var total = expected_coins + bonus_coins;
 
-                $('#expected_coins').text(expected_coins + ' coins');
-                $('#bonus_coins').text( bonus_coins + ' coins');
-                $('#total').text(total + ' coins');
+                $('#expected_coins').text(expected_coins.toFixed(10) + ' coins');
+                $('#bonus_coins').text( bonus_coins.toFixed(10) + ' coins');
+                $('#total').text(total.toFixed(10) + ' coins');
             } else {
                 $('#error').removeClass('hidden');
                 $('#result').addClass('hidden');
