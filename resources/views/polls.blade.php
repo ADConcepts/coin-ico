@@ -48,13 +48,19 @@
                                 <div class="col-md-10">
                                     <p class="pull-left">
                                         <strong>[POP] Which is your favorite Coin right now?</strong>
-                                        <br />
-                                        <small class="poll-detail">Polls will be developed during pre-ICO and start after the pre-ICO is finished. Only shareholders will be able to vote.</small>
                                     </p>
                                 </div>
 
                                 <div class="col-md-2 view-history">
                                     <a href="" class="btn btn-sm pull-right">Vote Now!</a>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-10">
+                                    <p class="pull-left">
+                                        <small class="poll-detail">Polls will be developed during pre-ICO and start after the pre-ICO is finished. Only shareholders will be able to vote.</small>
+                                    </p>
                                 </div>
                             </div>
 

@@ -14,6 +14,8 @@
     <meta property="og:title" content="Crypted United | 1 Coin - 1 Share - 1 Vote" />
     <meta property="og:description" content="Participate in our ICO to own a Share of our Cryptocurrency Platform and receive Dividends." />
     <meta property="og:image" content="{{ asset('/images/og-image.png', env('REDIRECT_HTTPS')) }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
