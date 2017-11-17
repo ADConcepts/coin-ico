@@ -84,7 +84,7 @@ class LoginController extends Controller
     protected function validateLogin(Request $request)
     {
         \Validator::extend('without_spaces', function($attr, $value){
-            return preg_match('/^[a-z0-9-]+$/', $value);
+            return preg_match('/^\S{6,}\z/', $value);
         });
 
         $this->validate($request, [

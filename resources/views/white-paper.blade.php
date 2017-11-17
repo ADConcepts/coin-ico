@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="col-md-2 crypted-btn">
-                                <a href="{{ route('get:white-paper:download', ['fileName' => 'white-paper-en.pdf']) }}" class="btn btn-md btn-primary pull-right">Download</a>
+                                <a href="{{ route('get:white-paper:download', ['fileName' => 'CryptedUnited - White Paper v 061 - English.pdf']) }}" class="btn btn-md btn-primary pull-right">Download</a>
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@
                             </div>
 
                             <div class="col-md-2 crypted-btn">
-                                <a href="{{ route('get:white-paper:download', ['fileName' => 'white-paper-es.pdf']) }}" class="btn btn-md btn-primary pull-right">Descargar</a>
+                                <a href="{{ route('get:white-paper:download', ['fileName' => 'CryptedUnited - White Paper v 061 - Deutsch.pdf']) }}" class="btn btn-md btn-primary pull-right">Descargar</a>
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="col-md-2 crypted-btn">
-                                <a href="{{ route('get:white-paper:download', ['fileName' => 'white-paper-de.pdf']) }}" class="btn btn-md btn-primary pull-right">Download</a>
+                                <a href="{{--{{ route('get:white-paper:download', ['fileName' => 'white-paper-de.pdf']) }}--}}" class="btn btn-md btn-primary pull-right">Available soon</a>
                             </div>
                         </div>
 
@@ -58,7 +58,7 @@
                             </div>
 
                             <div class="col-md-2 crypted-btn">
-                                <a href="{{ route('get:white-paper:download', ['fileName' => 'white-paper-fi.pdf']) }}" class="btn btn-md btn-primary pull-right">Available soon</a>
+                                <a href="{{--{{ route('get:white-paper:download', ['fileName' => 'white-paper-fi.pdf']) }}--}}" class="btn btn-md btn-primary pull-right">Available soon</a>
                             </div>
                         </div>
                     </div>
