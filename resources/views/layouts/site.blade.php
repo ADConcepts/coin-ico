@@ -30,6 +30,7 @@
     <title>{{ isset($pageTitle) ? $pageTitle.' - ' : '' }}{{ config('app.name', 'CryptedUnited') }}</title>
 
     <!-- Styles -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/css/site.css', env('REDIRECT_HTTPS')) }}" rel="stylesheet">
 
     <!-- Scripts -->

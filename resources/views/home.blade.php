@@ -558,14 +558,14 @@
           <div class="team-developed">
               <h1>Developed by the International Teams of</h1>
               <div class="team-logos clearfix">
-                  <div class="team-logo-wrap">
+                  <div class="team-logo-wrap wow slideInLeft">
                       <a href="https://levaral.com/" target="_blank" class="team-logo">
                           <img src="/images/levaral.png" alt="www.levaral.com"/>
                           <span>www.levaral.com</span>
                       </a>
                   </div>
 
-                  <div class="team-logo-wrap">
+                  <div class="team-logo-wrap wow slideInRight">
                       <a href="https://levaral.com/" target="_blank" class="team-logo">
                           <img src="/images/ad_concepts.png" alt="AD concepts"/>
                       </a>
@@ -573,12 +573,12 @@
               </div>
 
               <div class="flags">
-                  <img src="/images/flags/1.png" alt="logo"/>
-                  <img src="/images/flags/2.png" alt="logo"/>
-                  <img src="/images/flags/3.png" alt="logo"/>
-                  <img src="/images/flags/4.png" alt="logo"/>
-                  <img src="/images/flags/5.png" alt="logo"/>
-                  <img src="/images/flags/6.png" alt="logo"/>
+                  <img src="/images/flags/1.png" alt="logo" class="animated rollIn" />
+                  <img src="/images/flags/2.png" alt="logo" class="animated rollIn" />
+                  <img src="/images/flags/3.png" alt="logo" class="animated rollIn" />
+                  <img src="/images/flags/4.png" alt="logo" class="animated rollIn" />
+                  <img src="/images/flags/5.png" alt="logo" class="animated rollIn" />
+                  <img src="/images/flags/6.png" alt="logo" class="animated rollIn" />
               </div>
           </div>
 
