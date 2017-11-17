@@ -52,4 +52,31 @@ class AdminController extends Controller
             ->make(true);
     }
 
+    public function getReferralList(Request $request)
+    {
+        $pageTitle = 'Referrals';
+        return view('admin.referrals', compact('pageTitle'));
+    }
+
+    public function getReferralJson(Request $request)
+    {
+        $users = User::query()
+            ->select('users.id', 'users.name', 'users.email', \DB::raw('COUNT(referrals.id) AS total_referred'), \DB::raw('SUM(transactions.amount) AS referral_credit'))
+            ->leftJoin('referrals', 'referrals.user_id', '=', 'users.id')
+            ->leftJoin('transactions', function($join) {
+                $join->on('transactions.user_id', '=', 'users.id')
+                    ->where('transactions.type', '=', 'referral');
+            })
+            ->groupBy('users.id')
+            ->get();
+
+        return Datatables::of($users)
+            ->addIndexColumn()
+            ->addColumn('referral_credit', function ($user) {
+                return !empty($user->referral_credit) ? $user->referral_credit : 0;
+            })
+            ->rawColumns(['referral_credit'])
+            ->make(true);
+        
+    }
 }

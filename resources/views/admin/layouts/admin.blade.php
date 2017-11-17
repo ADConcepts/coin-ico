@@ -67,9 +67,9 @@
                             <li class="{{ (\Request::route()->getName() == 'get:transactions:list') ? 'left-active' : '' }}">
                                 <a href="{{ route('get:transactions:list') }}">Transactions</a>
                             </li>
-                            {{--<li class="{{ (\Request::route()->getName() == 'get:referrals:list') ? 'left-active' : '' }}">
+                            <li class="{{ (\Request::route()->getName() == 'get:referrals:list') ? 'left-active' : '' }}">
                                 <a href="{{ route('get:referrals:list') }}">Referrals</a>
-                            </li>--}}
+                            </li>
                         @endauth
                     </ul>
 
