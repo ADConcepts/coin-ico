@@ -23,7 +23,7 @@
                                             <img src="/images/bit_coin.png" class="img-responsive">
                                         </div>
                                     </div>
-                                    <a href="{{--{{ route('get:buy',['currency' => 'bitcoin']) }}--}}">
+                                    <a href="{{ route('get:buy',['currency' => 'bitcoin']) }}">
                                         <div class="buy-now text-center">
                                             <button type="button">Buy Now</button>
 
@@ -39,7 +39,7 @@
                                             <img src="/images/litecoin.png" class="img-responsive">
                                         </div>
                                     </div>
-                                    <a href="{{--{{ route('get:buy',['currency' => 'litecoin']) }}--}}">
+                                    <a href="{{ route('get:buy',['currency' => 'litecoin']) }}">
                                         <div class="buy-now text-center">
                                             <button type="button">Buy Now</button>
 
@@ -55,7 +55,7 @@
                                             <img src="/images/ethereum.png" class="img-responsive">
                                         </div>
                                     </div>
-                                    <a href="{{--{{ route('get:buy',['currency' => 'ethereum']) }}--}}">
+                                    <a href="{{ route('get:buy',['currency' => 'ethereum']) }}">
                                         <div class="buy-now text-center">
                                             <button type="button">Buy Now</button>
 
@@ -64,13 +64,6 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <br />
-                        <br />
-                        <div class="col-md-12 text-center welcome-text fa-2x">
-                            The pre-ICO starts in <span class="getting-started welcome-link"></span>.
                         </div>
                     </div>
                 </div>

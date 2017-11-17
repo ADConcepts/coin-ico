@@ -30,6 +30,7 @@ Route::get('/history', 'HomeController@getHistory')->name('get:history');
 Route::get('/polls', 'HomeController@getPolls')->name('get:polls');
 
 Route::get('/buy', 'BuyController@getBuy')->name('get:buy')->middleware(['auth','verify-email']);
+Route::get('/buyNow', 'BuyController@getBuyNow')->name('get:buy-now')->middleware(['auth','verify-email']);
 
 Route::get('/r/{code}', 'ReferralController@getReferralCode')->name('get:referral:code');
 Route::get('/refer', 'ReferralController@getRefer')->name('get:refer');

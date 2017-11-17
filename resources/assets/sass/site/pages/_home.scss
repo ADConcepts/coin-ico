@@ -5,6 +5,7 @@
   canvas {
     position: absolute;
     z-index: 9;
+    top: 0;
   }
 }
 .carousel-inner {
@@ -67,6 +68,7 @@
   transform: translateY(-30%) !important;
   left: 0;
   right: 0;
+  z-index: 20;
 
 }
 
@@ -1135,6 +1137,7 @@ footer {
     transform: translateY(-30%) !important;
     left: 4%;
     right: 4%;
+    z-index: 20;
   }
 
   .slide-crypted {
@@ -1270,6 +1273,7 @@ footer {
     transform: translateY(-30%) !important;
     left: 10%;
     right: 10%;
+    z-index: 20;
   }
 
   .slide-crypted {
@@ -1624,6 +1628,7 @@ footer {
     transform: translateY(-30%) !important;
     left: 15%;
     right: 15%;
+    z-index: 20;
   }
 
   .slide-crypted {
@@ -2034,6 +2039,7 @@ footer {
     transform: translateY(-30%) !important;
     left: 12%;
     right: 12%;
+    z-index: 20;
   }
 
   .slide-crypted {
@@ -2307,6 +2313,7 @@ footer {
     transform: translateY(-30%) !important;
     left: 15%;
     right: 15%;
+    z-index: 20;
   }
 
   .slide-crypted {
@@ -3070,6 +3077,7 @@ footer {
     transform: translateY(-30%) !important;
     left: 20%;
     right: 20%;
+    z-index: 20;
   }
 
   .slide-crypted {

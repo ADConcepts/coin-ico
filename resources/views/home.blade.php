@@ -4,7 +4,7 @@
 
     <div class="slider">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <canvas id="canvas"></canvas>
+
 
             <div class="container">
 
@@ -45,15 +45,16 @@
 
                 <div class="item active">
                     <img src="/images/slide.png" alt="Los Angeles">
+                    <canvas id="canvas"></canvas>
                     <div class="carousel-caption slide-caption">
 
                         <div class="slide-part clearfix">
-                            <div class="slide-crypted wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="slide-crypted " data-wow-duration="1s" data-wow-delay="0.5s">
                                 <a href="{{ route('home') }}"><h1>Crypted United</h1></a>
                                 <p>Shape the Future<br> Own the Company <br> Be the Change</p>
                             </div>
 
-                            <div class="big-ico wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="big-ico" data-wow-duration="1s" data-wow-delay="0.5s">
 
                                 <h1>pre-ICO 1st Round in</h1>
                                 <span class="getting-started big-time"></span>

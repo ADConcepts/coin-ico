@@ -65,7 +65,7 @@
 
                             <div class="form-group fg{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label class="control-label">Password:</label>
-                                <input type="password" class="form-control fc" placeholder="Enter Password" name="password" />
+                                <input type="password" class="form-control fc" placeholder="Minimum eight characters" name="password" />
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
