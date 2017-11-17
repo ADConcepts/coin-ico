@@ -71,14 +71,14 @@ class ExchangeRates extends Command
                 $oldExchangeRate->end_date = $now;
                 $oldExchangeRate->save();
             }
-
+            $priceUsd = number_format($value->price_usd, 2, '.', '');
             $exchangeRate = new ExchangeRate();
             $exchangeRate->currency = $value->id;
             $exchangeRate->start_date = $now;
-            $exchangeRate->dollar = $value->price_usd;
+            $exchangeRate->dollar = $priceUsd;
 
             $rate = config('app.exchangeRate')[$value->id];
-            $exchangeRate->amount = (1 * $value->price_usd) / $rate;
+            $exchangeRate->amount = (1 * $priceUsd) / $rate;
 
             $exchangeRate->save();
         }

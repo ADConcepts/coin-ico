@@ -18,10 +18,11 @@
 
                                 <div class="current-detail">
                                     <strong class="currency">Address:</strong>
-                                    <span>{{ $address->address }} </span>
+                                    <span class="font-source-code">{{ $address->address }} </span>
                                 </div>
 
                                 <div class="current-detail">
+
                                     <strong class="currency">Expected coins: </strong>
                                     <span>1 {{ ucfirst($currency) }} => ${{ number_format($exchangeRate->dollar, 2, '.', '') }}</span>
                                     <br />

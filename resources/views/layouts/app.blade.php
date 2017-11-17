@@ -93,6 +93,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu dd-menu" role="menu">
+                                    @if (Auth::user()->is_admin)
+                                        <li><a href="{{ route('get:dashboard:admin') }}">Admin Dashboard </a></li>
+                                    @endif
                                     <li><a href="{{ route('get:wallet:wallet_id', ['wallet_id' => Auth::user()->wallet_id]) }}">My wallet </a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"

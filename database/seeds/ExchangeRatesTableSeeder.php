@@ -43,6 +43,7 @@ class ExchangeRatesTableSeeder extends Seeder
 
             foreach ($currencies as $currency) {
                 $dollar = $faker->numberBetween($currency['min'], $currency['max']) + $currency['dollar'];
+                $dollar = number_format($dollar, 2, '.', '');
 
                 $exchangeRates[] = [
                     'currency' => $currency['currency'],
