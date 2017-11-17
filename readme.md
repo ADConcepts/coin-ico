@@ -72,3 +72,11 @@ Add LITECOIN_EXCHANGE_RATE in your .env file
 ### For Bonus(%)
 
 Add BONUS  in your .env file
+
+### For Load Secure Assets
+
+Add REDIRECT_HTTPS with true value in .env file
+
+### For Update Countdown
+
+Change `untilDate='YYYY-MM-DD'` variable value in file `site.js:43` in resource folder
