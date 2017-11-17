@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Domain\Referral\Referral;
 use App\Domain\Transaction\Transaction;
 use App\User;
 use Illuminate\Http\Request;
@@ -13,7 +14,12 @@ class AdminController extends Controller
     public function getDashboard(Request $request)
     {
         $pageTitle = 'Dashboard';
-        return view('admin.dashboard', compact('pageTitle'));
+        $totalUsers = User::count();
+        $totalTransactions = Transaction::count();
+        $totalReferrals = Referral::query()
+            ->whereNotNull('referral_id')
+            ->count();
+        return view('admin.dashboard', compact('pageTitle', 'totalUsers', 'totalTransactions', 'totalReferrals'));
     }
 
     public function getUserList(Request $request)

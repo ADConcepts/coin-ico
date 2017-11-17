@@ -501,6 +501,15 @@ table.data-history ,.no-footer {
     width: 100%; padding: 7px 0;
   }
 }
+.dashboard-figure {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.dashboard-title {
+  font-size: 2em;
+  font-weight: 500;
+}
 
 @media (min-width: $screen-xxs) {
 
