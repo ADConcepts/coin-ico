@@ -55,7 +55,7 @@
 
                             <div class="big-ico wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
 
-                                <h1>pre-ICO 1st Round</h1>
+                                <h1>pre-ICO 1st Round in</h1>
                                 <span class="getting-started big-time"></span>
 
                                 <div>
