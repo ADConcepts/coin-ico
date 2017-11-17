@@ -52,15 +52,20 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        Validator::extend('without_spaces', function($attr, $value){
+            return preg_match('/^[a-z0-9-]+$/', $value);
+        });
+
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|without_spaces|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'residence_country_id' => 'required|integer',
             'birth_country_id' => 'required|integer',
         ],[
-            'residence_country_id.required' => "Residence country is required.",
-            'birth_country_id.required' => "Nationality is required."
+            'name.without_spaces' => 'The username must be in lowercase without any spaces.',
+            'residence_country_id.required' => "The residence country is required.",
+            'birth_country_id.required' => "The nationality is required."
         ]);
     }
 

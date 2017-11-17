@@ -83,11 +83,49 @@ class LoginController extends Controller
 
     protected function validateLogin(Request $request)
     {
+        \Validator::extend('without_spaces', function($attr, $value){
+            return preg_match('/^[a-z0-9-]+$/', $value);
+        });
+
         $this->validate($request, [
-            $this->username() => 'required',
+            $this->username() => 'required|without_spaces',
             'password' => 'required',
         ], [
-            $this->username().'required' => 'Email or wallet id field is required.',
+            $this->username().'.required' => 'Email or wallet id or username field is required.',
+            $this->username().'.without_spaces' => "Invalid character entered."
         ]);
     }
+
+    public function login(Request $request)
+    {
+        $this->validateLogin($request);
+
+        if ($this->hasTooManyLoginAttempts($request)) {
+            $this->fireLockoutEvent($request);
+            return $this->sendLockoutResponse($request);
+        }
+
+        $credentials = $this->credentials($request);
+
+        if (!\Auth::attempt($credentials, false, false)) {
+            $credentials['name'] = $credentials[$this->username()];
+            unset($credentials[$this->username()]);
+            $this->username = 'name';
+            $request->merge([$this->username => $request->input('login')]);
+        }
+
+        if ($this->attemptLogin($request)) {
+            return $this->sendLoginResponse($request);
+        }
+
+        $this->incrementLoginAttempts($request);
+
+        return $this->sendFailedLoginResponse($request);
+    }
+
+    public function credentials(Request $request)
+    {
+        return $request->only($this->username(), 'password');
+    }
+
 }

@@ -44,8 +44,8 @@
                     <div class="setup-content" id="step-1">
                         <div class="panel-body">
                             <div class="form-group fg{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label class="control-label">Name:</label>
-                                <input type="text" class="form-control fc" placeholder="Enter Name" name="name" value="{{ old('name') }}"/>
+                                <label class="control-label">Username:</label>
+                                <input type="text" class="form-control fc" placeholder="Enter Username" name="name" value="{{ old('name') }}"/>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>

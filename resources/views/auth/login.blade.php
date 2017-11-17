@@ -23,8 +23,8 @@
                 <form class="login-form" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
                     <div class="form-group fg {{ ($errors->has('login') || $errors->has('wallet_id')) ? ' has-error' : '' }}">
-                        <label for="email" class="control-label">Email or Wallet Id:</label>
-                        <input type="text" class="form-control fc" id="login" placeholder="Email or Wallet Id." name="login" value="{{ old('login') }}">
+                        <label for="email" class="control-label">Email or Wallet Id or Username:</label>
+                        <input type="text" class="form-control fc" id="login" placeholder="Email or Wallet Id or Username" name="login" value="{{ old('login') }}">
                         @if ($errors->has('login'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('login') }}</strong>
