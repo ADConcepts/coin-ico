@@ -46,21 +46,10 @@
                             </div>
 
                             <div class="col-md-2 crypted-btn">
-                                <a href="{{--{{ route('get:white-paper:download', ['fileName' => 'white-paper-de.pdf']) }}--}}" class="btn btn-md btn-primary pull-right">Available soon</a>
+                                <a href="{{ route('get:white-paper:download', ['fileName' => 'CryptedUnited - White Paper v 061 - Español.pdf']) }}" class="btn btn-md btn-primary pull-right">Download</a>
                             </div>
                         </div>
 
-                        <div class="row clearfix">
-                            <div class="col-md-10">
-                                <h4 class="pull-left">
-                                    Filipino | <strong>White Paper v 0.6.1 last change 11-15-2017</strong>
-                                </h4>
-                            </div>
-
-                            <div class="col-md-2 crypted-btn">
-                                <a href="{{--{{ route('get:white-paper:download', ['fileName' => 'white-paper-fi.pdf']) }}--}}" class="btn btn-md btn-primary pull-right">Available soon</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

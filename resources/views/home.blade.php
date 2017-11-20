@@ -573,86 +573,19 @@
                   </div>
               </div>
 
-              <div class="flags">
-                  <img src="/images/flags/1.png" alt="logo" class="animated rollIn" />
-                  <img src="/images/flags/2.png" alt="logo" class="animated rollIn" />
-                  <img src="/images/flags/3.png" alt="logo" class="animated rollIn" />
-                  <img src="/images/flags/4.png" alt="logo" class="animated rollIn" />
-                  <img src="/images/flags/5.png" alt="logo" class="animated rollIn" />
-                  <img src="/images/flags/6.png" alt="logo" class="animated rollIn" />
+              <div class="flags wow bounceInUp">
+                  <img src="/images/flags/1.png" alt="logo" />
+                  <img src="/images/flags/2.png" alt="logo" />
+                  <img src="/images/flags/3.png" alt="logo" />
+                  <img src="/images/flags/4.png" alt="logo" />
+                  <img src="/images/flags/5.png" alt="logo" />
+                  <img src="/images/flags/6.png" alt="logo" />
               </div>
           </div>
 
     </div>
+
     <div class="container">
-
-        <div class="row">
-
-            {{--<div class="team-title">
-                <h1>Team</h1>
-
-                <div class="team-inner-title">
-                    <div class="col-sm-4">
-
-                        <div class="member wow fadeInUp" data-wow-delay="1" data-wow-duration="1s">
-
-                            <img src="/images/team1.png" align="team" class="img-responsive"/>
-
-                            <h3>John Doe</h3>
-                            <small>Director</small>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-sm-4">
-
-                        <div class="member wow fadeInUp" data-wow-delay="1" data-wow-duration="1s">
-
-                            <img src="/images/team2.png" align="team" class="img-responsive"/>
-
-                            <h3>Mark Anthoiny</h3>
-                            <small>Manager</small>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-sm-4">
-
-                        <div class="member wow fadeInUp" data-wow-delay="1" data-wow-duration="1s">
-
-                            <img src="/images/team3.png" align="team" class="img-responsive"/>
-
-                            <h3>Lisa Parker</h3>
-                            <small>Head Of Department</small>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>--}}
-
-
-
-
-        </div>
 
         <div class="developer">
 
@@ -661,10 +594,8 @@
             <ul class="lang">
                 <li class="wow zoomIn" data-wow-delay="0.5" data-wow-duration="1s"><a href="javascript:void(0)"><img
                                 src="/images/php.png" alt="img" class="img-responsive"></a></li>
-                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="javascript:void(0)"><img src="/images/v.png"
-                                                                                                                     alt="img"
-                                                                                                                     class="img-responsive"></a>
-                </li>
+                <li class="wow zoomIn" data-wow-delay="1" data-wow-duration="1.5s"><a href="javascript:void(0)"><img
+                                src="/images/v.png" alt="img" class="img-responsive"></a></li>
                 <li class="wow zoomIn" data-wow-delay="2" data-wow-duration="2s"><a href="javascript:void(0)"><img
                                 src="/images/laravel.png" alt="img" class="img-responsive"></a></li>
                 <li class="wow zoomIn" data-wow-delay="3" data-wow-duration="2.5s"><a href="javascript:void(0)"><img
@@ -799,7 +730,7 @@
 @endsection
 
 @section('script')
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
     <script>
         (function() {
