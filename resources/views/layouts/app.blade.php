@@ -155,6 +155,9 @@
             }
         });
     </script>
+    <script>
+        window.counterEndDate = '{{ env('COUNTER_END_DATE') }}';
+    </script>
     @yield('script')
 </body>
 </html>

@@ -40,12 +40,12 @@ $(document).ready(function(){
     window.wow.init();
 
     /*clock js*/
-    var untilDate = '2017-11-25';
-    var endDate = moment(untilDate).tz('UTC').format('YYYY/MM/DD');
-    $('.getting-started').countdown(endDate, function(event) {
-        $(this).html(event.strftime('%d : %H : %M : %S'));
-    });
+    var finalDate = new Date(window.counterEndDate);
+    console.log(finalDate);
 
+    $('.getting-started').countdown(finalDate) .on('update.countdown', function(event) {
+        $(this).html(event.strftime('%n : %H : %M : %S'));
+    });
     /* clock js end */
 
     /*timeline*/
