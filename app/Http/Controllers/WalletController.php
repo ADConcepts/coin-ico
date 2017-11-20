@@ -92,7 +92,9 @@ class WalletController extends Controller
     public function getTermsOfConditions()
     {
         $pageTitle = 'Terms of Service';
-        return view('terms', compact('pageTitle'));
+        $content = file_get_contents(asset('cryptedunited_crowdsaleagreement.txt', env('REDIRECT_HTTPS')));
+        $content = mb_convert_encoding($content, 'UTF-8', mb_detect_encoding($content, 'UTF-8, ISO-8859-1', true));
+        return view('terms', compact('pageTitle', 'content'));
     }
 
     public function getWhitePaper()
