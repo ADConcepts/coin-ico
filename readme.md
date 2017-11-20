@@ -79,4 +79,4 @@ Add REDIRECT_HTTPS with true value in .env file
 
 ### For Update Countdown
 
-Change `untilDate='YYYY-MM-DD'` variable value in file `site.js:43` in resource folder
+Add `COUNTER_END_DATE` in your .env file. date format should be `YYYY-MM-DD`.
