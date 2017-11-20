@@ -45,7 +45,7 @@
                         <div class="panel-body">
                             <div class="form-group fg{{ $errors->has('name') ? ' has-error' : '' }}">
                                 <label class="control-label">Username:</label>
-                                <input type="text" class="form-control fc txtAlphaNumeric" placeholder="Enter Username" name="name" value="{{ old('name') }}"/>
+                                <input type="text" class="form-control fc txtAlphaNumeric" placeholder="Alphanumeric lowercase letters only" name="name" value="{{ old('name') }}"/>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>

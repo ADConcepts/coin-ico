@@ -17,7 +17,7 @@
                         <div class="row clearfix">
                             <div class="col-md-10">
                                 <h4 class="pull-left">
-                                    English | <strong>White Paper v 0.6.1 last change 11-15-2017</strong>
+                                    English | <strong>White Paper v 0.6.1 last change 11-17-2017</strong>
                                 </h4>
                             </div>
 
@@ -29,7 +29,7 @@
                         <div class="row clearfix">
                             <div class="col-md-10">
                                 <h4 class="pull-left">
-                                    Español | <strong>White Paper v 0.6.1 last change 11-15-2017</strong>
+                                    Español | <strong>White Paper v 0.6.1 last change 11-17-2017</strong>
                                 </h4>
                             </div>
 
@@ -41,7 +41,7 @@
                         <div class="row clearfix">
                             <div class="col-md-10">
                                 <h4 class="pull-left">
-                                    Deutsch | <strong>White Paper v 0.6.1 last change 11-15-2017</strong>
+                                    Deutsch | <strong>White Paper v 0.6.1 last change 11-17-2017</strong>
                                 </h4>
                             </div>
 
