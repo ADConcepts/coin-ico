@@ -185,18 +185,10 @@
             });
         }
 
-        $(document).ready(function(){
-            $('.txtAlphaNumeric').keydown(function (e) {
-                var k = e.which;
-                var ok = k >= 65 && k <= 90 || // a-z
-                    k >= 35 && k <= 40 || // arrows
-                    k == 8 || // Backspaces
-                    k >= 48 && k <= 57; // 0-9
-                console.log(k);
-                if (!ok){
-                    e.preventDefault();
-                }
-            });
+        $(document).on('keyup', '.txtAlphaNumeric', function () {
+            if (this.value.match(/[^a-z0-9]/g)) {
+                this.value = this.value.replace(/[^a-z0-9]/g, '');
+            }
         });
 
     </script>

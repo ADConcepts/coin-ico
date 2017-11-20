@@ -573,13 +573,13 @@
                   </div>
               </div>
 
-              <div class="flags wow bounceInUp">
-                  <img src="/images/flags/1.png" alt="logo" />
-                  <img src="/images/flags/2.png" alt="logo" />
-                  <img src="/images/flags/3.png" alt="logo" />
-                  <img src="/images/flags/4.png" alt="logo" />
-                  <img src="/images/flags/5.png" alt="logo" />
-                  <img src="/images/flags/6.png" alt="logo" />
+              <div class="flags">
+                  <img src="/images/flags/1.png" alt="logo" class="wow bounceInUp" data-wow-duration="1s" />
+                  <img src="/images/flags/2.png" alt="logo" class="wow bounceInUp" data-wow-duration="1.20s" />
+                  <img src="/images/flags/3.png" alt="logo" class="wow bounceInUp" data-wow-duration="1.40s" />
+                  <img src="/images/flags/4.png" alt="logo" class="wow bounceInUp" data-wow-duration="1.60s" />
+                  <img src="/images/flags/5.png" alt="logo" class="wow bounceInUp" data-wow-duration="1.80s" />
+                  <img src="/images/flags/6.png" alt="logo" class="wow bounceInUp" data-wow-duration="2s" />
               </div>
           </div>
 
