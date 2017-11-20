@@ -41,7 +41,6 @@ $(document).ready(function(){
 
     /*clock js*/
     var finalDate = new Date(window.counterEndDate);
-    console.log(finalDate);
 
     $('.getting-started').countdown(finalDate) .on('update.countdown', function(event) {
         $(this).html(event.strftime('%n : %H : %M : %S'));

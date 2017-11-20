@@ -65,7 +65,8 @@ class BuyController extends Controller
 
             return view('buy-address', compact('user', 'address', 'currency', 'imageData', 'exchangeRate', 'pageTitle', 'bonus'));
         } else {
-            return view('buy', compact('user', 'pageTitle'));
+            $buyTemplate = (date('Y-m-d') < date('Y-m-d', strtotime(env('COUNTER_END_DATE')))) ? 'buy' : 'buy-now';
+            return view($buyTemplate, compact('user', 'pageTitle'));
         }
     }
 
