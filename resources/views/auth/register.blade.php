@@ -45,7 +45,7 @@
                         <div class="panel-body">
                             <div class="form-group fg{{ $errors->has('name') ? ' has-error' : '' }}">
                                 <label class="control-label">Username:</label>
-                                <input type="text" class="form-control fc" placeholder="Enter Username" name="name" value="{{ old('name') }}"/>
+                                <input type="text" class="form-control fc txtAlphaNumeric" placeholder="Enter Username" name="name" value="{{ old('name') }}"/>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -184,6 +184,20 @@
                 }
             });
         }
+
+        $(document).ready(function(){
+            $('.txtAlphaNumeric').keydown(function (e) {
+                var k = e.which;
+                var ok = k >= 65 && k <= 90 || // a-z
+                    k >= 35 && k <= 40 || // arrows
+                    k == 8 || // Backspaces
+                    k >= 48 && k <= 57; // 0-9
+                console.log(k);
+                if (!ok){
+                    e.preventDefault();
+                }
+            });
+        });
 
     </script>
 
