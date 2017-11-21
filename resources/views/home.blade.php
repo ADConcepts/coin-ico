@@ -57,18 +57,18 @@
                             <div class="big-ico" data-wow-duration="1s" data-wow-delay="0.5s">
 
                                 <h1>pre-ICO 1st Round in</h1>
-                                <span class="getting-started big-time"></span>
+                                <span class="getting-started"></span>
 
-                                <div>
+                                {{--<div>
                                     <span class="b-day">DAYS</span>
                                     <span class="b-day">HOURS</span>
                                     <span class="b-day">MINUTES</span>
                                     <span class="b-day">SECONDS</span>
-                                </div>
+                                </div>--}}
                                 <br />
                                 @if (env('BONUS', 0) > 0)
                                     <div class="clearfix">
-                                        <span>Bonus effective: {{ env('BONUS', 0) }}%</span>
+                                        <span class="bonus">Bonus effective: {{ env('BONUS', 0) }}%</span>
                                     </div>
                                 @endif
 

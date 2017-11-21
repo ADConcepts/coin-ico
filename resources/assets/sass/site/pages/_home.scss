@@ -112,21 +112,63 @@
   text-align: center;
   float: right;
   background-color: rgba(255, 255, 255, 0.15);
-  padding: 8px 5px;
+  padding: 8px 2px;
   border-radius: 10px;
 
   h1 {
-    font-size: 14px;
+    font-size: 12px;
     font-family: $normal-font;
+    margin-bottom: 5px;
   }
 
   .big-time {
     font-size: 22px;
-    font-family: $extra-font;
+    font-family: $font-family-source-code;
     font-weight: 300;
   }
 
-  .b-day {
+  .big-time-part {
+
+    font-family: $font-family-source-code;
+    display: inline-block;
+    padding: 0 2px;
+    position: relative;
+    line-height: normal;
+
+    .timer-num{
+
+      font-size: 12px;
+      position: relative;
+
+      &:after {
+        content: ':';
+        position: absolute;
+        font-size: 10px;
+        right: -6px;
+        left: auto;
+        bottom:0;
+      }
+
+    }
+
+    .tm {
+      &:after {
+        content:'';
+      }
+    }
+
+    .timer-text {
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+  }
+
+  .bonus {
+    margin-top: 5px;
+    display: inline-block;
+  }
+
+    .b-day {
     padding: 0 1px;
     font-family: $light-font;
     font-size: 8px;
@@ -3098,7 +3140,7 @@ footer {
   .big-ico {
     text-align: center;
     float: right;
-    padding: 25px 40px;
+    padding: 25px 20px;
     border-radius: 10px;
 
     h1 {
@@ -3106,8 +3148,49 @@ footer {
     }
 
     .big-time {
-      font-size: 85px;
+      font-size: 75px;
       font-weight: 300;
+    }
+
+    .big-time-part {
+
+      font-family: $font-family-source-code;
+      display: inline-block;
+      padding: 0 20px;
+      position: relative;
+      line-height: normal;
+
+      .timer-num{
+
+        font-size: 75px;
+        position: relative;
+
+        &:after {
+          content: ':';
+          position: absolute;
+          font-size: 70px;
+          right: -40px;
+          left: auto;
+        }
+
+      }
+
+      .tm {
+        &:after {
+          content:'';
+        }
+      }
+
+      .timer-text {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+
+    }
+
+    .bonus {
+      margin-top: 20px;
+      display:inline-block;
     }
 
     .b-day {

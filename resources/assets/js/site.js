@@ -49,26 +49,28 @@ $(document).ready(function(){
     /* custom countdown start */
     // Set the date we're counting down to
     var countDownDate = new Date(window.counterEndDate).getTime();
-    console.log(new Date(window.counterEndDate));
     var now = new Date(window.currentTime).getTime();
-    console.log(new Date(window.currentTime));
     var distance = countDownDate - now;
 
     var x = setInterval(function() {
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         days = pad(days, 2);
+        var daysDiv = "<div class='big-time-part'><div class='timer-num'>" + days + "</div><span class='timer-text'>days</span></div>";
 
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         hours = pad(hours, 2);
+        var hoursDiv = "<div class='big-time-part'><div class='timer-num'>" + hours + "</div><span class='timer-text'>hours</span></div>";
 
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         minutes = pad(minutes, 2);
+        var minutesDiv = "<div class='big-time-part'><div class='timer-num blink'>" + minutes + "</div><span class='timer-text'>minutes</span></div>";
 
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         seconds = pad(seconds, 2);
+        var secondsDiv = "<div class='big-time-part'><div class='timer-num tm'>" + seconds + "</div><span class='timer-text'>seconds</span></div>";
 
-        var timer = days + " : " + hours + " : " + minutes + " : " + seconds ;
+        var timer = daysDiv + hoursDiv + minutesDiv + secondsDiv ;
 
         $('.getting-started').html(timer);
 
