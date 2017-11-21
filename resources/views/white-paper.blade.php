@@ -34,7 +34,7 @@
                             </div>
 
                             <div class="col-md-2 crypted-btn">
-                                <a href="{{ route('get:white-paper:download', ['fileName' => 'CryptedUnited - White Paper v 061 - Español.pdf']) }}" class="btn btn-md btn-primary pull-right">Descargar</a>
+                                <a href="{{ route('get:white-paper:download', ['fileName' => 'CryptedUnited - White Paper v 061 - Espanol.pdf']) }}" class="btn btn-md btn-primary pull-right">Descargar</a>
                             </div>
                         </div>
 

@@ -54,6 +54,15 @@
     window.counterEndDate = '{{ env('COUNTER_END_DATE') }}';
     window.currentTime = '{{ date('Y/m/d h:i:s') }}';
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110023731-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110023731-1');
+</script>
 @yield('script')
 </body>
 </html>

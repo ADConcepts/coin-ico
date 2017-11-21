@@ -46,7 +46,7 @@ class EmailVerification extends Notification implements ShouldQueue
         return (new MailMessage)
             ->subject('Verify your email')
             ->greeting('Hello '.$this->user->name.'!')
-            ->line('Click the below link to verify your email.')
+            ->line('Click the link below to verify your email.')
             ->action('Verify', url(route('get:user:confirm:email', ['token' => $this->user->email_token], false)))
             ->line('Welcome to CryptedUnited!')
             ->view('vendor.notifications.email', compact('bottomText'))
