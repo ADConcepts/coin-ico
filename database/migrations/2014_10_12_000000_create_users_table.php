@@ -29,8 +29,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            //$table->foreign('residence_country_id')->references('id')->on('countries')->onDelete('cascade');
-            //$table->foreign('birth_country_id')->references('id')->on('countries')->onDelete('cascade');
+            $table->foreign('residence_country_id')->references('id')->on('countries')->onDelete('cascade');
+            $table->foreign('birth_country_id')->references('id')->on('countries')->onDelete('cascade');
         });
     }
 
