@@ -56,19 +56,19 @@ $(document).ready(function(){
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         days = pad(days, 2);
-        var daysDiv = "<div class='big-time-part'><div class='timer-num'>" + days + "</div><span class='timer-text'>days</span></div>";
+        var daysDiv = "<div class='big-time-part'><div class='timer-num'>" + days + "</div><span class='timer-text hidden-xs'>DAYS</span><span class='timer-text visible-xs'>D</span></div>";
 
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         hours = pad(hours, 2);
-        var hoursDiv = "<div class='big-time-part'><div class='timer-num'>" + hours + "</div><span class='timer-text'>hours</span></div>";
+        var hoursDiv = "<div class='big-time-part'><div class='timer-num'>" + hours + "</div><span class='timer-text hidden-xs'>HOURS</span><span class='timer-text visible-xs'>H</span></div>";
 
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         minutes = pad(minutes, 2);
-        var minutesDiv = "<div class='big-time-part'><div class='timer-num blink'>" + minutes + "</div><span class='timer-text'>minutes</span></div>";
+        var minutesDiv = "<div class='big-time-part'><div class='timer-num blink'>" + minutes + "</div><span class='timer-text hidden-xs'>MINUTES</span> <span class='timer-text visible-xs'>M</span></div>";
 
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         seconds = pad(seconds, 2);
-        var secondsDiv = "<div class='big-time-part'><div class='timer-num tm'>" + seconds + "</div><span class='timer-text'>seconds</span></div>";
+        var secondsDiv = "<div class='big-time-part'><div class='timer-num tm'>" + seconds + "</div><span class='timer-text hidden-xs'>SECONDS</span> <span class='timer-text visible-xs'>S</span></div>";
 
         var timer = daysDiv + hoursDiv + minutesDiv + secondsDiv ;
 

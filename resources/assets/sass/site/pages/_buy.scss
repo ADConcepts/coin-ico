@@ -206,6 +206,43 @@ body {
 
 }
 
+.big-time-part {
+
+  font-family: $font-family-source-code;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  line-height: normal;
+  min-width: 30px;
+
+  .timer-num{
+
+    position: relative;
+
+    &:after {
+      content: ':';
+      position: relative;
+      right: auto;
+      left: auto;
+      bottom:0;
+    }
+
+  }
+
+  .tm {
+    &:after {
+      content:'';
+    }
+  }
+
+  .timer-text {
+    font-size: 9px;
+    text-transform: uppercase;
+    display: none !important;
+  }
+}
+
+
 .view-history {
 
   a {
