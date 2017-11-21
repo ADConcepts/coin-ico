@@ -241,8 +241,7 @@ return [
     ],
 
     'adminEmails' => [
-        'user2@mail.com',
-        'user3@mail.com'
+        'dirkpollmann123@gmail.com'
     ]
 
 ];
