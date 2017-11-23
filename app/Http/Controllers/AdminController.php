@@ -67,12 +67,13 @@ class AdminController extends Controller
     public function getReferralJson(Request $request)
     {
         $users = User::query()
-            ->select('users.id', 'users.name', 'users.email', \DB::raw('COUNT(referrals.id) AS total_referred'), \DB::raw('SUM(transactions.amount) AS referral_credit'))
+            ->select('users.id', 'users.name', 'users.email', \DB::raw('COUNT(DISTINCT referrals.id) AS total_referred'), \DB::raw('SUM(transactions.amount) AS referral_credit'))
             ->leftJoin('referrals', 'referrals.user_id', '=', 'users.id')
             ->leftJoin('transactions', function($join) {
                 $join->on('transactions.user_id', '=', 'users.id')
                     ->where('transactions.type', '=', 'referral');
             })
+            ->whereNotNull('referrals.referral_id')
             ->groupBy('users.id')
             ->get();
 

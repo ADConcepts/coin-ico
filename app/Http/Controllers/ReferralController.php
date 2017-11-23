@@ -147,12 +147,12 @@ class ReferralController extends Controller
 
         \Session::put('code', $code);
 
-        $referral = new Referral();
+        /*$referral = new Referral();
         $referral->user_id = $user->id;
         $referral->referral_code = $user->referral_code;
         $referral->save();
 
-        \Session::put('referral_id', $referral->id);
+        \Session::put('referral_id', $referral->id);*/
 
         return response()->json([
             'success' => true,

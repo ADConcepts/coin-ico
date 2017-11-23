@@ -85,16 +85,28 @@ class RegisterController extends Controller
         $this->guard()->login($user);
         $now = \Carbon\Carbon::now()->toDateTimeString();
 
-        if(\Session::has('code') && \Session::has('referral_id')){
+        if (\Session::has('code')) {
             $code = \Session::get('code');
-            $referralId = \Session::get('referral_id');
 
-            $referral = Referral::query()
-                ->where('referral_code',$code)
-                ->where('id',$referralId)
-                ->first();
+            if (\Session::has('referral_id')) {
+                $referralId = \Session::get('referral_id');
 
-            if($referral) {
+                $referral = Referral::query()
+                    ->where('referral_code', $code)
+                    ->where('id', $referralId)
+                    ->first();
+            } else {
+                $refUser = User::query()
+                    ->where('referral_code', $code)
+                    ->first();
+
+                $referral = new Referral();
+                $referral->user_id = $refUser->id;
+                $referral->referral_code = $refUser->referral_code;
+                $referral->save();
+            }
+
+            if ($referral) {
                 $referral->referral_id = $user->id;
                 $referral->email = $user->email;
                 $referral->registered_at = $now;
