@@ -42,10 +42,11 @@ $panel-default-heading-bg: #fff;
 
 
 // colors
-$primary:			#CF7213;
+$primary:           #008ec5;
 $black:				#000000;
 $grey-black:        #393939;
 $light-black:       lighten($black, 40%);
+$dark-text:         #344a60;
 $facebook:          #3a589b;
 $linked-in:         #007aba;
 $twitter:           #598dca;
@@ -56,7 +57,7 @@ $lightborder:       #dddddd;
 // fonts
 //$base-font:			'PT Sans', sans-serif;
 $light-font:         'Aller Light';
-$normal-font:        'Aller';
+$normal-font:       'Lato', sans-serif;
 $extra-font:        'Dosis', sans-serif;
 $base-font:         'Montserrat', sans-serif;
 

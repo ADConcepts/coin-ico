@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Bootstrap Overrides
+   ========================================================================== */
+
+.navbar-default {
+  margin-bottom: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+
+  .navbar-collapse {
+    background-color: transparentize(#000,.5);
+  }
+  
+  .navbar-nav {
+    text-align: center;
+
+    > li {
+      padding: 5px 10px;
+      display: inline-block;
+
+      > a {
+        @include vpad(5);
+        color: #fff;
+        display: inline-block;
+
+        &:hover, &:focus {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border: none;
+    border-radius: 0;
+    margin-top: 15px;
+
+    &:hover, &:focus {
+      background-color: transparent;
+    }
+
+    .icon-bar {
+      width: 18px;
+      background-color: #fff;
+    }
+  }
+}
+
+.navbar-brand {
+  height: auto;
+
+  img {
+    width: auto;
+    height: 40px;
+  }
+}
+
+.btn {
+  border-radius: 35px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  transition: background-color .3s ease, border-color .3s ease;
+}
+
+.btn-sm {
+  font-size: 10px;
+  border-radius: 23px;
+  height: 34px;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border: 2px solid $primary;
+  color: #fff;
+  
+  &:hover {
+    border-color: $primary;
+    background-color: transparent;
+    color: #fff;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+
+  &.btn-primary:hover {
+    background-color: $primary !important;
+    border-color: $primary;
+  }
+}
+
+
+/* Small devices - Size SM */
+@media (min-width: $screen-sm) {
+
+  .navbar-default {
+    @include vpad(10);
+
+    .navbar-collapse {
+      background-color: transparent;
+    }
+
+    .navbar-nav {
+      margin-right: -20px;
+
+      > li {
+        @include hpad(5);
+
+        > a {
+          @include vpad(8);
+        }
+      }
+    }
+  }
+
+  .btn {
+    border-radius: 30px;
+    height: 58px;
+    font-size: 20px;
+    @include vpad(11);
+  }
+
+  .btn-sm {
+    font-size: 16px;
+    border-radius: 20px;
+    height: 40px;
+  }
+
+}
+
+
+/* large screen - Size lg */
+@media (min-width: $screen-lg) {
+
+  .navbar-default {
+    .navbar-nav {
+      > li > a {
+        @include vpad(10);
+      }
+    }
+  }
+
+  .btn {
+    letter-spacing: 3px;
+    border-radius: 35px;
+    height: 68px;
+    font-size: 20px;
+    @include vpad(16);
+  }
+
+  .btn-sm {
+    font-size: 12px;
+    border-radius: 23px;
+    height: 44px;
+  }
+
+}

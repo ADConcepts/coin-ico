@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
 /* Fonts */
 @import "site/blocks/fonts";
 
@@ -19,13 +18,10 @@
 /* General */
 @import "site/blocks/reset";
 @import "site/blocks/layout";
-@import "site/blocks/loader";
-@import "site/blocks/navigation";
+//@import "site/blocks/loader";
+//@import "site/blocks/navigation";
 @import "site/blocks/header";
 @import "site/blocks/footer";
-
-/* Partials */
-
 
 /* Pages */
 @import "site/pages/home";

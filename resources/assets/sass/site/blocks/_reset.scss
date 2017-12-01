@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Reset and Common Styles
+   ========================================================================== */
 
 html {
   -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
@@ -7,7 +10,7 @@ html {
 body {
   font: #{$base-size}/#{$line-height} $normal-font;
   color: $black;
-  background: url("/images/body-bg.png") repeat;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -34,3 +37,9 @@ a {
 }
 
 .clear { clear: both; }
+
+.line {
+  border-top: 1px solid rgba(54, 54, 54, 0.20);
+  display: block;
+  @include vmar(20);
+}

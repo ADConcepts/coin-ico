@@ -1,228 +1,67 @@
 /* ==========================================================================
    Home
    ========================================================================== */
-.slider {
-  canvas {
-    position: absolute;
-    z-index: 9;
-    top: 0;
-  }
-}
-.carousel-inner {
-  img {
-    position: relative;
-    z-index: 0;
-  }
+
+/* Countdown */
+.countdown-wrap {
+  padding-top: 30px;
 }
 
-.time {
-
-  position: relative;
-  width: 100%;
-  z-index: 999;
-
-  .stamp {
-
-    position: absolute;
-    color: #fff;
-    width: 100%;
-    margin-top: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
-    padding-bottom: 5px;
-
-    .ico-top {
-      padding-right: 10px;
-    }
-  }
-
-  .clock {
-    float: none;
-    font-size: 14px;
-    font-family: $light-font;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  .social {
-    float: none;
-    text-align: center;
-
-    li {
-      font-size: 14px;
-      display: inline-block;
-      padding: 0 5px;
-      a {
-        color: #fff;
-        font-family: $light-font;
-      }
-    }
-
-  }
-
-}
-
-.slide-caption {
-  text-shadow: none;
-  margin: 0 2%;
-  top: 40%;
-  transform: translateY(-30%) !important;
-  left: 0;
-  right: 0;
-  z-index: 20;
-
-}
-
-.slide-crypted {
-  text-align: left;
-  float: left;
-  padding-left: 27px;
-  h1 {
-    font-size: 18px;
-    color: #fff;
-    font-family: $normal-font;
-    text-align: left;
-    font-weight: 700;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      background: url(/images/logo.png) no-repeat;
-      background-size: 15px;
-      top: 0;
-      bottom: 0;
-      left: -25px;
-      right: 0;
-      height: 26px;
-      width: 24px;
-    }
-
-
-
-  }
-  p {
-    font-size: 14px;
-    line-height: normal;
-    font-family: $light-font;
-  }
-
-}
-
-.big-ico {
+.countdown {
+  padding: 15px;
+  background-color: #f4f4f4;
   text-align: center;
-  float: right;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 8px 2px;
-  border-radius: 10px;
 
   h1 {
-    font-size: 12px;
-    font-family: $normal-font;
-    margin-bottom: 5px;
-  }
-
-  .getting-started {
-
-    font-family: $font-family-source-code;
-  }
-
-  .big-time {
-    font-size: 22px;
-    font-family: $font-family-source-code;
-    font-weight: 300;
+    font-size: 23px;
+    font-weight: bold;
+    color: $dark-text;
+    text-transform: uppercase;
+    margin-bottom: 15px;
   }
 
   .big-time-part {
-
-    font-family: $font-family-source-code;
     display: inline-block;
+    width: 24%;
     padding: 0 2px;
     position: relative;
     line-height: normal;
     min-width: 30px;
 
-    .timer-num{
-
-      font-size: 12px;
+    .timer-num {
+      font-size: 24px;
+      font-weight: bold;
       position: relative;
-
-      &:after {
-        content: ':';
-        position: absolute;
-        font-size: 10px;
-        right: -6px;
-        left: auto;
-        bottom:0;
-      }
-
-    }
-
-    .tm {
-      &:after {
-        content:'';
-      }
     }
 
     .timer-text {
-      font-size: 9px;
-      text-transform: uppercase;
+      font-size: 14px;
+      color: #999;
     }
   }
 
   .bonus {
-    margin-top: 5px;
-    display: inline-block;
-    font-size: 10px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 14px;
+    font-weight: 700;
+    color: #696969;
+    text-transform: uppercase;
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 7px;
   }
 
-    .b-day {
+  .b-day {
     padding: 0 1px;
     font-family: $light-font;
     font-size: 8px;
   }
-  .b-hour {
-  }
-  .b-minute {
-  }
 
 }
 
-.btn-slide {
-  margin-top: 9%;
 
-  a {
-    background-color: $primary;
-    border-radius: 5px;
-    color: #fff;
-    width: 190px;
-    height: auto;
-    font-size: 13px;
-    display: inline-block;
-    padding: 11px;
-    font-family: $normal-font;
-    font-weight: bold;
-    line-height: normal;
-
-    &:hover {
-      color: #fff;
-    }
-  }
-}
-
-.slide-inner > .item {
-  overflow: hidden;
-  height: auto;
-  max-height: 720px;
-}
-
-.slide-inner > .item > img, .slide-inner > .item > a > img {
-  height: 310px;
-  width: auto;
-  max-width: none;
-}
-
-.title-1 {
-
+/* Intro Text */
+.introduction {
   font-size: 36px;
   padding: 50px 0;
   max-width: 767px;
@@ -237,28 +76,26 @@
   }
 
   .part {
-
     padding: 30px 0 0 0;
 
     h2 {
-      font-family: $normal-font;
+      font-size: 20px;
       font-weight: bold;
       color: $primary;
-      font-size: 20px;
     }
 
     p {
-      font-family: $normal-font;
+      font-size: 16px;
       color: $grey-black;
-      font-size: 14px;
     }
 
   }
 
 }
 
+/* Gradient 1 */
 .gradient-bg {
-  background: url("/images/gradient-bg.png") no-repeat;
+  background: url("/images/id-trade.jpg") no-repeat;
   min-height: 387px;
   position: relative;
 
@@ -273,16 +110,17 @@
   .thomas-words {
     width: 100%;
     margin: 9% 0 0 0;
+
     h2 {
       font-size: 20px;
       line-height: normal;
-      color: #fff;
+      color: $dark-text;
     }
 
     p {
       font-size: 16px;
       font-family: $light-font;
-      color: #fff;
+      color: $dark-text;
       padding-top: 10px;
     }
 
@@ -303,19 +141,19 @@
   }
 
   .ford-words {
-    width: 100%;
     margin: 6% 0 0 0;
     text-align: right;
+
     h2 {
       font-size: 20px;
       line-height: normal;
-      color: #fff;
+      color: $dark-text;
     }
 
     p {
       font-size: 16px;
       font-family: $light-font;
-      color: #fff;
+      color: $dark-text;
       padding-top: 10px;
     }
 
@@ -330,18 +168,18 @@
   }
 
   .bill-words {
-    width: 100%;
     margin: 16% 0 0 0;
+
     h2 {
       font-size: 20px;
       line-height: normal;
-      color: #fff;
+      color: $dark-text;
     }
 
     p {
       font-size: 16px;
       font-family: $light-font;
-      color: #fff;
+      color: $dark-text;
       padding-top: 10px;
     }
 
@@ -349,9 +187,8 @@
 
 }
 
+/* Planned Projects */
 .planned {
-
-  width: 100%;
   margin: 0 auto;
   padding: 50px 0;
 
@@ -365,21 +202,18 @@
 
     &:before {
       content: "";
-      position: absolute;
-      background: url("/images/transparent-logo.png") no-repeat;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
-      width: 80px;
-      margin: 0 auto;
-      background-size: 60px 70px;
+      background: url("/images/crypto-united-logo.png") no-repeat center center / 49px 49px;
+      position: relative;
+      display: block;
+      height: 49px;
+      width: 49px;
+      margin: 0 auto 30px;
     }
   }
 
 }
 
-.project-right {
+.project {
   padding-top: 30px;
 
   .left-img {
@@ -389,16 +223,11 @@
     margin-bottom: 20px;
 
     img {
-
       margin: 0 auto;
-      width: 30%;
-
     }
-
   }
 
   .right-text {
-
     display: inline-block;
     width: 100%;
     vertical-align: middle;
@@ -406,94 +235,33 @@
     text-align: center;
 
     h2 {
-      color: $primary;
       font-size: 20px;
       font-weight: bold;
-    }
-
-    p {
-      color: $grey-black;
-      font-size: 16px;
-      font-family: $light-font;
-      line-height: normal;
-    }
-
-  }
-
-  .right-img {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .left-text {
-
-    display: inline-block;
-    width: 75%;
-    vertical-align: middle;
-    margin-right: 30px;
-    text-align: right;
-
-    h2 {
       color: $primary;
-      font-size: 30px;
-      font-weight: bold;
     }
 
     p {
-      color: $grey-black;
-      font-size: 24px;
       font-family: $light-font;
+      font-size: 16px;
+      color: $grey-black;
       line-height: normal;
     }
-
   }
 
+  &.alt {
+
+    .left-img {
+      position: relative;
+    }
+
+    .right-text {
+      position: relative;
+    }
+  }
 }
 
-.alt {
 
-  .left-img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    position: relative;
-    left: 0;
-    margin-bottom: 20px;
-
-    img {
-      margin: 0 auto;
-      width: 30%;
-    }
-  }
-
-  .right-text {
-
-    display: inline-block;
-    width: 100%;
-    vertical-align: middle;
-    padding-left: 0;
-    position: relative;
-    right: 0;
-    text-align: center;
-    padding-right: 0;
-
-    h2 {
-      color: $primary;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    p {
-      color: $grey-black;
-      font-size: 16px;
-      font-family: $light-font;
-      line-height: normal;
-    }
-
-  }
-
-}
-
+/* Timeline */
 .timeline {
 
   padding: 50px 0;
@@ -505,21 +273,18 @@
     font-size: 24px;
     text-align: center;
     font-weight: 700;
-    color: #393939;
+    color: $grey-black;
     padding-bottom: 30px;
     position: relative;
 
     &:before {
       content: "";
-      position: absolute;
-      background: url(/images/transparent-logo.png) no-repeat;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
-      width: 70px;
-      margin: 0 auto;
-      background-size: 60px 70px;
+      background: url("/images/crypto-united-logo.png") no-repeat center center / 49px 49px;
+      position: relative;
+      display: block;
+      height: 49px;
+      width: 49px;
+      margin: 0 auto 30px;
     }
   }
 
@@ -532,11 +297,11 @@
 }
 
 .controls {
-  .time-prev {
-
+  .control-time {
     text-align: center;
 
     button {
+      background-color: #eee;
       border-radius: 50px;
 
       &:focus {
@@ -545,19 +310,6 @@
     }
 
   }
-  .time-next {
-
-    text-align: center;
-
-    button {
-      border-radius: 50px;
-      &:focus {
-        outline: none;
-      }
-    }
-
-  }
-
 }
 
 /*timeline*/
@@ -795,82 +547,43 @@
 
 /*-- #timeline --*/
 
-.team-title {
-  padding: 50px 0 0 0;
-
-  h1 {
-    font-size: 24px;
-    text-align: center;
-    font-weight: 700;
-    color: #393939;
-    padding-bottom: 30px;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      background: url(/images/transparent-logo.png) no-repeat;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
-      width: 80px;
-      margin: 0 auto;
-      background-size: 69px 70px;
-    }
-  }
-
-}
-
-.team-inner-title {
-  padding-top: 30px;
-}
-
 .developed {
-  margin-top: 50px;
-  margin-bottom: 50px;
   text-align: center;
   min-height: 300px;
   display: table;
   width: 100%;
 
   .team-developed {
-
     display: table-cell;
     vertical-align: middle;
     width: 100%;
 
     h1 {
-      font-size: 36px;
+      font-size: 24px;
       text-align: center;
       font-weight: 700;
-      color: #393939;
+      color: $grey-black;
       padding-bottom: 30px;
       position: relative;
 
       &:before {
         content: "";
-        position: absolute;
-        background: url(/images/transparent-logo.png) no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0px auto;
+        background: url("/images/crypto-united-logo.png") no-repeat center center / 49px 49px;
+        position: relative;
+        display: block;
+        height: 49px;
+        width: 49px;
+        margin: 0 auto 30px;
       }
     }
 
     img { padding: 50px 0 0 0;}
 
     p {
-
-
       a {
         color: #fff;
         text-decoration: none;
         font-family: $normal-font;
-
       }
     }
 
@@ -943,7 +656,7 @@
 }
 
 .developer {
-  padding: 50px 0 0 0;
+  @include vpad(30);
 
   h1 {
     font-size: 24px;
@@ -955,15 +668,12 @@
 
     &:before {
       content: "";
-      position: absolute;
-      background: url(/images/transparent-logo.png) no-repeat;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
-      width: 80px;
-      margin: 0 auto;
-      background-size: 60px 70px;
+      background: url("/images/crypto-united-logo.png") no-repeat center center / 49px 49px;
+      position: relative;
+      display: block;
+      height: 49px;
+      width: 49px;
+      margin: 0 auto 30px;
     }
   }
 
@@ -1015,431 +725,19 @@
   }
 }
 
-footer {
-  padding-bottom: 20px;
-}
-
-.footer {
-}
-
-.flogo {
-  padding-left: 0;
-  padding-bottom: 20px;
-
-  img {
-    padding-top: 20px;
-  }
-
-  p {
-    font-family: $base-font;
-    font-size: 16px;
-    color: #4d4d4d;
-    font-weight: 300;
-    line-height: normal;
-  }
-}
-
-.customer {
-
-  h4 {
-    font-size: 18px;
-    font-family: $base-font;
-    text-transform: uppercase;
-  }
-
-  ul {
-
-    padding-top: 10px;
-    padding-bottom: 30px;
-
-    li {
-
-      list-style: none;
-
-      a {
-        text-decoration: none;
-        color: #4d4d4d;
-        font-size: 16px;
-        font-family: $base-font;
-        font-weight: 300;
-      }
-
-    }
-  }
-
-}
-
-.about {
-
-  h4 {
-    font-size: 18px;
-    font-family: $base-font;
-    text-transform: uppercase;
-  }
-
-  ul {
-
-    padding-top: 10px;
-    padding-bottom: 30px;
-
-    li {
-
-      list-style: none;
-
-      a {
-        text-decoration: none;
-        color: #4d4d4d;
-        font-size: 16px;
-        font-family: $base-font;
-        font-weight: 300;
-      }
-
-    }
-  }
-
-}
-
-.social {
-
-  h4 {
-    font-size: 18px;
-    font-family: $base-font;
-    text-transform: uppercase;
-  }
-
-  ul {
-
-    padding-top: 10px;
-    padding-bottom: 30px;
-
-    li {
-
-      list-style: none;
-
-      i {
-        width: 25px;
-      }
-
-      a {
-        text-decoration: none;
-        color: #4d4d4d;
-        font-size: 16px;
-        font-family: $base-font;
-        font-weight: 300;
-      }
-
-    }
-  }
-
-}
-
-.line {
-  border-top: 1px solid rgba(54, 54, 54, 0.20);
-}
 
 /* Very Small devices - Size XXS */
 @media (min-width: $screen-xxs) {
 
-  .time {
-
-    position: relative;
-    width: 100%;
-    z-index: 999;
-
-    .stamp {
-
-      position: absolute;
-      width: 100%;
-      margin-top: 5px;
-      padding-bottom: 5px;
-
-      .ico-top {
-        padding-right: 10px;
-      }
-    }
-
-    .clock {
-      float: left;
-      font-size: 16px;
-      font-weight: 400;
-    }
-
-    .social {
-      float: right;
-
-      li {
-        font-size: 14px;
-        display: inline-block;
-        padding-left: 15px;
-        a {
-          color: #fff;
-        }
-      }
-
-    }
-
-  }
-
-  .slide-caption {
-    margin: 0 2%;
-    top: 40%;
-    transform: translateY(-30%) !important;
-    left: 4%;
-    right: 4%;
-    z-index: 20;
-  }
-
-  .slide-crypted {
-    text-align: left;
-    float: left;
-    padding-left: 30;
-
-    h1 {
-      font-size: 20px;
-      text-align: left;
-      font-weight: 700;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url(/images/logo.png) no-repeat;
-        background-size: 18px;
-        top: 0;
-        bottom: 0;
-        left: -25px;
-        right: 0;
-        height: 26px;
-        width: 24px;
-      }
-    }
-
-    p {
-      font-size: 16px;
-      line-height: normal;
-    }
-
-  }
-
-  .big-ico {
-    text-align: center;
-    float: right;
-    padding: 15px 5px;
-    border-radius: 10px;
-
-    h1 {
-      font-size: 22px;
-    }
-
-    .big-time {
-      font-size: 25px;
-      font-weight: 300;
-    }
-
-    .b-day {
-      padding: 0 2px;
-      font-size: 10px;
-    }
-
-  }
-
-  .btn-slide {
-    margin-top: 9%;
-
-    a {
-      width: 190px;
-      height: auto;
-      font-size: 14px;
-      display: inline-block;
-      padding: 12px;
-      font-weight: bold;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-
-  .slide-inner > .item {
-    overflow: hidden;
-    height: auto;
-    max-height: 720px;
-  }
-
-  .slide-inner > .item > img, .slide-inner > .item > a > img {
-    height: 350px;
-    width: auto;
-  }
 
 }
+
 
 /* Small devices - Size XS */
 @media (min-width: $screen-xs) {
 
-  .time {
-
-    position: relative;
-    width: 100%;
-    z-index: 999;
-
-    .stamp {
-
-      position: absolute;
-      width: 100%;
-      margin-top: 5px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.20);
-      padding-bottom: 5px;
-
-      .ico-top {
-        padding-right: 10px;
-      }
-    }
-
-    .clock {
-      float: left;
-      font-size: 20px;
-      font-weight: 400;
-    }
-
-    .social {
-      float: right;
-
-      li {
-        font-size: 18px;
-        display: inline-block;
-        padding-left: 15px;
-        a {
-          color: #fff;
-        }
-      }
-
-    }
-
-  }
-
-  .slide-caption {
-    margin: 0 2%;
-    top: 40%;
-    transform: translateY(-30%) !important;
-    left: 5%;
-    right: 5%;
-    z-index: 20;
-  }
-
-  .slide-crypted {
-    text-align: left;
-    float: left;
-
-    h1 {
-      font-size: 24px;
-      text-align: left;
-      font-weight: 700;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: normal;
-    }
-
-  }
-
-  .big-ico {
-    text-align: center;
-    float: right;
-    padding: 15px 10px;
-    border-radius: 10px;
-
-    h1 {
-      font-size: 26px;
-    }
-
-    .big-time {
-      font-size: 28px;
-      font-weight: 300;
-    }
-
-    .b-day {
-      padding: 0 2px;
-      font-size: 14px;
-    }
-
-    .big-time-part {
-
-      font-family: $font-family-source-code;
-      display: inline-block;
-      padding: 0 5px;
-      position: relative;
-      line-height: normal;
-
-      .timer-num{
-
-        font-size: 22px;
-        position: relative;
-
-        &:after {
-          content: ':';
-          position: absolute;
-          font-size: 10px;
-          right: -10px;
-          left: auto;
-          bottom:6px;
-        }
-
-      }
-
-      .tm {
-        &:after {
-          content:'';
-        }
-      }
-
-      .timer-text {
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-    }
-
-    .bonus {
-      margin-top: 5px;
-      display: inline-block;
-      font-size: 14px;
-    }
-
-
-  }
-
-
-  .btn-slide {
-    margin-top: 9%;
-
-    a {
-      width: auto;
-      height: auto;
-      font-size: 14px;
-      display: inline-block;
-      padding: 12px;
-      font-weight: bold;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-
-  .slide-inner > .item {
-    overflow: hidden;
-    height: auto;
-    max-height: 720px;
-  }
-
-  .slide-inner > .item > img, .slide-inner > .item > a > img {
-    height: 350px;
-    width: auto;
-  }
-
   .gradient-bg {
-    background: url(/images/gradient-bg.png) no-repeat;
     min-height: 250px;
-    position: relative;
 
     .bg {
       position: relative;
@@ -1447,8 +745,8 @@ footer {
     }
 
     .thomas-words {
-      width: 70%;
-      margin: 10% 0 0 25%;
+      margin-top: 10%;
+      padding-left: 200px;
     }
 
     .thomas img {
@@ -1456,9 +754,9 @@ footer {
     }
 
     .ford-words {
-      width: 70%;
-      margin: 9% 0 0 0;
+      margin-top: 9%;
       text-align: right;
+      padding-right: 190px;
     }
 
     .ford img {
@@ -1466,8 +764,8 @@ footer {
     }
 
     .bill-words {
-      width: 80%;
-      margin: 19% 0 0 28%;
+      margin-top: 19%;
+      padding-left: 190px;
     }
 
     .bill img {
@@ -1475,148 +773,57 @@ footer {
     }
   }
 
+  /* Planned Projects */
   .planned {
-
-    width: 100%;
-    margin: 0 auto;
-    padding: 70px 0;
+    @include vpad(70);
 
     h1 {
       font-size: 28px;
-      text-align: center;
-      font-weight: 700;
-      color: $grey-black;
-      padding-bottom: 30px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url("/images/transparent-logo.png") no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0 auto;
-      }
     }
 
   }
 
-  .project-right {
-    padding-top: 30px;
+  .project {
 
     .left-img {
-      display: inline-block;
-      vertical-align: middle;
       width: 20%;
       margin-bottom: 0;
 
       img {
-
-        margin: 0 auto;
         width: 70%;
-
       }
-
     }
 
     .right-text {
-
-      display: inline-block;
       width: 75%;
-      vertical-align: middle;
       padding-left: 30px;
       text-align: left;
 
       h2 {
-        color: $primary;
         font-size: 22px;
-        font-weight: bold;
-      }
-
-      p {
-        color: $grey-black;
-        font-size: 18px;
-        font-family: $light-font;
-        line-height: normal;
-      }
-
-    }
-
-    .right-img {
-      display: inline-block;
-      vertical-align: middle;
-
-      img {
-
-        margin: 0 auto;
-
-      }
-    }
-
-    .left-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      margin-right: 30px;
-      text-align: right;
-
-      h2 {
-        color: $primary;
-        font-size: 30px;
-        font-weight: bold;
-      }
-
-      p {
-        color: $grey-black;
-        font-size: 24px;
-        font-family: $light-font;
-        line-height: normal;
-      }
-
-    }
-
-  }
-
-  .alt {
-
-    .left-img {
-      display: inline-block;
-      vertical-align: middle;
-      width: 20%;
-      position: relative;
-      left: 75%;
-      margin-bottom: 0;
-    }
-
-    .right-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      padding-left: 0;
-      position: relative;
-      right: 20%;
-      text-align: right;
-      padding-right: 30px;
-
-      h2 {
-        font-size: 22px;
-        font-weight: bold;
       }
 
       p {
         font-size: 18px;
-        line-height: normal;
+      }
+    }
+
+    &.alt {
+      .left-img {
+        left: 75%;
       }
 
+      .right-text {
+        padding-left: 0;
+        right: 20%;
+        text-align: right;
+        padding-right: 30px;
+      }
     }
 
   }
 
+/* Timeline */
   .timeline-centered .timeline-entry .timeline-entry-inner {
     position: relative;
     margin-left: -13px;
@@ -1674,177 +881,35 @@ footer {
 /* Small devices - Size SM */
 @media (min-width: $screen-sm) {
 
-  .time {
-
-    position: relative;
-    width: 100%;
-    z-index: 999;
-
-    .stamp {
-
-      position: absolute;
-      width: 100%;
-      margin-top: 5px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.20);
-      padding-bottom: 5px;
-
-      .ico-top {
-        padding-right: 10px;
-      }
-    }
-
-    .clock {
-      float: left;
-      font-size: 20px;
-      font-weight: 400;
-    }
-
-    .social {
-      float: right;
-
-      li {
-        font-size: 18px;
-        display: inline-block;
-        padding-left: 15px;
-        a {
-          color: #fff;
-        }
-      }
-
-    }
-
+  /* Countdown */
+  .countdown-wrap {
+    padding-top: 40px;
   }
 
-  .slide-caption {
-    margin: 0 2%;
-    top: 35%;
-    transform: translateY(-30%) !important;
-    left: 10%;
-    right: 10%;
-    z-index: 20;
-  }
-
-  .slide-crypted {
-    text-align: left;
-    float: left;
+  .countdown {
+    padding: 30px;
 
     h1 {
-      font-size: 24px;
-      text-align: left;
-      font-weight: 700;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: normal;
-    }
-
-  }
-
-  .big-ico {
-    text-align: center;
-    float: right;
-    padding: 10px 15px;
-    border-radius: 10px;
-
-    h1 {
-      font-size: 24px;
-    }
-
-    .big-time {
-      font-size: 35px;
-      font-weight: 300;
-    }
-
-    .b-day {
-      padding: 0 2px;
-      font-size: 12px;
-    }
-
-    .big-time-part {
-
-      font-family: $font-family-source-code;
-      display: inline-block;
-      padding: 0 5px;
-      position: relative;
-      line-height: normal;
-
-      .timer-num{
-
-        font-size: 22px;
-        position: relative;
-
-        &:after {
-          content: ':';
-          position: absolute;
-          font-size: 10px;
-          right: -10px;
-          left: auto;
-          bottom:6px;
-        }
-
-      }
-
-      .tm {
-        &:after {
-          content:'';
-        }
-      }
-
-      .timer-text {
-        font-size: 12px;
-        text-transform: uppercase;
-      }
+      margin-bottom: 25px;
     }
 
     .bonus {
-      margin-top: 5px;
-      display: inline-block;
+      font-size: 18px;
+      padding-top: 15px;
     }
 
-  }
-
-  .btn-slide {
-    margin-top: 5%;
-
-    a {
-      width: auto;
-      height: auto;
-      font-size: 14px;
-      display: inline-block;
-      padding: 12px;
-      font-weight: bold;
-
-      &:hover {
-        color: #fff;
+    .big-time-part {
+      .timer-num {
+        font-size: 30px;
+        margin-bottom: 10px;
       }
     }
   }
 
-  .slide-inner > .item {
-    overflow: hidden;
-    height: auto;
-    max-height: 720px;
-  }
-
-  .slide-inner > .item > img, .slide-inner > .item > a > img {
-    height: auto;
-    width: 100%;
-  }
-
   .gradient-bg {
-    background: url(/images/gradient-bg.png) no-repeat;
-    min-height: 250px;
-    position: relative;
-
-    .bg {
-      position: relative;
-      min-height: 250px;
-    }
 
     .thomas-words {
-      width: 70%;
-      margin: 10% 0 0 25%;
+      padding-left: 225px;
     }
 
     .thomas img {
@@ -1852,9 +917,7 @@ footer {
     }
 
     .ford-words {
-      width: 70%;
-      margin: 9% 0 0 0;
-      text-align: right;
+      padding-right: 215px;
     }
 
     .ford img {
@@ -1862,8 +925,8 @@ footer {
     }
 
     .bill-words {
-      width: 80%;
-      margin: 17% 0 0 25%;
+      margin-top: 13%;
+      padding-left: 215px;
     }
 
     .bill img {
@@ -1871,148 +934,7 @@ footer {
     }
   }
 
-  .planned {
-
-    width: 100%;
-    margin: 0 auto;
-    padding: 70px 0;
-
-    h1 {
-      font-size: 28px;
-      text-align: center;
-      font-weight: 700;
-      color: $grey-black;
-      padding-bottom: 30px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url("/images/transparent-logo.png") no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0 auto;
-      }
-    }
-
-  }
-
-  .project-right {
-    padding-top: 30px;
-
-    .left-img {
-      display: inline-block;
-      vertical-align: middle;
-      width: 20%;
-      margin-bottom: 0;
-
-      img {
-
-        margin: 0 auto;
-        width: 70%;
-
-      }
-
-    }
-
-    .right-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      padding-left: 30px;
-      text-align: left;
-
-      h2 {
-        color: $primary;
-        font-size: 22px;
-        font-weight: bold;
-      }
-
-      p {
-        color: $grey-black;
-        font-size: 18px;
-        font-family: $light-font;
-        line-height: normal;
-      }
-
-    }
-
-    .right-img {
-      display: inline-block;
-      vertical-align: middle;
-
-      img {
-
-        margin: 0 auto;
-
-      }
-    }
-
-    .left-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      margin-right: 30px;
-      text-align: right;
-
-      h2 {
-        color: $primary;
-        font-size: 30px;
-        font-weight: bold;
-      }
-
-      p {
-        color: $grey-black;
-        font-size: 24px;
-        font-family: $light-font;
-        line-height: normal;
-      }
-
-    }
-
-  }
-
-  .alt {
-
-    .left-img {
-      display: inline-block;
-      vertical-align: middle;
-      width: 20%;
-      position: relative;
-      left: 75%;
-      margin-bottom: 0;
-    }
-
-    .right-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      padding-left: 0;
-      position: relative;
-      right: 20%;
-      text-align: right;
-      padding-right: 30px;
-
-      h2 {
-        font-size: 22px;
-        font-weight: bold;
-      }
-
-      p {
-        font-size: 18px;
-        line-height: normal;
-      }
-
-    }
-
-  }
-
+/* Timeline */
   .timeline-centered .timeline-entry .timeline-entry-inner {
     position: relative;
     margin-left: -15px;
@@ -2047,54 +969,7 @@ footer {
   }
 
   .developed {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
     min-height: 500px;
-    display: table;
-    width: 100%;
-
-    .team-developed {
-
-      display: table-cell;
-      vertical-align: middle;
-      width: 100%;
-
-      h1 {
-        font-size: 36px;
-        text-align: center;
-        font-weight: 700;
-        color: #393939;
-        padding-bottom: 30px;
-        position: relative;
-
-        &:before {
-          content: "";
-          position: absolute;
-          background: url(/images/transparent-logo.png) no-repeat;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 107px;
-          width: 100px;
-          margin: 0px auto;
-        }
-      }
-
-      img { padding: 50px 0 0 0;}
-
-      p {
-
-
-        a {
-          color: #fff;
-          text-decoration: none;
-          font-family: $normal-font;
-
-        }
-      }
-
-    }
 
     .team-logos {
       max-width: 400px;
@@ -2116,217 +991,22 @@ footer {
 
 }
 
-/*medium screen landscape*/
-
-@media (min-width: $screen-md) and (orientation: landscape) {
-
-}
 
 /* bigger devices - Size md */
 @media (min-width: $screen-md) {
 
-  .time {
-
-    position: relative;
-    width: 100%;
-    z-index: 999;
-
-    .stamp {
-
-      position: absolute;
-      color: #fff;
-      width: 100%;
-      margin-top: 5px;
-      padding-bottom: 5px;
-
-      .ico-top {
-        padding-right: 10px;
-      }
-    }
-
-    .clock {
-      float: left;
-      font-size: 25px;
-      font-weight: 400;
-    }
-
-    .social {
-      float: right;
-
-      li {
-        font-size: 22px;
-        display: inline-block;
-        padding-left: 15px;
-        a {
-          color: #fff;
-        }
-      }
-
-    }
-
-  }
-
-  .slide-caption {
-    text-shadow: none;
-    margin: 0 1%;
-    top: 50%;
-    transform: translateY(-30%) !important;
-    left: 12%;
-    right: 12%;
-    z-index: 20;
-  }
-
-  .slide-crypted {
-    text-align: left;
-    float: left;
-    h1 {
-      font-size: 35px;
-      text-align: left;
-      font-weight: 700;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url(/images/logo.png) no-repeat;
-        background-size: 25px;
-        top: 3px;
-        bottom: 0;
-        left: -40px;
-        right: 0;
-        height: auto;
-        width: 34px;
-      }
-    }
-    p {
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-  }
-
-  .big-ico {
-    text-align: center;
-    float: right;
-    padding: 10px 15px;
-    border-radius: 10px;
-
-    h1 {
-      font-size: 36px;
-    }
-
-    .big-time {
-      font-size: 40px;
-      font-weight: 300;
-    }
-
-    .b-day {
-      padding: 0 5px;
-    }
-    .b-hour {
-    }
-    .b-minute {
-    }
-
-    .big-time-part {
-
-      font-family: $font-family-source-code;
-      display: inline-block;
-      padding: 0 8px;
-      position: relative;
-      line-height: normal;
-
-      .timer-num{
-
-        font-size: 32px;
-        position: relative;
-
-        &:after {
-          content: ':';
-          position: absolute;
-          font-size: 24px;
-          right: -15px;
-          left: auto;
-          bottom:6px;
-        }
-
-      }
-
-      .tm {
-        &:after {
-          content:'';
-        }
-      }
-
-      .timer-text {
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-    }
-
-    .bonus {
-      margin-top: 5px;
-      display: inline-block;
-    }
-
-  }
-
-  .btn-slide {
-    margin-top: 15%;
-
-    a {
-      border-radius: 5px;
-      width: 190px;
-      height: auto;
-      font-size: 16px;
-      display: inline-block;
-      padding: 12px;
-      font-weight: bold;
-      line-height: 30px;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-
-  .slide-inner > .item {
-    overflow: hidden;
-    height: auto;
-    max-height: 100%;
-  }
-
-  .slide-inner > .item > img, .slide-inner > .item > a > img {
-    height: 100vh;
-    width: auto;
-  }
-
   .gradient-bg {
-    background: url(/images/gradient-bg.png) no-repeat;
-    min-height: 250px;
-    position: relative;
-
-    .bg {
-      position: relative;
-      min-height: 250px;
-    }
 
     .thomas-words {
-      width: 75%;
-      margin: 9% 0 0 20%;
+      margin-top: 9%;
     }
 
     .ford-words {
-      width: 75%;
-      margin: 9% 0 0 0;
-      text-align: right;
-    }
-
-    .bill-words {
-      width: 75%;
-      margin: 13% 0 0 20%;
+      margin-top: 9%;
     }
   }
 
+  /* Timeline */
   .timeline-centered .timeline-entry .timeline-entry-inner {
     position: relative;
     margin-left: -17px;
@@ -2361,54 +1041,7 @@ footer {
   }
 
   .developed {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
     min-height: 600px;
-    display: table;
-    width: 100%;
-
-    .team-developed {
-
-      display: table-cell;
-      vertical-align: middle;
-      width: 100%;
-
-      h1 {
-        font-size: 36px;
-        text-align: center;
-        font-weight: 700;
-        color: #393939;
-        padding-bottom: 30px;
-        position: relative;
-
-        &:before {
-          content: "";
-          position: absolute;
-          background: url(/images/transparent-logo.png) no-repeat;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 107px;
-          width: 100px;
-          margin: 0px auto;
-        }
-      }
-
-      img { padding: 50px 0 0 0;}
-
-      p {
-
-
-        a {
-          color: #fff;
-          text-decoration: none;
-          font-family: $normal-font;
-
-        }
-      }
-
-    }
 
     .team-logo-wrap {
       img {
@@ -2423,225 +1056,41 @@ footer {
 /* large screen - Size lg */
 @media (min-width: $screen-lg) {
 
-  .slide-inner > .item {
-    overflow: hidden;
-    height: auto;
-    max-height: 100%;
+  /* Countdown */
+  .countdown-wrap {
+    padding-top: 50px;
   }
 
-  .slide-inner > .item > img, .slide-inner > .item > a > img {
-    height: auto;
-    width: 100%;
-    min-height: 100vh;
+  .countdown {
+    .big-time-part {
+      .timer-num {
+        font-size: 36px;
+        margin-bottom: 20px;
+        padding-top: 15px;
+      }
+    }
   }
 
 }
 
+
 /*large screen - size xl*/
 @media (min-width: $screen-xl) {
 
-  .time {
-
-    position: relative;
-    width: 100%;
-    z-index: 999;
-
-    .stamp {
-
-      position: absolute;
-      color: #fff;
-      width: 100%;
-      margin-top: 5px;
-      padding-bottom: 5px;
-
-      .ico-top {
-        padding-right: 10px;
-      }
-    }
-
-    .clock {
-      float: left;
-      font-size: 25px;
-      font-weight: 400;
-    }
-
-    .social {
-      float: right;
-
-      li {
-        font-size: 22px;
-        display: inline-block;
-        padding-left: 15px;
-        a {
-          color: #fff;
-        }
-      }
-
-    }
-
-  }
-
-  .slide-caption {
-    text-shadow: none;
-    margin: 0 0;
-    top: 40%;
-    transform: translateY(-30%) !important;
-    left: 15%;
-    right: 15%;
-    z-index: 20;
-  }
-
-  .slide-crypted {
-    text-align: left;
-    float: left;
-    h1 {
-      font-size: 50px;
-      text-align: left;
-      font-weight: 700;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url(/images/logo.png) no-repeat;
-        background-size: 35px;
-        top: 7px;
-        bottom: 0;
-        left: -50px;
-        right: 0;
-        height: auto;
-        width: 42px;
-      }
-    }
-    p {
-      font-size: 20px;
-      line-height: 50px;
-    }
-
-  }
-
-  .big-ico {
-    text-align: center;
-    float: right;
-    padding: 25px 40px;
-    border-radius: 10px;
+  /* Introduction */
+  .introduction {
+    @include vpad(70);
 
     h1 {
-      font-size: 45px;
-    }
-
-    .big-time {
-      font-size: 65px;
-      font-weight: 300;
-    }
-
-    .b-day {
-      padding: 0 15px;
-      font-size: 18px;
-    }
-    .b-hour {
-    }
-    .b-minute {
-    }
-
-    .big-time-part {
-
-      font-family: $font-family-source-code;
-      display: inline-block;
-      padding: 0 15px;
-      position: relative;
-      line-height: normal;
-
-      .timer-num{
-
-        font-size: 52px;
-        position: relative;
-
-        &:after {
-          content: ':';
-          position: absolute;
-          font-size: 50px;
-          right: -32px;
-          left: auto;
-          bottom:2px;
-        }
-
-      }
-
-      .tm {
-        &:after {
-          content:'';
-        }
-      }
-
-      .timer-text {
-        font-size: 16px;
-        text-transform: uppercase;
-      }
-    }
-
-    .bonus {
-      margin-top: 5px;
-      display: inline-block;
-      font-size: 16px;
-    }
-
-  }
-
-  .btn-slide {
-    margin-top: 12%;
-
-    a {
-      border-radius: 5px;
-      width: 242px;
-      height: 58px;
-      font-size: 18px;
-      display: inline-block;
-      padding: 14px;
-      font-weight: bold;
-      line-height: 30px;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-
-  .slide-inner > .item {
-    overflow: hidden;
-    height: auto;
-    max-height: 100%;
-  }
-
-  .slide-inner > .item > img, .slide-inner > .item > a > img {
-    height: auto;
-    width: 100%;
-    min-height: 100vh;
-  }
-
-
-  .title-1 {
-
-    font-size: 36px;
-    padding: 70px 0;
-    max-width: 767px;
-    margin: 0 auto;
-
-    h1 {
-      text-align: center;
-      font-weight: 700;
-      padding-bottom: 10px;
       font-size: 36px;
     }
 
     .part {
-
-      padding: 50px 0 0 0;
+      padding-top: 50px;
 
       h2 {
-        font-weight: bold;
         font-size: 30px;
       }
-
       p {
         font-size: 24px;
       }
@@ -2652,265 +1101,112 @@ footer {
 
   .gradient-bg {
     min-height: 387px;
-    position: relative;
-
 
     .thomas {
-      position: absolute;
-      bottom: 0;
       img {
         width: 325px;
       }
     }
 
     .thomas-words {
-      width: 65%;
-      margin: 9% 0 0 35%;
+      padding-left: 335px;
+
       h2 {
         font-size: 30px;
         line-height: 50px;
-        color: #fff;
       }
 
       p {
         font-size: 26px;
-        font-family: $light-font;
-        color: #fff;
-        padding-top: 35px;
+        margin-top: 35px;
+        padding-top: 0;
       }
-
     }
 
     .bg {
-      position: relative;
       min-height: 387px;
     }
 
     .ford {
-      position: absolute;
-      bottom: 0;
-      right: 0;
       img {
         width: 325px;
       }
     }
 
     .ford-words {
-      width: 65%;
-      margin: 6% 0 0 0;
-      text-align: right;
+      padding-right: 335px;
+      margin-top: 6%;
+
       h2 {
         font-size: 30px;
         line-height: 50px;
-        color: #fff;
       }
 
       p {
         font-size: 26px;
-        font-family: $light-font;
-        color: #fff;
         padding-top: 35px;
       }
-
     }
 
     .bill {
-      position: absolute;
-      bottom: 0;
       img {
         width: 324px;
       }
     }
 
     .bill-words {
-      width: 65%;
-      margin: 16% 0 0 35%;
+      padding-left: 334px;
+      margin-top: 16%;
+
       h2 {
         font-size: 30px;
-        line-height: normal;
-        color: #fff;
       }
 
       p {
         font-size: 26px;
-        font-family: $light-font;
-        color: #fff;
         padding-top: 25px;
       }
-
     }
 
   }
 
+  /* Planned Projects */
   .planned {
-
     width: 767px;
-    margin: 0 auto;
-    padding: 70px 0;
 
     h1 {
       font-size: 36px;
-      text-align: center;
-      font-weight: 700;
-      color: $grey-black;
-      padding-bottom: 30px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url("/images/transparent-logo.png") no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0 auto;
-      }
     }
-
   }
 
-  .project-right {
-    padding-top: 30px;
+  .project {
 
     .left-img {
-      display: inline-block;
-      vertical-align: middle;
-      width: 20%;
-      margin-bottom: 0;
-
       img {
-
-        margin: 0 auto;
         width: auto;
-
       }
-
     }
 
     .right-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      padding-left: 30px;
-      text-align: left;
-
       h2 {
         font-size: 30px;
-        font-weight: bold;
       }
-
       p {
         font-size: 24px;
-        line-height: normal;
-      }
-
-    }
-
-    .right-img {
-      display: inline-block;
-      vertical-align: middle;
-
-      img {
-
-        margin: 0 auto;
-
       }
     }
-
-    .left-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      margin-right: 30px;
-      text-align: right;
-
-      h2 {
-        font-size: 30px;
-        font-weight: bold;
-      }
-
-      p {
-        font-size: 24px;
-        line-height: normal;
-      }
-
-    }
-
-  }
-
-  .alt {
-
-    .left-img {
-      display: inline-block;
-      vertical-align: middle;
-      width: 20%;
-      position: relative;
-      left: 75%;
-      margin-bottom: 0;
-    }
-
-    .right-text {
-
-      display: inline-block;
-      width: 75%;
-      vertical-align: middle;
-      padding-left: 0;
-      position: relative;
-      right: 20%;
-      text-align: right;
-      padding-right: 30px;
-
-      h2 {
-        color: $primary;
-        font-size: 30px;
-        font-weight: bold;
-      }
-
-      p {
-        color: $grey-black;
-        font-size: 24px;
-        font-family: $light-font;
-        line-height: normal;
-      }
-
-    }
-
   }
 
   /*--time line--*/
 
   .timeline {
-
     padding: 70px 0;
   }
 
   .time-title {
-
     h1 {
       font-size: 36px;
-      text-align: center;
-      font-weight: 700;
-      color: #393939;
-      padding-bottom: 30px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url(/images/transparent-logo.png) no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0px auto;
-      }
     }
-
   }
 
   .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner {
@@ -2995,37 +1291,13 @@ footer {
 
   /*-- #timeline*/
 
-  .team-title {
-    padding: 70px 0;
-
-    h1 {
-      font-size: 36px;
-      text-align: center;
-      font-weight: 700;
-      color: #393939;
-      padding-bottom: 30px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url(/images/transparent-logo.png) no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0px auto;
+  .developed {
+    .team-developed {
+      h1 {
+        font-size: 36px;
       }
     }
-
   }
-
-  .team-inner-title {
-    padding-top: 30px;
-  }
-
-
 
   .member {
     padding-bottom: 0;
@@ -3059,29 +1331,11 @@ footer {
   }
 
   .developer {
-    padding: 70px 0;
+    @include vpad(50);
 
     h1 {
       font-size: 36px;
-      text-align: center;
-      font-weight: 700;
-      color: #393939;
-      padding-bottom: 30px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url(/images/transparent-logo.png) no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0px auto;
-      }
     }
-
   }
 
   .lang {
@@ -3107,361 +1361,36 @@ footer {
     }
   }
 
-  .coin-logo {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    li {
-      padding: 0;
-      display: inline-block;
-
-      &:last-child {
-        padding-right: 0;
-      }
-
-      a {
-
-        img {
-          width: auto;
-        }
-      }
-
-    }
-  }
-
-  .flogo {
-    padding-left: 50px;
-    padding-bottom: 0;
-
-    img {
-      padding-top: 20px;
-    }
-
-    p {
-      font-family: $base-font;
-      font-size: 20px;
-      color: #4d4d4d;
-      font-weight: 300;
-      line-height: 35px;
-    }
-  }
-
-  .customer {
-
-    h4 {
-      font-size: 20px;
-      font-family: $base-font;
-      text-transform: uppercase;
-    }
-
-    ul {
-
-      padding-top: 20px;
-      padding-bottom: 0;
-
-      li {
-
-        list-style: none;
-
-        a {
-          text-decoration: none;
-          color: #4d4d4d;
-          font-size: 20px;
-          font-family: $base-font;
-          font-weight: 300;
-        }
-
-      }
-    }
-
-  }
-
-  .about {
-
-    h4 {
-      font-size: 20px;
-      font-family: $base-font;
-      text-transform: uppercase;
-    }
-
-    ul {
-
-      padding-top: 20px;
-      padding-bottom: 0;
-
-      li {
-
-        list-style: none;
-
-        a {
-          text-decoration: none;
-          color: #4d4d4d;
-          font-size: 20px;
-          font-family: $base-font;
-          font-weight: 300;
-        }
-
-      }
-    }
-
-  }
-
-  .social {
-
-    h4 {
-      font-size: 20px;
-      font-family: $base-font;
-      text-transform: uppercase;
-    }
-
-    ul {
-
-      padding-top: 20px;
-      padding-bottom: 0;
-
-      li {
-
-        list-style: none;
-
-        i {
-          width: 25px;
-        }
-
-        a {
-          text-decoration: none;
-          color: #4d4d4d;
-          font-size: 20px;
-          font-family: $base-font;
-          font-weight: 300;
-        }
-
-      }
-    }
-
-  }
+  //.coin-logo {
+  //  text-align: center;
+  //  padding-top: 50px;
+  //  padding-bottom: 50px;
+  //
+  //  li {
+  //    padding: 0;
+  //    display: inline-block;
+  //
+  //    &:last-child {
+  //      padding-right: 0;
+  //    }
+  //
+  //    a {
+  //
+  //      img {
+  //        width: auto;
+  //      }
+  //    }
+  //
+  //  }
+  //}
 
 }
 
 /*large screen - size xxl*/
 @media (min-width: $screen-xxl) {
 
-  .time {
-
-    position: relative;
-    width: 100%;
-    z-index: 999;
-
-    .stamp {
-
-      position: absolute;
-      color: #fff;
-      width: 100%;
-      margin-top: 5px;
-      padding-bottom: 5px;
-
-      .ico-top {
-        padding-right: 10px;
-      }
-    }
-
-    .clock {
-      float: left;
-      font-size: 25px;
-      font-weight: 400;
-    }
-
-    .social {
-      float: right;
-
-      li {
-        font-size: 22px;
-        display: inline-block;
-        padding-left: 15px;
-        a {
-          color: #fff;
-        }
-      }
-
-    }
-
-  }
-
-  .slide-caption {
-    text-shadow: none;
-    margin: 0 2%;
-    top: 47%;
-    transform: translateY(-30%) !important;
-    left: 20%;
-    right: 20%;
-    z-index: 20;
-  }
-
-  .slide-crypted {
-    text-align: left;
-    float: left;
-    h1 {
-      font-size: 55px;
-      text-align: left;
-      font-weight: 700;
-    }
-    p {
-      font-size: 26px;
-      line-height: 50px;
-    }
-
-  }
-
-  .big-ico {
-    text-align: center;
-    float: right;
-    padding: 25px 20px;
-    border-radius: 10px;
-
-    h1 {
-      font-size: 50px;
-    }
-
-    .big-time {
-      font-size: 75px;
-      font-weight: 300;
-    }
-
-    .big-time-part {
-
-      font-family: $font-family-source-code;
-      display: inline-block;
-      padding: 0 20px;
-      position: relative;
-      line-height: normal;
-
-      .timer-num{
-
-        font-size: 75px;
-        position: relative;
-
-        &:after {
-          content: ':';
-          position: absolute;
-          font-size: 70px;
-          right: -40px;
-          left: auto;
-        }
-
-      }
-
-      .tm {
-        &:after {
-          content:'';
-        }
-      }
-
-      .timer-text {
-        font-size: 18px;
-        text-transform: uppercase;
-      }
-
-    }
-
-    .bonus {
-      margin-top: 20px;
-      display:inline-block;
-      font-size: 20px;
-    }
-
-    .b-day {
-      padding: 0 37px;
-    }
-    .b-hour {
-    }
-    .b-minute {
-    }
-
-  }
-
-  .btn-slide {
-    margin-top: 14%;
-
-    a {
-      border-radius: 5px;
-      width: 242px;
-      height: 58px;
-      font-size: 18px;
-      display: inline-block;
-      padding: 14px;
-      font-weight: bold;
-      line-height: 30px;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-
   .gradient-bg {
-
     background-size: 100%;
-
-  }
-
-  .title-1 {
-
-    font-size: 36px;
-    padding: 70px 0;
-    max-width: 767px;
-    margin: 0 auto;
-
-    h1 {
-      text-align: center;
-      font-weight: 700;
-      padding-bottom: 10px;
-      font-size: 36px;
-    }
-
-    .part {
-
-      padding: 50px 0 0 0;
-
-      h2 {
-        font-weight: bold;
-        font-size: 30px;
-      }
-
-      p {
-        font-size: 24px;
-      }
-
-    }
-
-  }
-
-  .planned {
-
-    width: 767px;
-    margin: 0 auto;
-    padding: 70px 0;
-
-    h1 {
-      font-size: 36px;
-      text-align: center;
-      font-weight: 700;
-      color: $grey-black;
-      padding-bottom: 30px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: url("/images/transparent-logo.png") no-repeat;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 107px;
-        width: 100px;
-        margin: 0 auto;
-      }
-    }
-
   }
 
   .member {

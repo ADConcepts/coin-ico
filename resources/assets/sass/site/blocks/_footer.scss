@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  background-color: $dark-text;
+  @include vpad(50);
+  color: #fff;
+}
+
+.flogo {
+   a {
+     img {
+       height: 40px;
+     }
+   }
+
+  p {
+    font-family: $base-font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 15px;
+  }
+}
+
+.footer-links {
+  margin-top: 30px;
+
+  h4 {
+    font-family: $base-font;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  ul {
+    padding-top: 10px;
+    list-style-type: none;
+
+    li {
+      a {
+        font-family: $base-font;
+        font-weight: 300;
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.social {
+    .fa {
+      width: 25px;
+    }
+  }
+
+}
+
+
+/* bigger devices - Size md */
+@media (min-width: $screen-md) {
+
+  footer {
+    @include vpad(75);
+  }
+
+  .footer-links {
+    margin-top: 10px;
+  }
+
+}
+
+
+/*large screen - size xl*/
+@media (min-width: $screen-xl) {
+
+  footer {
+    @include vpad(100);
+  }
+
+  .flogo {
+    p {
+      margin-top: 25px;
+    }
+  }
+
+  .footer-links {
+    h4 {
+      font-size: 24px;
+    }
+
+    ul {
+      padding-top: 20px;
+
+      li {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}
