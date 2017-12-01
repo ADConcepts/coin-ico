@@ -144,8 +144,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('/js/app.js', env('REDIRECT_HTTPS')) }}"></script>
     <script src="{{ asset('/js/site.js', env('REDIRECT_HTTPS')) }}"></script>
+    <script src="{{ asset('/js/app.js', env('REDIRECT_HTTPS')) }}"></script>
     <script src="{{ asset('/js/sly.min.js', env('REDIRECT_HTTPS')) }}"></script>
     <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script>
